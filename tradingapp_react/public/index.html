@@ -219,7 +219,7 @@
 		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="45" height="45"><g fill="none" stroke="currentColor"><path stroke-dasharray="1,1" d="M4 14.5h22"></path><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.5l2-4 1 2 2-4 3 6"></path><path stroke-linecap="round" d="M5.5 16.5l-1 2"></path><path stroke-linecap="round" stroke-linejoin="round" d="M17.5 16.5l2 4 2-4m2-4l1-2-1 2z"></path></g></svg>',
 	];
 	var g_chartUnit = ["1m", "5m", "15m", "30m", "1H", "5H"];
-	var g_indicators = [];
+	var g_indicators = ['Accumulation/Distribution', 'Accumulative Swing Index', 'Advance/Decline', 'Arnaud Legoux Moving Average', 'Aroon', 'Average Directional Index', 'Average True Range', 'Awesome Oscillator', 'Balance of Power', 'Bollinger Bands', 'Bollinger Bands %B', 'Bollinger Bands Width', 'Chaikin Money Flow', 'Chaikin Oscillator', 'Chande Kroll Stop', 'Chande Momentum Oscillator', 'Chop Zone', 'Choppiness Index', 'Commodity Channel Index', 'Connors RSI', 'Coppock Curve', 'Correlation Coeff', 'Detrended Price Oscillator', 'Directional Movement Index', 'Donchian Channels', 'Double Exponential Moving Average', 'Ease of Movement', 'Elders Force Index', 'EMA Cross', 'Envelope', 'Fisher Transform', 'Historical Volatility', 'Hull MA', 'Ichimoku Cloud', 'Keltner Channels', 'Klinger Oscillator', 'Know Sure Thing', 'Least Squares Moving Average', 'Linear Regression Curve', 'MA Cross', 'MA with EMA Cross', 'Mass Index', 'McGinley Dynamic', 'Momentum', 'Money Flow', 'Moving Average', 'Moving Average Channel', 'MACD', 'Moving Average Exponential', 'Moving Average Weighted', 'Net Volume', 'On Balance Volume', 'Parabolic SAR', 'Price Channel', 'Price Oscillator', 'Price Volume Trend', 'Rate Of Change', 'Relative Strength Index', 'Relative Vigor Index', 'Relative Volatility Index', 'SMI Ergodic Indicator/Oscillator', 'Smoothed Moving Average', 'Stochastic', 'Stochastic RSI', 'TRIX', 'Triple EMA', 'True Strength Indicator', 'Ultimate Oscillator', 'VWAP', 'VWMA', 'Volume Oscillator', 'Vortex Indicator', 'Williams %R', 'Williams Alligator', 'Williams Fractals', 'Volume', 'Zig Zag', 'SuperTrend', 'Pivot Points Standard', 'Spread', 'Ratio'];
 	var g_drawing = ['Arrow', 'Channel', 'Eliotte wave(12345)', 'Eliotte wave(ABC)', 'Gann fan', 'Trend angle', 'Head and shoulders', 'Horizontal line', 'Point to point', 'Ellipse', 'Pitchfork', 'Rectangle', 'Trend', 'Triangle', 'Vertical line'];
 	var g_drawing_pram = ["arrow","parallel_channel", "elliott_impulse_wave", "elliott_correction", 
     "gannbox_fan","trend_angle", "head_and_shoulders", "horizontal_line", "trend_line", "ellipse", "pitchfork", "rectangle", "extended", "triangle","vertical_line"];
@@ -327,7 +327,8 @@
 			},
 		});
 		setTimeout(() => {
-			g_indicators = widget.getStudiesList();
+			//g_indicators = widget.getStudiesList();
+			//console.log(g_indicators);
 			//g_period = widget.getIntervals();
 			log('kch', widget);
 			init();
