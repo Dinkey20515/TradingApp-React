@@ -24,14 +24,11 @@ class FullChart extends React.Component {
 			userId: 'public_user_id',
 			fullscreen: false,
 			autosize: true,
-			height: '500px',
 			studiesOverrides: {},
 		};
 		
 	}
 
-	//const
-	
 	//variables
 	log_flag = 1;							//display logs flag
 	g_selectedShapeIndexes = [];			//selected drawingtool indexes
@@ -254,7 +251,7 @@ class FullChart extends React.Component {
 											data-role={"search"} placeholder={"Search"}  />
 									</div>
 									<span className={"icon-nVh4c_cg"}>
-										<img alt="svg file" src={window.location.origin +'../../public/svg/search.svg'}></img>
+										<img alt="svg file" src={window.location.origin +'/svg/search.svg'}></img>
 									</span>
 								</div>
 								<div style={{height: "65vh", overflow: "auto"}}>
@@ -337,11 +334,11 @@ class FullChart extends React.Component {
 						<button className={"tablinks"} onClick={(e)=>this.openTab(e, 'daterange')} >
 							<span className={"icon-a7Y2yl3G"}><svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" fill="currentColor">
 								<g>
-								<path transform="rotate(-90.3604 13.957 13.9458)" stroke="#000" id="svg_4" d="m5.61359,12.8898l16.68691,0l0,0c2.18603,0 3.95816,0.47278 3.95816,1.05597c0,0.5832 -1.77213,1.05597 -3.95816,1.05597l-16.68691,0l0,0c-2.18603,0 -3.95816,-0.47278 -3.95816,-1.05597c0,-0.5832 1.77213,-1.05597 3.95816,-1.05597z" stroke-width="0.1" fill="currentColor"/>
-								<path transform="rotate(-90.3604 8.70677 14.0141)" stroke="#000" id="svg_5" d="m3.09812,12.95816l11.21729,0l0,0c1.46949,0 2.66076,0.47278 2.66076,1.05598c0,0.58319 -1.19126,1.05597 -2.66076,1.05597l-11.21729,0l0,0c-1.4695,0 -2.66076,-0.47278 -2.66076,-1.05597c0,-0.5832 1.19126,-1.05598 2.66076,-1.05598z" stroke-width="0.1" fill="currentColor"/>
-								<path transform="rotate(-90.3604 19.6194 14.0802)" stroke="#000" id="svg_6" d="m14.01077,13.0243l11.21729,0l0,0c1.46949,0 2.66075,0.47278 2.66075,1.05598c0,0.58319 -1.19126,1.05597 -2.66075,1.05597l-11.21729,0l0,0c-1.4695,0 -2.66075,-0.47278 -2.66075,-1.05597c0,-0.5832 1.19125,-1.05598 2.66075,-1.05598z" stroke-width="0.1" fill="currentColor"/>
-								<path transform="rotate(-90.3604 3.96551 14.8399)" stroke="#000" id="svg_7" d="m0.57668,13.78388l6.77766,0l0,0c0.88789,0 1.60767,0.47278 1.60767,1.05598c0,0.58319 -0.71978,1.05597 -1.60767,1.05597l-6.77766,0l0,0c-0.88789,0 -1.60767,-0.47278 -1.60767,-1.05597c0,-0.5832 0.71977,-1.05598 1.60767,-1.05598z" stroke-width="0.1" fill="currentColor"/>
-								<path transform="rotate(-90.3604 24.7988 14.906)" stroke="#000" id="svg_8" d="m21.40993,13.85002l6.77766,0l0,0c0.88788,0 1.60766,0.47278 1.60766,1.05598c0,0.58319 -0.71978,1.05597 -1.60766,1.05597l-6.77766,0l0,0c-0.8879,0 -1.60767,-0.47278 -1.60767,-1.05597c0,-0.5832 0.71977,-1.05598 1.60767,-1.05598z" stroke-width="0.1" fill="currentColor"/>
+								<path transform="rotate(-90.3604 13.957 13.9458)" stroke="#000" id="svg_4" d="m5.61359,12.8898l16.68691,0l0,0c2.18603,0 3.95816,0.47278 3.95816,1.05597c0,0.5832 -1.77213,1.05597 -3.95816,1.05597l-16.68691,0l0,0c-2.18603,0 -3.95816,-0.47278 -3.95816,-1.05597c0,-0.5832 1.77213,-1.05597 3.95816,-1.05597z" strokeWidth="0.1" fill="currentColor"/>
+								<path transform="rotate(-90.3604 8.70677 14.0141)" stroke="#000" id="svg_5" d="m3.09812,12.95816l11.21729,0l0,0c1.46949,0 2.66076,0.47278 2.66076,1.05598c0,0.58319 -1.19126,1.05597 -2.66076,1.05597l-11.21729,0l0,0c-1.4695,0 -2.66076,-0.47278 -2.66076,-1.05597c0,-0.5832 1.19126,-1.05598 2.66076,-1.05598z" strokeWidth="0.1" fill="currentColor"/>
+								<path transform="rotate(-90.3604 19.6194 14.0802)" stroke="#000" id="svg_6" d="m14.01077,13.0243l11.21729,0l0,0c1.46949,0 2.66075,0.47278 2.66075,1.05598c0,0.58319 -1.19126,1.05597 -2.66075,1.05597l-11.21729,0l0,0c-1.4695,0 -2.66075,-0.47278 -2.66075,-1.05597c0,-0.5832 1.19125,-1.05598 2.66075,-1.05598z" strokeWidth="0.1" fill="currentColor"/>
+								<path transform="rotate(-90.3604 3.96551 14.8399)" stroke="#000" id="svg_7" d="m0.57668,13.78388l6.77766,0l0,0c0.88789,0 1.60767,0.47278 1.60767,1.05598c0,0.58319 -0.71978,1.05597 -1.60767,1.05597l-6.77766,0l0,0c-0.88789,0 -1.60767,-0.47278 -1.60767,-1.05597c0,-0.5832 0.71977,-1.05598 1.60767,-1.05598z" strokeWidth="0.1" fill="currentColor"/>
+								<path transform="rotate(-90.3604 24.7988 14.906)" stroke="#000" id="svg_8" d="m21.40993,13.85002l6.77766,0l0,0c0.88788,0 1.60766,0.47278 1.60766,1.05598c0,0.58319 -0.71978,1.05597 -1.60766,1.05597l-6.77766,0l0,0c-0.8879,0 -1.60767,-0.47278 -1.60767,-1.05597c0,-0.5832 0.71977,-1.05598 1.60767,-1.05598z" strokeWidth="0.1" fill="currentColor"/>
 								</g>
 
 								</svg></span>
@@ -350,8 +347,8 @@ class FullChart extends React.Component {
 							<span><svg xmlns="http://www.w3.org/2000/svg" width="32"  height="32" fill="currentColor" >
 									<g>
 									<title>Layer 1</title>
-									<path fill="currentColor" d="m21.9647,11.43279l2.74279,0.05664c-0.43636,-8.85223 -13.28071,-8.68847 -13.55004,0.57871l-0.55277,5.66242c-0.63075,2.52464 -3.00201,2.46253 -5.45676,2.1736l-0.90917,2.50977c5.25416,0.24802 8.21083,0.42111 9.43845,-4.63255l0.56712,-5.62266c0.34556,-5.68163 7.16603,-5.72729 7.72038,-0.72594l0,0.00001z" id="svg_7" stroke-width="0.1" stroke="#000"/>
-									<rect stroke="#000" id="svg_1" height="2.60318" width="24.14012" y="13.07909" x="1.60097" stroke-width="0.1" fill="currentColor"/>
+									<path fill="currentColor" d="m21.9647,11.43279l2.74279,0.05664c-0.43636,-8.85223 -13.28071,-8.68847 -13.55004,0.57871l-0.55277,5.66242c-0.63075,2.52464 -3.00201,2.46253 -5.45676,2.1736l-0.90917,2.50977c5.25416,0.24802 8.21083,0.42111 9.43845,-4.63255l0.56712,-5.62266c0.34556,-5.68163 7.16603,-5.72729 7.72038,-0.72594l0,0.00001z" id="svg_7" strokeWidth="0.1" stroke="#000"/>
+									<rect stroke="#000" id="svg_1" height="2.60318" width="24.14012" y="13.07909" x="1.60097" strokeWidth="0.1" fill="currentColor"/>
 									</g>
 
 								</svg></span>
@@ -361,7 +358,7 @@ class FullChart extends React.Component {
 							<span style={{position:'relative'}}>
 							<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 28 28" width="32" height="32" fill="currentColor">
 								<g fill="currentColor">
-								<path fill-rule="nonzero"
+								<path fillRule="nonzero"
 								d="M14 18.634l-.307-.239-7.37-5.73-2.137-1.665 9.814-7.633 9.816 7.634-.509.394-1.639 1.269-7.667 5.969zm7.054-6.759l1.131-.876-8.184-6.366-8.186 6.367 1.123.875 7.063 5.491 7.054-5.492z">
 								</path>
 								<path d="M7 14.5l-1 .57 8 6.43 8-6.5-1-.5-7 5.5z"></path>

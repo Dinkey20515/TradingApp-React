@@ -18,6 +18,10 @@
 .summaryCardRow{
     margin: 4px 0px !important;
 }
+
+.summaryCardContainer:first{
+    margin-top: 40px !important;
+}
 .miniChart{
     height:40px;
     width: 110px;

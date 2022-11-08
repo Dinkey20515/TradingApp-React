@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{ Component } from "react";
 // import { useState } from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
@@ -15,7 +15,7 @@ function App() {
 			  <Route index element={<LogInScreen/>} />
 			  <Route path='detailpage' element={<TradeOneScreen/>}/>
 			  <Route path='trade' element={<TradeAllScreen />}/>
-			  <Route path='Chart' element={<FullChart />}/>
+			  <Route path='chart' element={<FullChart />}/>
 			  {/* <Route path='register' element={<RegisterForm />}/>
 			  <Route path='geresult' element={<GeResult />}/>
 			  <Route path='perDashboard' element={<PerDashboard />}/> */}

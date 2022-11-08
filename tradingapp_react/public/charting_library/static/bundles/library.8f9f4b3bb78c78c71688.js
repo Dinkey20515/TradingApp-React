@@ -39775,24 +39775,24 @@ webpackJsonp(
 									visible: !0,
 								},
 								paneProperties: {
-									background: "#ffffff",
+									background: "#0f0f0f",
 									gridProperties: {
-										color: "#e1ecf2",
+										color: "#333333",
 										style: CanvasEx.LINESTYLE_SOLID,
 									},
 									vertGridProperties: {
-										color: "#e1ecf2",
+										color: "#333333",
 										style: CanvasEx.LINESTYLE_SOLID,
 									},
 									horzGridProperties: {
-										color: "#e1ecf2",
+										color: "#333333",
 										style: CanvasEx.LINESTYLE_SOLID,
 									},
 									crossHairProperties: {
-										color: "rgba( 152, 152, 152, 1)",
+										color: "rgba( 28, 28, 28, 1)", //kmh 152
 										style: CanvasEx.LINESTYLE_DASHED,
 										transparency: 0,
-										width: 1,
+										width: 1,  //kmh1
 									},
 									topMargin: 5,
 									bottomMargin: 5,
@@ -39828,9 +39828,9 @@ webpackJsonp(
 								scalesProperties: {
 									showLeftScale: !1,
 									showRightScale: !0,
-									backgroundColor: "#ffffff",
-									lineColor: "#555",
-									textColor: "#555",
+									backgroundColor: "#0f0f0f",
+									lineColor: "#333",
+									textColor: "#333",
 									fontSize: 11,
 									scaleSeriesOnly: !1,
 									showSeriesLastValue: !0,
@@ -39865,7 +39865,7 @@ webpackJsonp(
 									extendedHours: !1,
 									sessVis: !1,
 									statusViewStyle: {
-										fontSize: 17,
+										fontSize: 13,
 										showExchange: !0,
 										showInterval: !0,
 										showSymbolAsDescription: !1,
@@ -39914,7 +39914,7 @@ webpackJsonp(
 									barStyle: {
 										upColor: "#3a8ff2",
 										downColor: "#eb444f",
-										barColorsOnPrevClose: !1,
+										barColorsOnPrevClose: !0,
 										dontDrawOpen: !1,
 									},
 									lineStyle: {
@@ -40037,7 +40037,7 @@ webpackJsonp(
 									},
 								},
 								symbolWatermarkProperties: {
-									color: "rgba( 85, 85, 85, 0)",
+									color: "rgba( 15, 15, 15, 0)",  //kmhdel
 									transparency: 100,
 								},
 								chartEventsSourceProperties: {
@@ -56024,7 +56024,8 @@ webpackJsonp(
 										);
 									});
 							},
-							// createDialog: function (t, i) {   //kmh remove dialog
+							 createDialog: function (t, i) {   //kmh remove dialog
+								return 0;
 							// 	var o, n, r;
 							// 	return s.isOpen(t)
 							// 		? ((o = s.get(t)),
@@ -56124,7 +56125,7 @@ webpackJsonp(
 							// 			  (n = t.find("._tv-dialog")),
 							// 			  o(),
 							// 			  n.resize(o));
-							// },
+							 },
 							applyHandlers: function (t, e) {
 								var i,
 									o,
@@ -61577,13 +61578,13 @@ webpackJsonp(
 				"color-border-chat-fields": "#c9cbcd",
 				"color-border-hover": "#c8c8c8",
 				"color-button-hover-bg": "#f2f2f2",
-				"color-depthrenderer-fill-style": "#555555",
+				"color-depthrenderer-fill-style": "#333333",
 				"color-disabled-border-and-color": "#ececec",
 				"color-disabled-input": "#ececec",
 				"color-empty-container-message": "#8a8a8a",
 				"color-footer-chart-panel-bg": "#f1f3f6",
 				"color-icons": "#7d7d7d",
-				"color-input-textarea-readonly": "#555555",
+				"color-input-textarea-readonly": "#333333",
 				"color-item-active-blue": "#eff9ff",
 				"color-item-hover-active-bg": "#f1f3f6",
 				"color-item-hover-bg": "#edf1f2",

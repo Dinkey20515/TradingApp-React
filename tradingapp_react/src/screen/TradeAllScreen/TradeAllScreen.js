@@ -1,3 +1,4 @@
+import React ,{ Component } from "react";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
@@ -18,7 +19,7 @@ function TradeAllScreen() {
       navigate(path)
     }
 	return (
-        <Container className='tradeAllScreenContainer' onClick={symbolCardOnclickHandler}>
+        <Container className='tradeAllScreenContainer' >
             <TradeAllScreenTopbar />
             <SummaryCard symbol='BSC/USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
             <SummaryCard symbol='BSC/USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
@@ -33,7 +34,7 @@ function TradeAllScreen() {
             <SummaryCard symbol='BSC/USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
             <Row className='tradeOneScreenEditButtonRow'>
                 <Col className="tradeOneScreenEditButtonCol">
-                    <button className="tradeOneScreenEditButton">
+                    <button onClick={symbolCardOnclickHandler} className="tradeOneScreenEditButton">
                         <FaEdit className="tradeOneScreenEditIcon"/>
                     </button>
                     <div className="tradeOneScreenEditButtonText"> Edit watchlist </div>

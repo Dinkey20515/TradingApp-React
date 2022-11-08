@@ -1,0 +1,110 @@
+
+.TradeOneScreenTopbarContainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:rgb(15,15,15);
+    z-index: 1;
+    border-top: 1px solid #202020;
+    box-shadow: 0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+    width: -webkit-fill-available;
+    margin:0px 0px;
+    margin-bottom: 0px;
+    display: grid;
+    justify-content: center;
+}
+.TradeOneScreenTopStatusbar{
+    padding: 0px 15px !important;
+    margin-top: 15px !important;
+    margin-bottom: 0px !important;
+    height: 40px;
+    color: white;
+    list-style: none;
+ }
+.symbolSketText{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    margin: 10px 5px;
+}
+.symboldetailText{
+    text-align: center;
+    color: rgb(130, 130, 130);
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.5rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+.TradeOneScreenTopStatusbarText{
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: 0px 15px;
+    color: rgb(210, 210, 210);
+}
+.arrowBackIcon {
+    color: #bb8761;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 12px !important;
+    left: 12px !important;
+}
+.plusIcon{
+    color: #bb8761;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 12px !important;
+    right: 12px !important;
+}
+.addAlertButton{
+    display: inline-block;
+    align-items: center;
+    border: solid 1px;
+    color: #bb8761;
+    border-radius: 12px;
+    background: none;
+    margin:10px 5px!important;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: none;
+    transition: none;
+    box-shadow: none;
+    font-size: 0.5rem;
+    font-weight: 400;
+}
+.addAlertBellIcon{
+    vertical-align: text-top !important;
+    color: #bb8761;
+}
+.addAlertText{
+    background-color: none;
+    color: #bb8761;
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+
+.toTopLeft{
+    float: left;
+    top: 15px !important;
+    left: 15px !important;
+}
+.toTopRight{
+    float: right;
+    top: 15px !important;
+    right: 15px !important;
+    margin-left: 15px;
+}

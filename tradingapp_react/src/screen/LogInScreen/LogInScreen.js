@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LogInScreen.css";
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import React ,{ Component }from "react";
 // import "react-slideshow-image/dist/styles.css";
 import SimpleImageSlider from "react-simple-image-slider";
 
@@ -38,7 +38,7 @@ function LogInScreen() {
   const navigate = useNavigate();
   const loginHandler = () => {
     console.log("nav");
-    let path = '/chart'
+    let path = '/trade'
     navigate(path)
   }
 

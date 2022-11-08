@@ -40,7 +40,7 @@ body {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    /* background-color: #ddd; */
+    background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
@@ -57,7 +57,7 @@ body {
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 13px 5px;
+    padding: 5px 5px;
     
     border-top: none;
     background-color: #303030;
@@ -157,6 +157,7 @@ body {
 }
 
 .inline-list-2>li {
+    font-size: 0.9rem;
     padding: 14px 22px;
     /* border: 1px solid red; */
     margin: 0 8px;
@@ -173,7 +174,7 @@ body {
     /* Internet Explorer 10+ */
     scrollbar-width: none;
     /* Firefox */
-    overflow-x: 'auto';
+    overflow-x: auto;
 }
 
 .scroll-none::-webkit-scrollbar {
@@ -239,9 +240,8 @@ h4 {
 }
 
 .inputContainer-nVh4c_cg {
-    height: 24px;
     padding: 8px 16px 8px 47px;
-    width: 90%;
+    width: 100%;
     border-style: solid;
     border-width: 1.3px;
     border-radius: 3px;
@@ -250,11 +250,11 @@ h4 {
 
 .icon-nVh4c_cg {
     color: #a3a6af;
-    height: 18px;
+    height: 12px;
     left: 20px;
     pointer-events: none;
     position: absolute;
-    top: calc(50% - 9px);
+    top: calc(50% - 15px);
 }
 
 .container-nVh4c_cg {

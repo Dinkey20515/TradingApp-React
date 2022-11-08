@@ -5,13 +5,11 @@
   }
 
 .priceRangeDiv{
-    margin-top: 35px !important;
-    margin-bottom: 25px !important; 
-    padding: 0px 15px;
+    padding: 35px 15px !important;
 }
 .middleChart{
     width: 100%;
-    
+    margin-top: 90px;
 }
 .priceRangeText{
     color: white;

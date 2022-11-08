@@ -820,21 +820,19 @@ export interface ISettingsAdapter {
 }
 export declare type IBasicDataFeed = IDatafeedChartApi & IExternalDatafeed;
 export declare type ThemeName = 'Light' | 'Dark';
-
-//kmh   Creating widget Options
 export interface ChartingLibraryWidgetOptions {
-	container_id: string;    //kmh containerId e.g. "tv_chart_container"
-	datafeed: IBasicDataFeed | (IBasicDataFeed & IDatafeedQuotesApi);      //kmh datafeed e.g.  : new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com")    
-	interval: ResolutionString;     //kmh interval string e.g. 'D'/'W'/'M'
-	symbol: string;          //kmh symbol name e.g. "AAPL" 
+	container_id: string;
+	datafeed: IBasicDataFeed | (IBasicDataFeed & IDatafeedQuotesApi);
+	interval: ResolutionString;
+	symbol: string;
 	auto_save_delay?: number;
 	autosize?: boolean;
 	debug?: boolean;
 	disabled_features?: string[];
 	drawings_access?: AccessList;
 	enabled_features?: string[];
-	fullscreen?: boolean;     //kmh fullscreen mode e.g. true/false
-	height?: number;         //kmh set height manually e.g. 700
+	fullscreen?: boolean;
+	height?: number;
 	library_path?: string;
 	locale: LanguageCode;
 	numeric_formatting?: NumericFormattingParams;
@@ -845,7 +843,7 @@ export interface ChartingLibraryWidgetOptions {
 	timeframe?: string;
 	timezone?: 'exchange' | Timezone;
 	toolbar_bg?: string;
-	width?: number;       //kmh set height manually e.g. 400
+	width?: number;
 	charts_storage_url?: string;
 	charts_storage_api_version?: AvailableSaveloadVersions;
 	client_id?: string;
@@ -1293,7 +1291,7 @@ export interface IChartingLibraryWidget {
 	unsubscribe<EventName extends keyof SubscribeEventsMap>(event: EventName, callback: SubscribeEventsMap[EventName]): void;
 	chart(index?: number): IChartWidgetApi;
 	setLanguage(lang: LanguageCode): void;
-	o9symbol: string, interval: ResolutionString, callback: EmptyCallback): void;
+	setSymbol(symbol: string, interval: ResolutionString, callback: EmptyCallback): void;
 	remove(): void;
 	closePopupsAndDialogs(): void;
 	selectLineTool(linetool: SupportedLineTools): void;

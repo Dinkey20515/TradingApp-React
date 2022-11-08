@@ -1,3 +1,4 @@
+import React ,{ Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./PriceRange.css";
 import {MdArrowDropDown} from "react-icons/md";

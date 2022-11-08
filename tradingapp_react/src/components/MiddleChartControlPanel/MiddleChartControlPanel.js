@@ -1,3 +1,4 @@
+import React ,{ Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./MiddleChartControlPanel.css";
 import { AiOutlineExpand } from "react-icons/ai";

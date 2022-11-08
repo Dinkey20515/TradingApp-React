@@ -1,30 +1,36 @@
+import React ,{ Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./TradeAllScreenTopbar.css";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { CiSliderHorizontal } from "react-icons/ci";
+import { AiOutlineMail } from "react-icons/ai"; 
 
 function TradeAllScreenTopbar(props) {
 	return (
 		<div className="TradeAllScreenTopbarContainer">
-			<div className="TradeAllScreenTopStatusbar">
-				<span className="toTopLeft TradeAllScreenTopStatusbarText"> adsf </span>
-				<span className="toTopRight TradeAllScreenTopStatusbarText"> adsf </span>
-			</div>
+			<ul className="TradeAllScreenTopStatusbar">
+			    <li><MdKeyboardArrowDown className="topBarIcon toTopLeft" /></li>
+				<li  className="toTopLeft TradeAllScreenTopStatusbarText"> 0 </li>
+				
+				<li className="topBarIcon toTopRight"><CiSliderHorizontal />  </li>
+				<li className="topBarIcon toTopRight"><AiOutlineMail /></li>
+			</ul>
 			<div className="topStatusHorizonBar" />
 			<div className="TradeAllScreenTopNavbar">
-				<button className="topNavBarButton topNavBaritem">
-					<span className="TradeAllScreenTopStatusbarText">Favorite</span>
-					<span className="TradeAllScreenTopStatusbarText">Popular</span>
-					<span className="TradeAllScreenTopStatusbarText">New</span>
-					<span className="TradeAllScreenTopStatusbarText">Weekend Trading</span>
-					<span className="TradeAllScreenTopStatusbarText">ETF</span>
-					<span className="TradeAllScreenTopStatusbarText">Commodities</span>
-					<span className="TradeAllScreenTopStatusbarText">Oil Markets</span>
-					<span className="TradeAllScreenTopStatusbarText">Indices</span>
-					<span className="TradeAllScreenTopStatusbarText">Forex</span>
-					<span className="TradeAllScreenTopStatusbarText">Cryptos</span>
-					<span className="TradeAllScreenTopStatusbarText">Shares</span>
-					<span className="TradeAllScreenTopStatusbarText">Futures</span>
-
-				</button>
+				<ul className="topNavBarRow ">
+					<li className="TradeAllScreenTopStatusbarText">Favorite</li>
+					<li className="TradeAllScreenTopStatusbarText">Popular</li>
+					<li className="TradeAllScreenTopStatusbarText">New</li>
+					<li className="TradeAllScreenTopStatusbarText">WeekendTrading</li>
+					<li className="TradeAllScreenTopStatusbarText">ETF</li>
+					<li className="TradeAllScreenTopStatusbarText">Commodities</li>
+					<li className="TradeAllScreenTopStatusbarText">OilMarkets</li>
+					<li className="TradeAllScreenTopStatusbarText">Indices</li>
+					<li className="TradeAllScreenTopStatusbarText">Forex</li>
+					<li className="TradeAllScreenTopStatusbarText">Cryptos</li>
+					<li className="TradeAllScreenTopStatusbarText">Shares</li>
+					<li className="TradeAllScreenTopStatusbarText">Futures</li>
+				</ul>
 			</div>
 		</div>
 	);

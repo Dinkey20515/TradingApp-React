@@ -22,7 +22,6 @@ export class TVChartContainer extends React.PureComponent {
 		userId: 'public_user_id',
 		fullscreen: false,
 		autosize: true,
-		height: '500px',
 		studiesOverrides: {},
 	};
 
@@ -49,11 +48,12 @@ export class TVChartContainer extends React.PureComponent {
 			autosize: this.props.autosize,
 			studies_overrides: this.props.studiesOverrides,
 			overrides: {
-				"paneProperties.background": "#191919",
-				"paneProperties.vertGridProperties.color": "#323232",
-				"paneProperties.horzGridProperties.color": "#323232",
+				"paneProperties.background": "#0f0f0f",
+				"paneProperties.vertGridProperties.color": "#232323",
+				"paneProperties.horzGridProperties.color": "#232323",
 				"symbolWatermarkProperties.transparency": 90,
-				"scalesProperties.textColor": "#AAA",
+				"scalesProperties.textColor": "#444",
+				
 			}
 		};
 
@@ -62,6 +62,7 @@ export class TVChartContainer extends React.PureComponent {
 
 			widget.onChartReady(() => {
 				console.log('Chart has loaded!')
+				console.log(widget.chart());
 			});
 		});
 	}

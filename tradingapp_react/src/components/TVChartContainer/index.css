@@ -1,3 +1,7 @@
 .TVChartContainer {
-	height: calc(100vh - 80px);
+	height: calc(100vh - 53px);
+	width: calc(100vw + 5px);
+	left: -2px;
+	position: fixed;
+	top: -2px;
 }
