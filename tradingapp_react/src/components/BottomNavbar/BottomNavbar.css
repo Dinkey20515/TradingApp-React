@@ -1,0 +1,84 @@
+.BottomNavBarContainer{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+    background-color: #262626;
+    z-index: 1;
+    height: 54px;
+    border-top: 1px solid #202020;
+    box-shadow: 0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.hidebar{
+    bottom: -20%;
+    animation-name: bottomBarShowEffect;
+    animation-duration: 0.5s;
+}
+@keyframes bottomBarShowEffect {
+    0%   {bottom: 0%}
+    100% {bottom: -20%}
+  }
+.showbar{
+    bottom: 0%;
+    animation-name: bottomBar-HideEffect;
+    animation-duration: 0.5s;
+}
+@keyframes bottomBar-HideEffect {
+    0%   {bottom: -20%}
+    100% {bottom: 0%;}
+}
+.BottomNavBar-item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+.BottomNavBarButton{
+    background: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    padding: 3px 10px;
+    border-radius: 17px;
+    transition:none;
+    box-shadow:none;
+    
+    color: rgb(141, 134, 134);
+    text-decoration: none;
+    font-family:Arial;
+    font-weight: 600;
+    font-size: 0.4rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.BottomNavBarButton:hover{
+    background-color: none !important;
+}
+.BottomNavBarButton:active{
+    color:#bb8761 !important;
+    box-sizing: border-box;
+}
+.BottomNavBar-Text{
+   margin-top: 6px !important;
+}
+.BottomNavBarIcon{
+    width:22px;
+    height:22px;
+}

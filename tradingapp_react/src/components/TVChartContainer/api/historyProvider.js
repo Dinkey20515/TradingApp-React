@@ -16,7 +16,7 @@ export default {
 					tsym: split_symbol[2],
 					toTs:  to ? to : '',
 					limit: limit ? limit : 2000, 
-					api_key: '7a877fb52ac46a2ec6a78b939733a9383eaff6a811fdbf456f2cc2ab9dec17fb'
+					api_key: '7a877fb52ac46a2ec6a78b939733a9383eaff6a811fdbf456f2cc2ab9dec17fb',
 					// aggregate: 1//resolution 
 				}
 			// console.log({qs})

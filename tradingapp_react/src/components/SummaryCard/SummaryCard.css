@@ -1,0 +1,109 @@
+.summaryCardContainer{
+    margin: 10px 4px !important;
+    padding:10px 2px !important;
+    background-color: #262626 !important;
+    border-radius: 7px !important;
+}
+.summaryCardSymbolText{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+
+.summaryCardRow{
+    margin: 4px 0px !important;
+}
+.miniChart{
+    height:40px;
+    width: 110px;
+}
+.toRight{
+    float: right;
+}
+.toLeft{
+    float: left;
+}
+.summaryButton{
+    background: none;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition:none;
+    box-shadow:none;
+    color:rgb(140, 140, 140);
+    border: solid 1px;
+    border-color:#bb8761;
+}
+.summaryButton:hover{
+    background-color: none !important;
+}
+.summaryButton:active{
+    color:#bb8761 !important;
+    background-color: #443931 !important;
+    box-sizing: border-box;
+}
+.summaryCardButtonText{
+    color:#bb8761;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.6rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+
+.summaryAskText{
+    padding: 3px 5px;
+    background-color: rgb(117 50 54);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    border-radius: 4px;
+}
+.summaryBidText{
+    padding: 3px 5px;
+    background-color: rgb(45 80 114);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    border-radius: 4px;
+}
+.summaryRateText{
+    padding: 3px 5px;
+    color: rgb(210 70 70);
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.6rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    border-radius: 4px;
+}

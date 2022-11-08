@@ -1,0 +1,84 @@
+.screenContainer{
+    background-color:rgba(10, 10, 10, 0.98);
+    height: 100vh;
+    padding: 0 !important;
+}
+.rise {
+    /* animation: animatedBackground 4s linear; */
+    animation-iteration-count: 1;
+    position: absolute;
+    /* animation-delay: 2s; */
+}
+@keyframes animatedBackground {
+    from {
+        width: 150%;
+        left: 50%;
+    }
+    to {
+        width:150%;
+        left: 0%;
+    }
+}
+
+.titleSection{
+    position: absolute;
+    top:80px;
+    width:100%;
+    text-align: center;
+    color:white;
+}
+.titleSection p{
+   font-size: 40px;;
+}
+.loginButtons{
+    position: absolute;
+    bottom: 50px;
+    color: whtie;
+}
+.google{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-bottom:10px;
+    border:solid 0px !important;
+    height: 45px;
+    border-radius: 4px;
+    text-align: left;
+}
+.email{
+    width: 80vw;
+    margin-left: 10vw;
+    background-color:rgb(189 137 99);
+    color:white;
+    height: 45px;
+    border-radius: 8px;
+    margin-bottom: 20px;;
+    text-align: center;
+    border: solid 0px !important;
+}
+.LogIn{
+    position: relative;
+    display: flex;
+    justify-content:center !important;
+    font-size: 18px;
+    color:white;
+}
+.LogIn p{
+    text-align: center;
+}
+   
+.LogIn-p{
+    color: rgb(189 137 99);
+    margin-left: 10px;
+}
+.loginButtons span{
+    font-size: 12px;
+    text-align: center;
+    color:grey;
+}
+.descriptionText{
+    text-align: center;
+}
+.buttonIcon{
+    margin-bottom: 6px;
+    margin-right: 6px;
+}

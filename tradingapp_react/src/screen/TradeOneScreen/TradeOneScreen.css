@@ -1,0 +1,81 @@
+.tradeOneScreenContainer{
+    background-color:rgba(10, 10, 10, 0.98);
+    height: 100%;
+    padding: 0 !important;
+  }
+
+.priceRangeDiv{
+    margin-top: 35px !important;
+    margin-bottom: 25px !important; 
+    padding: 0px 15px;
+}
+.middleChart{
+    width: 100%;
+    
+}
+.priceRangeText{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.pricePercentText{
+    float: right;
+    color: rgb(60 140 210);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.arrowUpIcon{
+    color: #bb8761;
+    width:1.2em;
+    height:1.2em;
+}
+.tradeOneScreenEditButtonRow{
+    margin: 4px 0px !important;
+    margin-top: 30px !important;
+    /* margin-bottom: 8px !important; */
+}
+.tradeOneScreenEditButtonCol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tradeOneScreenEditButton{
+    padding: 20px 20px;
+    border-radius: 45%;
+    background-color: #bb8761;
+    color: #ffffff;
+    margin:5px 0px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+
+    /* width: 100%; */
+    /* padding: 0px 0px;  */
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    /* color: rgba(0, 0, 0, 0.87); */
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+
+}
+.tradeOneScreenEditIcon{
+    width: 25px;
+    height: 25px;
+}
+
+.tradeOneScreenEditButtonText{
+    font-size: 0.8rem;
+    color: #bb8761;
+    text-align: center;
+}
+
+

@@ -1,0 +1,63 @@
+.panelContainer{
+    margin: 4px 4px !important;
+    padding:10px 12px !important;
+    background-color: #262626 !important;
+    border-radius: 7px !important;
+}
+.lowHigh{
+    margin:0px 5px;
+    margin-bottom: 0px;
+    display: flow-root;
+}
+
+.lowText{
+    color: rgb(141, 134, 134);
+    text-decoration: none;
+    font-family:Arial;
+    font-weight: 600;
+    font-size: 0.6rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.horizonSellerBar{
+        background: rgb(230 70 70);
+        height: 5px;
+        border-radius: 2px;
+}
+.horizonBuyerBar{
+    background:rgb(60 140 210);
+    height: 5px;
+    border-radius: 2px;
+}
+.sellerValue{
+    color: rgb(230 70 70);
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    margin-bottom:10px;
+}
+.buyerValue{
+    color: rgb(60 140 210);
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    margin-bottom:10px;
+}
+.sellerBuyerRow{
+    margin-bottom: 0px;
+    padding: 0px 0px;
+    display: flow-root;
+}
+.barRow{
+    margin-bottom: 8px;
+    padding: 0px 0px;
+    display:flex !important;
+}

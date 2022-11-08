@@ -12,7 +12,7 @@ function getLanguageFromURL() {
 export class TVChartContainer extends React.PureComponent {
 
 	static defaultProps = {
-		symbol: ':BTC/USD',
+		symbol: 'Coinbase:BTC/USD',
 		interval: '15',
 		containerId: 'tv_chart_container',
 		libraryPath: '/charting_library/',
@@ -22,12 +22,15 @@ export class TVChartContainer extends React.PureComponent {
 		userId: 'public_user_id',
 		fullscreen: false,
 		autosize: true,
+		height: '500px',
 		studiesOverrides: {},
 	};
 
 	componentDidMount() {
 		const widgetOptions = {
 			debug: false,
+			height: this.props.height,
+			width: "100%",
 			symbol: this.props.symbol,
 			datafeed: Datafeed,
 			interval: this.props.interval,
@@ -38,38 +41,41 @@ export class TVChartContainer extends React.PureComponent {
 			enabled_features: ['study_templates'],
 			charts_storage_url: this.props.chartsStorageUrl,
 			charts_storage_api_version: this.props.chartsStorageApiVersion,
+			preset: "mobile",
+			auto_save_delay: 2000,
 			client_id: this.props.clientId,
 			user_id: this.props.userId,
 			fullscreen: this.props.fullscreen,
 			autosize: this.props.autosize,
 			studies_overrides: this.props.studiesOverrides,
 			overrides: {
-				"mainSeriesProperties.showCountdown": true,
-				"paneProperties.background": "#131722",
-				"paneProperties.vertGridProperties.color": "#363c4e",
-				"paneProperties.horzGridProperties.color": "#363c4e",
+				"paneProperties.background": "#191919",
+				"paneProperties.vertGridProperties.color": "#323232",
+				"paneProperties.horzGridProperties.color": "#323232",
 				"symbolWatermarkProperties.transparency": 90,
-				"scalesProperties.textColor" : "#AAA",
-				"mainSeriesProperties.candleStyle.wickUpColor": '#336854',
-				"mainSeriesProperties.candleStyle.wickDownColor": '#7f323f',
+				"scalesProperties.textColor": "#AAA",
 			}
 		};
 
-		// window.TradingView.onready(() => {
-		// 	const widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
+		window.TradingView.onready(() => {
+			const widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
 
-		// 	widget.onChartReady(() => {
-		// 		console.log('Chart has loaded!')
-		// 	});
-		// });
+			widget.onChartReady(() => {
+				console.log('Chart has loaded!')
+			});
+		});
 	}
 
 	render() {
 		return (
-			<div
-				// id={ this.props.containerId }
-				// className={ 'TVChartContainer' }
-			/>
+			<div>
+				<div
+					id={ this.props.containerId }
+					className={ 'TVChartContainer' }
+				/>
+				
+			</div>
+				
 		);
 	}
 }

@@ -1,0 +1,308 @@
+body {
+    font-family: Arial;
+}
+
+#bottom-menu {
+    position: fixed;
+     left: 0;
+     right: 0;
+     bottom: 0;
+}
+
+.overlay {
+    position:fixed;
+    background-color: #0000008f;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border-top: solid;
+    border-top-color: rgb(69, 69, 69, 0.7);
+    background-color: rgb(45, 45, 45);
+} 
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: right;
+    border: 3px solid #30303000;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    
+    /* transition: 0.3s;  */
+    font-size: 17px;
+    color: white;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    /* background-color: #ddd; */
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    /* background-color: #ccc; */
+    color: #bb8961;
+    border-bottom: 3px solid #bb8961;
+}
+
+.svg_color {
+    color: #bb8961;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 13px 5px;
+    
+    border-top: none;
+    background-color: #303030;
+    color: #90969b;
+}
+
+/* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    margin-top: -8px;
+}
+
+.topright:hover {
+    color: rgb(27, 16, 16);
+}
+
+.content-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.bid-btn {
+    font-size: 12px;
+    width: 46%;
+    background: #bb8961;
+    letter-spacing: 0px;
+    border-radius: 6px;
+    padding: 16px;
+    /* font-size: 16px; */
+    margin: 0 3px;
+    color: #353535;
+    border: none;
+    font-weight: 800;
+}
+
+.del-btn {
+    font-size: 12px;
+    width: 46%;
+    background: #2c2c2c;
+    letter-spacing: 0px;
+    border-radius: 6px;
+    padding: 16px;
+    /* font-size: 16px; */
+    margin: 0 3px;
+    color: rgb(146, 33, 33);
+    border: none;
+    font-weight: 800;
+}
+
+.draw-pane {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    background: #3d3d3d;
+    display: none;
+    justify-content: center;
+}
+
+.tab-btn-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.inline-list>li {
+    padding: 5px 25px;
+    /* border: 1px solid red; */
+    margin: 0 8px;
+    border-radius: 10px;
+    background: #464646;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.inline-list>li:active {
+    background: #bb8961;
+    color: #353535;
+}
+
+.inline-list,
+.inline-list-2 {
+    list-style: none;
+    display: inline-flex;
+    margin: 10px 0 ;
+    padding: 0;
+
+}
+
+.inline-list-2>li {
+    padding: 14px 22px;
+    /* border: 1px solid red; */
+    margin: 0 8px;
+    border-radius: 10px;
+}
+
+.inline-list-2>li:active {
+    color: #bb8961;
+    /* background: #464646; */
+}
+
+.scroll-none {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-x: 'auto';
+}
+
+.scroll-none::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+h4 {
+    margin: 5px;
+}
+
+.tablink2, .tablink3 {
+    background-color: #353535;
+    color: rgb(98, 95, 95);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight:700;
+    width: 49.3%;
+    border-bottom: 2px solid #777;
+}
+
+.tablink2:hover {
+    background-color: #353535;
+}
+
+.tablink-header{
+    background-color: #353535;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent2, .tabcontent3 {
+    color: white;
+    display: none;
+    padding: 10px;
+    height: 100%;
+    border-radius: 12px 12px 0 0;
+    background-color: #353535;
+}
+
+.indicator-tab-active {
+    color: #bb8961;
+    border-bottom: 2px solid #bb8961;
+}
+.indicator-lists{
+    list-style: none;
+    padding-left: 0;
+    font-size:16px;
+}
+
+.input-nVh4c_cg,
+.input-nVh4c_cg:focus {
+    background-color: initial;
+    border: none;
+    color: white;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.inputContainer-nVh4c_cg {
+    height: 24px;
+    padding: 8px 16px 8px 47px;
+    width: 90%;
+    border-style: solid;
+    border-width: 1.3px;
+    border-radius: 3px;
+    border-color: #bb8961;
+}
+
+.icon-nVh4c_cg {
+    color: #a3a6af;
+    height: 18px;
+    left: 20px;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 9px);
+}
+
+.container-nVh4c_cg {
+    align-items: center;
+    margin-left:30px;
+    margin-right:30px;
+    margin-bottom: 10px;
+    cursor: default;
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.period-active,
+.chart-active {
+    background: #bb8961 !important;
+    color: #353535;
+}
+
+/* .timeunit-active, */
+.indicator-active {
+    color: #bb8961 !important;
+}
+
+#daterange-list>li {
+    padding: 18px 25px;
+}
+
+.badge {
+    background-color: #bb8961;
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.tabintab {
+    padding: 0;
+    border-radius: '12px 12px 0 0'; 
+    height: '80vh';
+}
+
+.draw-item {
+    padding: 5px 10px; 
+    padding-left:0px !important;
+}
+
+.indicator-item {
+    padding: 5px 10px;
+    padding-left:0px !important;
+}

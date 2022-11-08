@@ -1,0 +1,28 @@
+.tradeAllScreenContainer{
+    background-color:rgba(10, 10, 10, 0.98);
+    height: 100%;
+    padding: 50px 0px !important;
+  }
+
+.priceRangeDiv{
+    margin-top: 35px !important;
+    margin-bottom: 25px !important; 
+    padding: 0px 15px;
+}
+.priceRangeText{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.pricePercentText{
+    float: right;
+    color: rgb(60 140 210);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.arrowUpIcon{
+    color: #bb8761;
+    width:1.2em;
+    height:1.2em;
+}
+

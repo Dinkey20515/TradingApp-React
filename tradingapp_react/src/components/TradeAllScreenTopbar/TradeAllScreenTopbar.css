@@ -1,0 +1,171 @@
+.TradeAllScreenTopbarContainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:rgb(12,12,12);
+    z-index: 1;
+    border-top: 1px solid #202020;
+    box-shadow: 0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+ 
+    margin:0px 5px;
+    margin-bottom: 0px;
+    display: flow-root;
+}
+.TradeAllScreenTopStatusbar{
+    height: 40px;
+    color: white;
+ }
+.TradeAllScreenTopStatusbarText{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.topStatusHorizonBar{
+    background:#bb8761 ;
+    height: 5px;
+    margin-bottom : 15px;
+    border-radius: 2px;
+}
+.tradeAllScreenTopNavbar{
+    border-top: 1px solid #202020;
+    box-shadow: 0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+ }
+.topNavBaritem {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+.topNavBarButton{
+    background: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    padding: 3px 10px;
+    border-radius: 17px;
+    transition:none;
+    box-shadow:none;
+    
+    color: rgb(141, 134, 134);
+    text-decoration: none;
+    font-family:Arial;
+    font-weight: 600;
+    font-size: 0.4rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.BottomNavBarButton:hover{
+    background-color: none !important;
+}
+.BottomNavBarButton:active{
+    color:#bb8761 !important;
+    box-sizing: border-box;
+}
+.BottomNavBar-Text{
+   margin-top: 6px !important;
+}
+.BottomNavBarIcon{
+    width:22px;
+    height:22px;
+}
+.sellerBuyerContainer{
+    margin: 15px 4px !important;
+    padding:10px 12px !important;
+    background-color: #262626 !important;
+    border-radius: 7px !important;
+}
+.buttonClass{
+    margin-bottom: 12px !important;
+}
+.priceRangeButton{
+    background: none;
+    margin:4px 5px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    padding: 3px 10px;
+    border-radius: 17px;
+    transition:none;
+    box-shadow:none;
+    font-size: 0.7rem;
+    color:rgb(140, 140, 140);
+    font-weight: 600;
+}
+.priceRangeButton:hover{
+    background-color: none !important;
+}
+.priceRangeButton:active{
+    color:#bb8761 !important;
+    background-color: #443931 !important;
+    box-sizing: border-box;
+    border: solid 1px;
+    border-color:#bb8761;
+}
+.active{
+    color:#bb8761 !important;
+    background-color: #443931 !important;
+    box-sizing: border-box;
+    border: solid 1px;
+    border-color:#bb8761;
+}
+
+.lowText{
+    color: rgb(141, 134, 134);
+    text-decoration: none;
+    font-family:Arial;
+    font-weight: 600;
+    font-size: 0.6rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.topStatusHorizonBar{
+    background:#4b4947 ;
+    height: 5px;
+    margin-bottom : 15px;
+    border-radius: 1px;
+}
+.lowHighPrice{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    margin-bottom:10px;
+}
+.toTopLeft{
+    float: left;
+    top: 10px;
+}
+.toTopRight{
+    float: right;
+    top: 10px;
+}
