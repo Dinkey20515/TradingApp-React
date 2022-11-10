@@ -1,0 +1,176 @@
+.screenContainer{
+    background-color:rgba(10, 10, 10, 0.98);
+    height: 100vh;
+    width: 100vw;
+    padding: 0 !important;
+}
+.panelContainer{
+    margin: 10px 4px !important;
+    padding:4px 2px !important;
+    background-color: #262626 !important;
+    border-radius: 7px !important;
+}
+.buttonRow{
+    margin: 4px 0px !important;
+    margin-bottom: 8px !important;
+}
+.buttonCol{
+    padding: 0px 6px !important;
+}
+.amountCol{
+    padding: 0px 6px !important;
+}
+.sellBuyButton{
+    margin:5px 0px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    height: 53px;
+    width: 100%;
+    padding: 0px 0px; 
+    border-radius: 7px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    /* color: rgba(0, 0, 0, 0.87); */
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+}
+
+.sellButton {
+    background-color: rgb(235, 67, 78);
+}
+.buyButton {
+    background-color: rgb(56, 142, 247);
+}
+.priceButton{
+    border-radius: 20px !important;
+    background-color: #404040;
+    margin:2px 2px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: solid 0.5px;
+    border-color:#807d7d;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    height: 45px;
+    width: 100%;
+    padding: 0px 0px; 
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: rgba(24, 24, 24, 0.2) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+}
+.buttonText{
+    color: white;
+    text-decoration: none;
+    font-family:Arial;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.priceText{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+.symbolText{
+    color: rgb(130, 130, 130);
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+
+.sellBuyRow {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.arrowIcon {
+    color: #bb8761;
+    position: absolute;
+    top: 12px !important;
+    right: 12px !important;
+}
+.sliderIcon{
+    float: right;
+    color: #bb8761;
+    width: 1.2em;
+    height:1.2em;
+    margin-top: 15px;
+    margin-right:15px;
+}
+.symbolRow{
+    margin-bottom: 8px;
+    padding: 0px 15px;
+    display: flow-root;
+}
+.horizonLine{
+        background: gray;
+        height: 1px;
+        margin-bottom : 15px;
+}
+
+
+.priceAsk{
+    color: rgb(230 70 70);
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+.priceVs{
+    color:rgb(123, 119, 119);
+    height: 1rem;
+}
+.priceBid{
+    color: rgb(60 140 210);
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+.priceAmount{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+.toRight{
+    float: right;
+}
+.toLeft{
+    float: left;
+}

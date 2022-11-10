@@ -1,0 +1,39 @@
+.middleChartContainer {
+    display: grid;
+    justify-content: center;
+}
+
+.addAlertButton {
+    display: inline-block;
+    align-items: center;
+    border: solid 1px;
+    color: #bb8761;
+    border-radius: 12px;
+    background: none;
+    margin: 10px 5px !important;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: none;
+    transition: none;
+    box-shadow: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.addAlertBellIcon {
+    vertical-align: text-bottom !important;
+    color: #bb8761;
+}
+
+.addAlertText {
+    background-color: none;
+    color: #bb8761;
+    font-size: 0.8rem;
+    font-weight: 600;
+}

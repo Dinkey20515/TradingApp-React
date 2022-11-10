@@ -1,7 +1,71 @@
-.screenContainer{
-    background-color:rgba(10, 10, 10, 0.98);
+.logInScreenContainer {
     height: 100vh;
     padding: 0 !important;
+    z-index: 1;
+    background-image: url(../../assets/intro-pic3.jpg);
+    background-size: cover
+}
+.titleSection {
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+.titleSection p {
+    font-size: 40px;
+}
+.loginButtons {
+    bottom: 50px;
+    color: whtie;
+    position: relative;
+    top: calc(70vh - 300px);
+}
+.google, 
+.Facebook,
+.Apple {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    border: solid 0px !important;
+    height: 45px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-align: left;
+}
+.googleIcon,
+.FacebookIcon,
+.AppleIcon {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    margin-left: 10px;
+}
+.email {
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgb(189 137 99);
+    color: white;
+    height: 45px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    ;
+    text-align: center;
+    border: solid 0px !important;
+}
+.LogInText {
+    position: relative;
+    display: flex;
+    justify-content: center !important;
+    font-size: 0.8rem;
+    color: white;
+}
+.descriptionText {
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
 }
 .rise {
     /* animation: animatedBackground 4s linear; */
@@ -9,76 +73,18 @@
     position: absolute;
     /* animation-delay: 2s; */
 }
-@keyframes animatedBackground {
-    from {
-        width: 150%;
-        left: 50%;
-    }
-    to {
-        width:150%;
-        left: 0%;
-    }
+
+.logInImage {
+    z-index: 0;
+    position: relative;
+    height: 100vh;
+}
+.LogIn-p {
+    text-align: center;
+    color: #4488cc;
 }
 
-.titleSection{
-    position: absolute;
-    top:80px;
-    width:100%;
-    text-align: center;
-    color:white;
-}
-.titleSection p{
-   font-size: 40px;;
-}
-.loginButtons{
-    position: absolute;
-    bottom: 50px;
-    color: whtie;
-}
-.google{
-    width: 80vw;
-    margin-left: 10vw;
-    margin-bottom:10px;
-    border:solid 0px !important;
-    height: 45px;
-    border-radius: 4px;
-    text-align: left;
-}
-.email{
-    width: 80vw;
-    margin-left: 10vw;
-    background-color:rgb(189 137 99);
-    color:white;
-    height: 45px;
-    border-radius: 8px;
-    margin-bottom: 20px;;
-    text-align: center;
-    border: solid 0px !important;
-}
-.LogIn{
-    position: relative;
-    display: flex;
-    justify-content:center !important;
-    font-size: 18px;
-    color:white;
-}
-.LogIn p{
-    text-align: center;
-}
-   
-.LogIn-p{
-    color: rgb(189 137 99);
-    margin-left: 10px;
-}
-.loginButtons span{
-    font-size: 12px;
-    text-align: center;
-    color:grey;
-}
-.descriptionText{
-    text-align: center;
-}
-.buttonIcon{
-    margin-bottom: 6px;
-    margin-right: 6px;
-}
+
+
+
+

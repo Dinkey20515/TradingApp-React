@@ -1,45 +1,63 @@
 import * as React from 'react';
 import './style.css';
-
+import { useState } from "react";
 
 import { TVChartContainer } from '../../components/TVChartContainer/index';
 import jsonData from "./data";
 import $ from 'jquery';
 import renderHTML from 'react-render-html';
-
-
-
+import { RiLoader2Line } from "react-icons/ri"; 
+ 
 class FullChart extends React.Component {
 	
 	constructor(props) {
 		super(props);
-		this.state = { 
-			symbol: 'Coinbase:BTC/USD',
-			interval: '15',
-			containerId: 'tv_chart_container',
-			libraryPath: '/charting_library/',
-			chartsStorageUrl: 'https://saveload.tradingview.com',
-			chartsStorageApiVersion: '1.1',
-			clientId: 'tradingview.com',
-			userId: 'public_user_id',
-			fullscreen: false,
-			autosize: true,
-			studiesOverrides: {},
+		this.state = {
+			symbol: "Bitfinex:BTC/USD",
+			period: '',
+			charttype: '',
+			add_indicator: '',
+			add_drawing: '',
+			del_obj:'',
+			getShapeFlg: 0,
+			selectedItem: "",
+			selectedShapeIndexes: [],		//selected drawingtool indexes
+			selectedIndicators: [],			//selected indicator indexes.
+			flag: 0,
 		};
-		
 	}
 
 	//variables
 	log_flag = 1;							//display logs flag
-	g_selectedShapeIndexes = [];			//selected drawingtool indexes
+	//g_selectedShapeIndexes = [];			//selected drawingtool indexes
 	g_selShapeIds = [];						//selected drawingtool id(of chart lib)
 	g_selDrawIndex = 0;						//selected drawingtool index(of array)
-	g_selMenu = ""; 						//select bottom menu index
-	g_selIndicIds = [];						//array of indicator id selected
+	g_selMenu = ""; 						//select bottom menu index 
+	// g_selIndicIds = [];						//array of indicator id selected
+	// g_selectedIndicators = [];				//selected indicator indexes.
+	// g_allShapeids = [];						//get all shape's ids when draw and delete any indicator and drawing.
+	g_indicators = jsonData.g_indicators;
+	g_period = jsonData.g_period;
+	g_drawing_pram = jsonData.g_drawing_pram;
 
 	componentDidMount() {
-		console.log('start')
+		console.log('start');
+		$('.fullOverlay').css('display', 'block');
 	}
+
+	getShapeId(data, type) {
+		if (type === 1) {  //indicator id
+			jsonData.g_selIndicIds.push(data.obj_id);
+			jsonData.g_allShapeids = data.allIds;
+		} else if(type === 2) {  //drawing id
+			// $('.draw-pane').css('display', 'block');
+			// jsonData.g_allShapeids = data.allIds;
+		} else if(type === 3) {
+			jsonData.g_allShapeids = data.allIds;
+		}
+	}
+
+
 
 	log(tag, obj){
 		if(this.log_flag){
@@ -49,15 +67,12 @@ class FullChart extends React.Component {
 	}
 
 	openTab(evt, tabName) {
-		console.log(evt.currentTarget)
-		// let el = event.target;
-		// el.classList.add('active');
-		// $(el).addClass('active'); I'm not familiar with jquery but try it
 		if (this.g_selMenu === tabName) {
 			this.initTab();
 			this.g_selMenu = '';
 			return;
 		}
+		this.state.flag++;
 		this.g_selMenu = tabName;
 		this.initTab();
 		$('.overlay').css('display', 'block');
@@ -82,46 +97,47 @@ class FullChart extends React.Component {
 	drawByDrawing(index, e) {
 		this.initTab();
 		
-		$('.draw-pane').css('display', 'flex');
 		this.g_selDrawIndex = index
-		
-		//widget.selectLineTool(g_drawing_pram[index]);
+		this.setState({
+			add_drawing: this.g_drawing_pram[index],
+			selectedItem: 'add_drawing'
+		});
+		$('.draw-pane').css('display', 'block');
+		// widget.selectLineTool(g_drawing_pram[index]);
 	}
 
 
 	drawDone(flag) {
 		$('.draw-pane').css('display', 'none');
-		var arr = [];//widget.chart().getAllShapes();
-		if (arr.length == 0) {
-			return;
-		}
-		var shape_id = arr[arr.length-1].id;
 		if(!flag) {
 			//delete shape
-			//widget.chart().removeEntity(shape_id);
+			this.setState({
+				del_obj: -1,
+				selectedItem: 'del_obj'
+			});
+			// widget.chart().removeEntity(shape_id);
 			return;
 		}
 			
-		this.g_selShapeIds.push(shape_id);
-		this.g_selectedShapeIndexes.push(this.g_selDrawIndex);
-		$('#sel-indicator-cnt').text(this.g_selectedIndicators.length+this.g_selectedShapeIndexes.length);
-		if ((this.g_selectedIndicators.length+this.g_selectedShapeIndexes.length) > 0)
+		// this.g_selShapeIds.push(shape_id);
+		let arr = this.state.selectedShapeIndexes;
+		arr.push(this.g_selDrawIndex);
+		this.setState({
+			selectedShapeIndexes: arr,
+			selectedItem: ''
+		});
+		$('#sel-indicator-cnt').text(this.totalSelectedItem());
+		if ((this.totalSelectedItem()) > 0)
 			$('#sel-history').css('display', 'block');
 		//add select history list
-		this.selectedDrawing(this.g_selDrawIndex);
-		
+		// widget.chart().selected
 	}
 
-	selectedDrawing(id) {
-		let str = '';
-		str = str + (<li className="draw-item" id={'sel_draw_'+id}><div style="padding: 10px;">{this.g_drawing_svg[id]}<span style={{padding: '10px 0'}}>{ this.g_drawing[id] }</span><span style={{float: 'right', fontSize: '25px', margin: '-8px'}}><span style={{paddingRight: '10px', color:'#bb8961'}} onclick={this.deleteDrawing(id)}><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17" fill="currentColor" style="margin-bottom: -8px;"><path d="m.58 1.42.82-.82 15 15-.82.82z"></path><path d="m.58 15.58 15-15 .82.82-15 15z"></path></svg></span></span></div></li>);
-		
-		$('#sel-drawing-list').append(str);
-	}
+
 
 	//select effect in indicator & drawing page
 	openIndicators(pageName, elmnt, id) {
-		var i, tabcontent2, tablink2s;
+		let i, tabcontent2, tablink2s;
 		tabcontent2 = document.getElementsByClassName("tabcontent"+id);
 		for (i = 0; i < tabcontent2.length; i++) {
 			tabcontent2[i].style.display = "none";
@@ -134,91 +150,151 @@ class FullChart extends React.Component {
 		elmnt.currentTarget.classList.add("indicator-tab-active");
 	}
 
-	drawByPeriod(index, e) {
+	drawByPeriod(i, e) {
 		$(".period-active").removeClass("period-active");
-		var data = ["1", "5", "15", "30", "60", "300"];
+		//let data = ["1", "5", "15", "30", "60", "300"];
 		e.currentTarget.className = "period-active";
-		//widget.setSymbol("Bitfinex:BTC/USD", g_period[index]);
+		this.setState({
+			period: this.g_period[i],
+			selectedItem: 'period'
+		});
+		//this.widget.setSymbol("Bitfinex:BTC/USD", this.g_period[i]);
 	}
 
 	drawByChartType(index, e) {
+		console.log(e);
 		$(".chart-active").removeClass("chart-active");
 		e.currentTarget.className = "chart-active";
-		//widget.chart().setChartType(index);
+		this.setState({
+			charttype: index,
+			selectedItem: 'charttype'
+		});
+		//this.widget.chart().setChartType(index);
 	}
 
 	drawByChartUnit(index, e) {
 		$(".timeunit-active").removeClass("timeunit-active");
-		var data = ["1", "5", "15", "30", "60", "300"];
+		let data = ["1", "5", "15", "30", "60", "300"];
 		e.currentTarget.className = "timeunit-active";
+		this.setState({
+			period: data[index],
+			selectedItem: 'period'
+		});
 		//widget.setSymbol("Bitfinex:BTC/USD", data[index]);
 	}
 
 	//remove indicator in chart
 	deleteIndicator(index) {
-		$('#sel_indic_'+index).remove();
-		const result = this.g_selectedIndicators.filter(function checkIdic(id) { return id != index; });
-		const id_index = this.g_selectedIndicators.findIndex(function checkAdult(id) { return id == index; });
-		$('[name="'+this.g_indicators[index]+'"]').removeClass('indicator-active');
-		this.g_selectedIndicators = result;
-		$('#sel-indicator-cnt').text(this.g_selectedIndicators.length+this.g_selectedShapeIndexes.length);
-		
-		//widget.chart().removeEntity(this.g_selIndicIds[id_index]);
-		const result1 = this.g_selIndicIds.filter(function checkIdic(id) { return id != this.g_selIndicIds[id_index]; });
-		this.g_selIndicIds = result1;
-		if ((this.g_selectedIndicators.length+this.g_selectedShapeIndexes.length) === 0) {
+		//$(`#sel_indic_${index}`).remove();
+		const result = this.state.selectedIndicators.filter(function checkIdic(id) { return id != index; });
+		const id_index = this.state.selectedIndicators.findIndex(function checkAdult(id) { return id == index; });
+		$(`[name="${this.g_indicators[index]}"]`).removeClass('indicator-active');
+		this.state.selectedIndicators = result;
+		$('#sel-indicator-cnt').text(this.totalSelectedItem());
+
+		this.setState({
+			del_obj: jsonData.g_selIndicIds[id_index],
+			selectedItem: 'del_indic_obj'
+		});
+		//widget.chart().removeEntity(jsonData.g_selIndicIds[id_index]);
+		const result1 = jsonData.g_selIndicIds.filter(function checkIdic(id) { return id != jsonData.g_selIndicIds[id_index]; });
+		jsonData.g_selIndicIds = result1;
+		if ((this.totalSelectedItem()) === 0) {
 			$('#sel-history').css('display', 'none');
 			this.initTab();
-			
 		}
 		
 	}
 
 	//remove shape in chart
 	deleteDrawing(index) {
-		$('#sel_draw_'+index).remove();
+		//$('#sel_draw_'+index).remove();
 
-		const id_index = this.g_selectedShapeIndexes.findIndex(function fun2(id) { return id == index; });
-		const result = this.g_selectedShapeIndexes.filter(function fun1(id) { return id != index; });
-		this.g_selectedShapeIndexes = result;
+		const id_index = this.state.selectedShapeIndexes.findIndex(function fun2(id) { return id == index; });
+		const result = this.state.selectedShapeIndexes.filter(function fun1(id) { return id != index; });
+		this.state.selectedShapeIndexes = result;
 
+		this.setState({
+			del_obj: id_index,
+			selectedItem: 'del_obj'
+		});
 		//widget.chart().removeEntity(this.g_selShapeIds[id_index]);
 		const result1 = this.g_selShapeIds.filter(function fun3(id) { return id != this.g_selShapeIds[id_index]; });
 		this.g_selShapeIds = result1;
 		
-		$('#sel-indicator-cnt').text(this.g_selectedIndicators.length+this.g_selectedShapeIndexes.length);
-		if ((this.g_selectedIndicators.length+this.g_selectedShapeIndexes.length) === 0) {
+		$('#sel-indicator-cnt').text(this.totalSelectedItem());
+		if ((this.totalSelectedItem()) === 0) {
 			$('#sel-history').css('display', 'none');
 			this.initTab();
 		}
 	}
 
+	
+
+
+	//draw indicator in diplay
+	drawByIndicator(index, e) {
+		if (this.state.selectedIndicators.includes(index)) {
+			return;
+		}
+		if (this.state.selectedIndicators.length >= 5) {
+			alert('bigger than limit.');
+			return;
+		}
+		this.state.selectedIndicators.push(index);
+		$('#sel-indicator-cnt').text(this.totalSelectedItem());
+		//add select history list
+		
+		if ((this.totalSelectedItem()) > 0)
+			$('#sel-history').css('display', 'block');
+		e.currentTarget.className = "draw-item indicator-active";
+		this.setState({
+			add_indicator: this.g_indicators[index],
+			selectedItem: 'add_indicator'
+		});
+		// const obj_id = widget.chart().createStudy(this.g_indicators[index]);
+		// this.log('indicatorid===', this.g_indicators[index])
+		// jsonData.g_selIndicIds.push(obj_id);
+	}
+
+	totalSelectedItem() {
+		return this.state.selectedIndicators.length+this.state.selectedShapeIndexes.length;
+	}
+	chartloaded(loaded){
+		$('.fullOverlay').css('display', loaded);
+	}
 
     render() {
-		let {g_period, g_chartType, g_chartType_svg, g_chartUnit, g_indicators, g_drawing, g_drawing_pram, g_drawing_svg, g_selectedIndicators} = jsonData;
+		const { g_period, g_chartType, g_chartType_svg, g_chartUnit, g_indicators, g_drawing, g_drawing_svg } = jsonData;
+		const { selectedIndicators, selectedShapeIndexes } = this.state;
 		let {str1, str2, str3, str4, str5} = '';
 		
-		str2 = g_chartType.map(function(item, i){
+		str2 = g_chartType.map((item, i)=>{
 			if (i < 4 || i > 8) {
-				return (<li key={i} onClick={(e)=>this.drawByChartType( i , e)}>{renderHTML(g_chartType_svg[i])}</li>)
+				return (<li key={i} onClick={(e)=>this.drawByChartType(i, e)}>{renderHTML(g_chartType_svg[i])}</li>)
 			}
 		})
-		str4 = g_chartUnit.map(function(item, i){
-			return (<li key={i} onClick={(e)=>this.drawByChartUnit( i , e)}>{item} </li>)
+		str4 = g_chartUnit.map((item, i)=>{
+			return (<li key={i} onClick={(e)=>this.drawByChartUnit(i, e)}>{item} </li>)
 		})
-		str3 = g_indicators.map(function(item, i){
+		str3 = g_indicators.map((item, i)=>{
 			return (item.toLowerCase()=='spread' || item.toLowerCase()=='ratio')?"":
-			 (<li className='indicator-item' name={item}  key={i} onClick={ (e)=>this.drawByIndicator( i, e)} ><div style={{padding: '10px'}}><span style={{padding: '10px 0'}}> {item} </span><span style={{float: 'right', fontSize: '25px', margin: '-8px'}}>+</span></div></li>);
+			 (<li className='draw-item' name={item}  key={i} onClick={ (e)=>this.drawByIndicator(i, e)} ><div style={{padding: '10px'}}><span style={{padding: '10px 0'}}> {item} </span><span style={{float: 'right', fontSize: '25px', margin: '-8px'}}>+</span></div></li>);
 		})
-		str5 = g_drawing.map(function(item, i){
-			return (<li className='indicator-item' name={item} key={i} onClick={(e)=>this.drawByDrawing( i, e)} ><div style={{padding: '10px'}}> {renderHTML(g_drawing_svg[i])}<span style={{padding: '10px 0'}}> {item}</span><span style={{float: 'right', fontSize: '25px'}}>+</span></div></li>)
+		str5 = g_drawing.map((item, i)=>{
+			return (<li className='draw-item' name={item} key={i} onClick={(e)=>this.drawByDrawing(i, e)} ><div style={{padding: '10px'}}> {renderHTML(g_drawing_svg[i])}<span style={{padding: '10px 0'}}> {item}</span><span style={{float: 'right', fontSize: '25px'}}>+</span></div></li>)
 		})
-
+		
 		return (
 			<div>
-				<TVChartContainer />
-				<div id={'bottom-menu'} >
-					<div id='candles' className={'tabcontent'}> 
+				<div className='fullOverlay'>
+					<RiLoader2Line className='fullOverlayImage'/>
+				</div>
+				<div className="overlay" onClick={()=>this.initTab()}></div>
+				<TVChartContainer option={this.state} getShapeId={this.getShapeId} chartloaded={this.chartloaded}/>
+				
+				<div id="bottom-menu" >
+					<div id="candles" className={"tabcontent"}> 
 						 
 						<div className={"content-center"}>
 							<h4 className={"tab-btn-title"}>CHART TYPE</h4>
@@ -254,7 +330,7 @@ class FullChart extends React.Component {
 										<img alt="svg file" src={window.location.origin +'/svg/search.svg'}></img>
 									</span>
 								</div>
-								<div style={{height: "65vh", overflow: "auto"}}>
+								<div style={{height: "60vh", overflow: "auto"}}>
 									<ul id={"indicator-list"} className={"indicator-lists"}>{str3}</ul>
 								</div>
 							</div>
@@ -280,13 +356,22 @@ class FullChart extends React.Component {
 
 							<div id={"sel-indicator"} className={"tabcontent3"} style={{display: "block"}}>
 								<div style={{height: "70vh", overflow: "auto"}}>
-									<ul id={"sel-indicator-list"} className={"indicator-lists"}></ul>
+									<ul id={"sel-indicator-list"} className={"indicator-lists"}>
+										{selectedIndicators.map((id, i)=> {
+											return (<li key={i} className='draw-item' id={'sel_indic_' + id}><div className='p-10'><span className='del-icon' onClick={()=>this.deleteIndicator(id)}><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17" fill="currentColor" style={{marginBottom: '-3px'}}><path d="m.58 1.42.82-.82 15 15-.82.82z"></path><path d="m.58 15.58 15-15 .82.82-15 15z"></path></svg></span><span style={{padding: '10px 0'}}>{this.g_indicators[id]}
+											</span><span className='pencil-icon'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"fill="#bb8961"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/><path xmlns="http://www.w3.org/2000/svg" d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg></span></div></li>)
+										})}
+									</ul>
 								</div>
 							</div>
 
 							<div id={"sel-drawings"} className={"tabcontent3"}>
 								<div style={{height: "70vh", overflow: "auto"}}>
-									<ul id={"sel-drawing-list"} className={"indicator-lists"}></ul>
+									<ul id={"sel-drawing-list"} className={"indicator-lists"}>
+										{selectedShapeIndexes.map((id, i)=> {
+											return (<li key={i} className="draw-item" id={'sel_draw_'+id}><div className='p-10'>{renderHTML(g_drawing_svg[id]) }<span style={{padding: '10px 0'}}>{ g_drawing[id] }</span><span style={{float: 'right', fontSize: '25px', margin: '-8px'}}><span style={{paddingRight: '10px', color:'#bb8961'}} onClick={()=> this.deleteDrawing(id)}><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17" fill="currentColor" style={{marginBottom: "-8px"}}><path d="m.58 1.42.82-.82 15 15-.82.82z"></path><path d="m.58 15.58 15-15 .82.82-15 15z"></path></svg></span></span></div></li>);
+										})}
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -312,9 +397,7 @@ class FullChart extends React.Component {
 						</div>
 						<div className={"scroll-none"} >
 							<ul className={"inline-list"} id={"daterange-list"}>
-								{g_period.map(function(item, i){
-			return (<li key={i} onClick={(e)=>this.drawByPeriod( i , e)}>{item} </li>)
-		})}
+								{g_period.map((item, i) => <li key={i} onClick={(e)=>this.drawByPeriod(i, e)} >{item} </li>)}
 							</ul>
 						</div>
 					</div>
@@ -353,7 +436,7 @@ class FullChart extends React.Component {
 
 								</svg></span>
 						</button>
-						<button className={"tablinks "} onClick={(e)=>this.openTab(e, 'indicator-history')} id={"sel-history"} style={{float: "left", display: "block"}}
+						<button className={"tablinks "} onClick={(e)=>this.openTab(e, 'indicator-history')} id={"sel-history"} style={{float: "left", display: "none"}}
 							>
 							<span style={{position:'relative'}}>
 							<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 28 28" width="32" height="32" fill="currentColor">
@@ -365,15 +448,15 @@ class FullChart extends React.Component {
 								<path d="M7 17.5l-1 .57 8 6.43 8-6.5-1-.5-7 5.5z"></path>
 								</g>
 								</svg>
-								<span className={"badge"} id={"sel-indicator-cnt"} style={{position: 'absolute', fontSize: '12px',top: '-19px',
+								<span className={"badge"} id={"sel-indicator-cnt"} style={{position: 'absolute', fontSize: '12px',top: '-12px',
 								right: '-9px'}}>0</span>
 							</span>
 							
 						</button>
 					</div>
 					<div className={'content-around draw-pane'}>
-						<button className={"del-btn"} onClick={this.drawDone(0)}>DELETE</button>
-						<button className={"bid-btn"} onClick={this.drawDone(1)}>DONE</button>
+						<button className={"del-btn"} onClick={()=>this.drawDone(0)}>DELETE</button>
+						<button className={"done-btn"} onClick={()=>this.drawDone(1)}>DONE</button>
 					</div>
 				</div>
 			</div>

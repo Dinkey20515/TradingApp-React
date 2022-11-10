@@ -1,0 +1,48 @@
+.middleChartPanelContainer{
+    margin: 10px 4px !important;
+    padding:5px 12px !important;
+    background-color: #262626 !important;
+    border-radius: 7px !important;
+    display: flex;
+    justify-content: space-between;
+}
+.middleChartControlPanelButton{
+    background: none;
+    margin:4px 5px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    padding: 3px 10px;
+    border-radius: 17px;
+    transition:none;
+    box-shadow:none;
+    font-size: 0.9rem;
+    color:rgb(241, 230, 230);
+    font-weight: 600;
+}
+.middleChartControlPanelButton:hover{
+    background-color: none !important;
+}
+.middleChartControlPanelButton:active{
+    color:#bb8761 !important;
+    box-sizing: border-box;
+}
+.middleChartButtonActive{
+    color:#bb8761 !important;
+    box-sizing: border-box;
+}
+.midChartExpandIcon{
+    width:26px;
+    height:26px;
+}
+
+

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './index.css';
 import Datafeed from './api/'
-
+import { useState } from 'react';
 
 function getLanguageFromURL() {
 	const regex = new RegExp('[\\?&]lang=([^&#]*)');
@@ -10,36 +10,50 @@ function getLanguageFromURL() {
 }
 
 export class TVChartContainer extends React.PureComponent {
+	constructor(props) {
+		super(props);
+		this.state = {
+			symbol: '',
+			period: '',
+			charttype: '',
+			add_indicator: '',
+			add_drawing: '',
+			del_obj:'',
+			getShapeFlg: 0,
+			selectedItem: "",
+			selectedShapeIndexes: [],		//selected drawingtool indexes
+			selectedIndicators: [],			//selected indicator indexes.
+			flag: 0,
+			loaded: ''
+		};
+	}
 
 	static defaultProps = {
-		symbol: 'Coinbase:BTC/USD',
-		interval: '15',
-		containerId: 'tv_chart_container',
-		libraryPath: '/charting_library/',
-		chartsStorageUrl: 'https://saveload.tradingview.com',
-		chartsStorageApiVersion: '1.1',
 		clientId: 'tradingview.com',
 		userId: 'public_user_id',
 		fullscreen: false,
 		autosize: true,
+		height: '500px',
 		studiesOverrides: {},
 	};
 
-	componentDidMount() {
+	widget = null;
+
+	componentDidMount(props) {
 		const widgetOptions = {
 			debug: false,
-			height: this.props.height,
+			height: '500px',
 			width: "100%",
-			symbol: this.props.symbol,
+			symbol: 'Coinbase:BTC/USD',
 			datafeed: Datafeed,
-			interval: this.props.interval,
-			container_id: this.props.containerId,
-			library_path: this.props.libraryPath,
+			interval: '15',
+			container_id: 'tv_chart_container',
+			library_path: '/charting_library/',
 			locale: getLanguageFromURL() || 'en',
 			disabled_features: ['use_localstorage_for_settings'],
 			enabled_features: ['study_templates'],
-			charts_storage_url: this.props.chartsStorageUrl,
-			charts_storage_api_version: this.props.chartsStorageApiVersion,
+			charts_storage_url: 'https://saveload.tradingview.com',
+			charts_storage_api_version: '1.0',
 			preset: "mobile",
 			auto_save_delay: 2000,
 			client_id: this.props.clientId,
@@ -48,30 +62,91 @@ export class TVChartContainer extends React.PureComponent {
 			autosize: this.props.autosize,
 			studies_overrides: this.props.studiesOverrides,
 			overrides: {
-				"paneProperties.background": "#0f0f0f",
-				"paneProperties.vertGridProperties.color": "#232323",
-				"paneProperties.horzGridProperties.color": "#232323",
+				"paneProperties.background": "#121212",
+				"paneProperties.vertGridProperties.color": "#323232",
+				"paneProperties.horzGridProperties.color": "#323232",
 				"symbolWatermarkProperties.transparency": 90,
-				"scalesProperties.textColor": "#444",
-				
+				"scalesProperties.textColor": "#AAA",
 			}
 		};
-
+		
 		window.TradingView.onready(() => {
-			const widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
-
-			widget.onChartReady(() => {
-				console.log('Chart has loaded!')
-				console.log(widget.chart());
+			this.widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
+			
+			this.widget.onChartReady(() => {
+				console.log('Chart has loaded!');
+				console.log("sdf",this.props);
+				this.props.chartloaded('none');
 			});
 		});
 	}
+	static removeOverlay(props){
+		if(props.loaded == none)
+			props.chartloaded(1, state.loaded);
+	}
+	static getDerivedStateFromProps(props) {
+		if (props.option.selectedItem !== '') {
+			switch (props.option.selectedItem) {
+				case 'symbol':
+					window.tvWidget.setSymbol(props.option.symbol, props.option.period);
+					break;
+				case 'period':
+					window.tvWidget.setSymbol(props.option.symbol, props.option.period);
+					break;
+				case 'charttype':
+					window.tvWidget.chart().setChartType(props.option.charttype);
+					break;
+				case 'add_indicator':
+					let indic_id = window.tvWidget.chart().createStudy(props.option.add_indicator);
+					let data = {
+						obj_id: indic_id,
+						allIds: window.tvWidget.chart().getAllShapes(),
+					}
+					props.getShapeId(data, 1);
+					break;
+				case 'add_drawing':
+					let draw_id = window.tvWidget.selectLineTool(props.option.add_drawing);
+					let data2 = {
+						obj_id: draw_id,
+						allIds: window.tvWidget.chart().getAllShapes(),
+					}
+					props.getShapeId(data2, 2);
+					break;
+
+				case 'del_indic_obj':
+					
+					window.tvWidget.chart().removeEntity(props.option.del_obj);
+					
+					break;
+				case 'del_obj':
+					let arr = window.tvWidget.chart().getAllShapes();
+					if (arr.length == 0) {
+						break;
+					}
+					let shape_id = '';
+					if (props.option.del_obj === -1) {
+						shape_id = arr[arr.length-1].id;
+					}else if (props.option.del_obj >= 0) {
+						shape_id = arr[props.option.del_obj].id;
+					}
+					
+					window.tvWidget.chart().removeEntity(shape_id);
+					
+					break;
+				default:
+					break;
+			}
+		}
+	}  
+
+
+
 
 	render() {
 		return (
 			<div>
 				<div
-					id={ this.props.containerId }
+					id={ 'tv_chart_container' }
 					className={ 'TVChartContainer' }
 				/>
 				

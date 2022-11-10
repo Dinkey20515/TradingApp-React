@@ -1,0 +1,45 @@
+.modal{
+    /* position: fixed; */
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(  0,0,0,0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation-name: modal-effect;
+    animation-duration: 0.8s;
+}
+@keyframes modal-effect {
+    0%   {top:100%}
+    100% {top:0%}
+  }
+.modal-back{
+    position: absolute;
+    z-index:99;
+    width: 100vw;
+    height:100vh;
+}
+.modal-content{
+    width:100%;
+    background-color: rgb(55 55 55);
+    z-index: 100;
+}
+.modal-header-1,.modal-footer-1{
+    border-radius: 50px;
+
+    background-color: rgb(55 55 55);
+    padding:10px;
+}
+.modal-body{
+    padding:10px;
+    border-top:1px solid #676767;
+    border-bottom:1px solid #676767;
+}
+.inline-list{
+    color: #adb5bd;
+}
+.inline-list-2{
+    color: #adb5bd;
+}

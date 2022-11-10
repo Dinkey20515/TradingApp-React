@@ -39871,54 +39871,54 @@ webpackJsonp(
 										showSymbolAsDescription: !1,
 									},
 									candleStyle: {      //kmh Color and styles
-										upColor: "#3a8ff2",
-										downColor: "#eb444f",
+										upColor: "#388ee3",
+										downColor: "#eb434e",
 										drawWick: !0,
 										drawBorder: !0,
-										borderColor: "#3a8ff2",
-										borderUpColor: "#3a8ff2",
-										borderDownColor: "#eb444f",
+										borderColor: "#388ee3",
+										borderUpColor: "#388ee3",
+										borderDownColor: "#eb434e",
 										wickColor: "#737375",
-										wickUpColor: "#3a8ff2",
-										wickDownColor: "#eb444f",
+										wickUpColor: "#388ee3",
+										wickDownColor: "#eb434e",
 										barColorsOnPrevClose: !0,
 									},
 									hollowCandleStyle: {
-										upColor: "#3a8ff2",
-										downColor: "#eb444f",
+										upColor: "#388ee3",
+										downColor: "#eb434e",
 										drawWick: !0,
 										drawBorder: !0,
 										borderColor: "rgba( 55, 134, 88, 1)",
-										borderUpColor: "#3a8ff2",
-										borderDownColor: "#eb444f",
-										wickColor: "#3a8ff2",
-										wickUpColor: "#3a8ff2",
-										wickDownColor: "#eb444f",
+										borderUpColor: "#388ee3",
+										borderDownColor: "#eb434e",
+										wickColor: "#388ee3",
+										wickUpColor: "#388ee3",
+										wickDownColor: "#eb434e",
 									},
 									haStyle: {
-										upColor: "#3a8ff2",
-										downColor: "#eb444f",
+										upColor: "#388ee3",
+										downColor: "#eb434e",
 										drawWick: !0,
 										drawBorder: !0,
 										borderColor: "rgba( 55, 134, 88, 1)",
-										borderUpColor: "#3a8ff2",
-										borderDownColor: "#eb444f",
+										borderUpColor: "#388ee3",
+										borderDownColor: "#eb434e",
 										wickColor: "rgba( 115, 115, 117, 1)",
-										wickUpColor: "#3a8ff2",
-										wickDownColor: "#eb444f",
+										wickUpColor: "#388ee3",
+										wickDownColor: "#eb434e",
 										showRealLastPrice: !1,
 										barColorsOnPrevClose: !1,
 										inputs: {},
 										inputInfo: {},
 									},
 									barStyle: {
-										upColor: "#3a8ff2",
-										downColor: "#eb444f",
+										upColor: "#388ee3",
+										downColor: "#eb434e",
 										barColorsOnPrevClose: !0,
 										dontDrawOpen: !1,
 									},
 									lineStyle: {
-										color: "#3a8ff2",
+										color: "#388ee3",
 										linestyle: CanvasEx.LINESTYLE_SOLID,
 										linewidth: 3,
 										priceSource: "close",
@@ -39927,7 +39927,7 @@ webpackJsonp(
 									areaStyle: {
 										color1: "rgba( 59, 143, 242, 0.3)",
 										color2: "rgba( 59, 143, 242, 0.05)",
-										linecolor: "#3a8ff2",
+										linecolor: "#388ee3",
 										linestyle: CanvasEx.LINESTYLE_SOLID,
 										linewidth: 3,
 										priceSource: "close",
@@ -40022,7 +40022,7 @@ webpackJsonp(
 										},
 									},
 									baselineStyle: {
-										baselineColor: "#3a8ff2",
+										baselineColor: "#388ee3",
 										topFillColor1: "rgba( 59, 139, 242, 0.1)",
 										topFillColor2: "rgba( 59, 139, 242, 0.1)",
 										bottomFillColor1: "rgba( 240, 68, 59, 0.1)",
@@ -50074,7 +50074,7 @@ webpackJsonp(
 						}),
 						(t.prototype.anchorColor = function () {
 							return this._source.isBeingEdited()
-								? "#3a8ff2"    //kmh color of handpick
+								? "#388ee3"    //kmh color of handpick
 								: this._model.isDark()
 								? "#0a6fc2"
 								: "#606060";
@@ -87320,7 +87320,7 @@ webpackJsonp(
 								l.isLineTool(this.source._model.currentTool()) &&
 								!i),
 							(n = o
-								? "#3a8ff2"    //kmh color of linetoolpointer #a000a0
+								? "#388ee3"    //kmh color of linetoolpointer #a000a0
 								: t
 								? e.color
 								: this.pane._model

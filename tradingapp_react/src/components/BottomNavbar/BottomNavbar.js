@@ -30,9 +30,9 @@ function BottomNavbar(props) {
 
 	return (
 		<div className={`BottomNavBarContainer ${visibleBottombar ? "showbar" : "hidebar"} `} >
-			<button className="BottomNavBarButton BottomNavBar-item ">
-                <RiLineChartLine className="BottomNavBarIcon " />
-				<span className="BottomNavBar-Text">Trade</span>
+			<button className="BottomNavBarButton BottomNavBar-item">
+                <RiLineChartLine className="BottomNavBarIcon Active" />
+				<span className="BottomNavBar-Text Active">Trade</span>
 			</button>
 
 			<button className="BottomNavBarButton BottomNavBar-item">

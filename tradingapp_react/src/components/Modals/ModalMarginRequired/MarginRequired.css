@@ -1,0 +1,77 @@
+.header-section{
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+.header-section p{
+    color: #b1b1b1;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+.circleProgressBar{
+    padding: 10px;
+    color:#2ab644;
+    width:60vw;
+    margin-left: 20vw;
+}
+.priceStyle{
+    color:white;
+    font-size: 1.6rem;
+}
+.dealStyle{
+    color:#b1b1b1;
+    font-size: 0.8rem;
+    display:flex;
+}
+.infoIcon{
+    color:#ba8861;
+    margin-left: 5px;
+    width:1.4rem;
+    height:1.4rem;
+    margin-top: -2px;
+}
+.playIcon{
+    color:#ba8861;
+}
+.okButton{
+    background-color:#ba8861;
+    color:white;
+    padding: 10px;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 2vh;
+    border-radius: 8px;;
+}
+.marginRight{
+       margin-left:52vw;
+       color:#b1b1b1;
+}
+.marginHalf{
+    /* margin-left:52vw; */
+    color:#b1b1b1;
+    padding-left: 4vw;;
+    width:50vw;
+}
+.marginHalfRight{
+    padding-left:20vw;
+    width:50vw;
+    color:#b1b1b1;
+}
+.marginHalfRightbar{
+    padding-left:46vw;
+    width:50vw;
+    color:#b1b1b1;
+}
+.colorBlue{
+    color:#2ab644;
+    font-size:1.5rem;
+}
+.colorGrey{
+    font-size:1.5rem;
+    color:#b1b1b1;
+}
+.panel{
+    display:flex;
+}

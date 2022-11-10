@@ -1,0 +1,87 @@
+.priceRangeContainer{
+    margin: 15px 4px !important;
+    padding:10px 12px !important;
+    background-color: #262626 !important;
+    border-radius: 7px !important;
+}
+.buttonClass{
+    margin-bottom: 12px !important;
+}
+.priceRangeButton{
+    background: none;
+    margin:4px 5px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    padding: 3px 10px;
+    border-radius: 17px;
+    transition:none;
+    box-shadow:none;
+    font-size: 0.9rem;
+    color:rgb(140, 140, 140);
+    font-weight: 600;
+}
+.priceRangeButton:hover{
+    background-color: none !important;
+}
+.priceRangeButton:active{
+    color:#bb8761 !important;
+    background-color: #443931 !important;
+    box-sizing: border-box;
+    border: solid 1px;
+    border-color:#bb8761;
+}
+.active{
+    color:#bb8761 !important;
+    background-color: #443931 !important;
+    box-sizing: border-box;
+    border: solid 1px;
+    border-color:#bb8761;
+}
+.lowHigh{
+    margin:0px 5px;
+    margin-bottom: 0px;
+    display: flow-root;
+}
+.arrowDownIcon{
+    color: white;
+    width:1.2em;
+    height:1.2em;
+}
+
+.lowText{
+    color: rgb(141, 134, 134);
+    text-decoration: none;
+    font-family:Arial;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.horizonBar{
+    background:#bb8761 ;
+    height: 5px;
+    margin-bottom : 15px;
+    border-radius: 2px;
+}
+.lowHighPrice{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    margin-bottom:10px;
+}

@@ -1,24 +1,21 @@
 import React ,{ Component } from "react";
-// import { useState } from "react";
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import TradeOneScreen from "./screen/TradeOneScreen/TradeOneScreen"
 import LogInScreen from "./screen/LogInScreen/LogInScreen"
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TradeAllScreen from "./screen/TradeAllScreen/TradeAllScreen";
-import FullChart from "./screen/fullchart";
+import FullChart from "./screen/FullChart";
+
+import './App.css';
 
 function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter className='mobileSet'>
 		  <Routes>
 			  <Route index element={<LogInScreen/>} />
 			  <Route path='detailpage' element={<TradeOneScreen/>}/>
 			  <Route path='trade' element={<TradeAllScreen />}/>
 			  <Route path='chart' element={<FullChart />}/>
-			  {/* <Route path='register' element={<RegisterForm />}/>
-			  <Route path='geresult' element={<GeResult />}/>
-			  <Route path='perDashboard' element={<PerDashboard />}/> */}
 		 </Routes>
 		</BrowserRouter>
 	)

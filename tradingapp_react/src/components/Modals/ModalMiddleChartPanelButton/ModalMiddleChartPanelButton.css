@@ -1,0 +1,29 @@
+.done-button{
+    color: #ba8861;
+    float: right;
+}
+/* .switchButton{
+    
+} */
+.switchButtonLabel{
+    color: white;
+    margin-left: 20px;
+}
+.switchButtonPanel{
+    display: flex;
+    margin-bottom:20px;
+}
+.switchButton{
+    position: absolute;
+    right: 20px;
+    color: white;
+    display: flex;
+    font-size: 13px;
+}
+.form-check-input:checked {
+    background-color: #ba8861;
+    border-color: #ba8861;
+}
+.colorBrown{
+    color: #ba8861; 
+}

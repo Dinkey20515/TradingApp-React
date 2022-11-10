@@ -1,7 +1,7 @@
 .tradeOneScreenContainer{
     background-color:rgba(10, 10, 10, 0.98);
     height: 100%;
-    padding: 0 !important;
+    padding: 0px 0px;
   }
 
 .priceRangeDiv{
@@ -9,7 +9,7 @@
 }
 .middleChart{
     width: 100%;
-    margin-top: 90px;
+    margin: 5px 0px;
 }
 .priceRangeText{
     color: white;
@@ -71,7 +71,7 @@
 }
 
 .tradeOneScreenEditButtonText{
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #bb8761;
     text-align: center;
 }

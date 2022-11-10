@@ -3,10 +3,10 @@ body {
 }
 
 #bottom-menu {
-    position: fixed;
-     left: 0;
-     right: 0;
-     bottom: 0;
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .overlay {
@@ -16,19 +16,51 @@ body {
     height: 100%;
     display: none;
 }
+.fullOverlay {
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0,0,0,0);
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+@media (min-width: 900px) {
+    .fullOverlay {
+      max-width: 500px;
+    }
+  } 
+
+.fullOverlayImage {
+    position: absolute;
+    left: calc(50% - 25px);
+    top: 40%;
+    color: #bb8961;
+    width: 50px;
+    height: 50px;
+    animation: rotation 3s infinite linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 /* Style the tab */
 .tab {
     overflow: hidden;
     border-top: solid;
     border-top-color: rgb(69, 69, 69, 0.7);
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(38, 38, 38);
 } 
 
 /* Style the buttons inside the tab */
 .tab button {
     background-color: inherit;
     float: right;
-    border: 3px solid #30303000;
+    border: none;
+    border-bottom: 3px solid #262626;
     outline: none;
     cursor: pointer;
     padding: 8px 15px;
@@ -39,9 +71,9 @@ body {
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+/* .tab button:hover {
     background-color: #ddd;
-}
+} */
 
 /* Create an active/current tablink class */
 .tab button.active {
@@ -57,10 +89,8 @@ body {
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 5px 5px;
-    
     border-top: none;
-    background-color: #303030;
+    background-color: #262626;
     color: #90969b;
 }
 
@@ -79,6 +109,7 @@ body {
 .content-around {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 1rem;
 }
 
 .content-center {
@@ -86,8 +117,8 @@ body {
     justify-content: center;
 }
 
-.bid-btn {
-    font-size: 12px;
+.bid-btn, .done-btn {
+    font-size: 0.95rem;
     width: 46%;
     background: #bb8961;
     letter-spacing: 0px;
@@ -95,13 +126,14 @@ body {
     padding: 16px;
     /* font-size: 16px; */
     margin: 0 3px;
-    color: #353535;
+    color: #262626;
     border: none;
-    font-weight: 800;
+
+    font-weight: 600;
 }
 
 .del-btn {
-    font-size: 12px;
+    font-size: 0.95rem;
     width: 46%;
     background: #2c2c2c;
     letter-spacing: 0px;
@@ -114,8 +146,9 @@ body {
     font-weight: 800;
 }
 
+
 .draw-pane {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -128,36 +161,36 @@ body {
 .tab-btn-title {
     text-align: center;
     margin-bottom: 15px;
-    font-size: 13px;
+    font-size: 0.95rem;
     font-weight: 600;
 }
 
 .inline-list>li {
-    padding: 5px 25px;
+    padding: 12px 25px;
     /* border: 1px solid red; */
-    margin: 0 8px;
+    margin: 1px 10px;
     border-radius: 10px;
     background: #464646;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .inline-list>li:active {
     background: #bb8961;
-    color: #353535;
+    color: #262626;
 }
 
 .inline-list,
 .inline-list-2 {
+    font-size: 1rem;
     list-style: none;
     display: inline-flex;
-    margin: 10px 0 ;
+    margin: 10px 5px ;
     padding: 0;
 
 }
 
 .inline-list-2>li {
-    font-size: 0.9rem;
     padding: 14px 22px;
     /* border: 1px solid red; */
     margin: 0 8px;
@@ -187,24 +220,24 @@ h4 {
 }
 
 .tablink2, .tablink3 {
-    background-color: #353535;
+    background-color: #262626;
     color: rgb(98, 95, 95);
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    font-size: 14px;
+    font-size: 1rem !important;
     font-weight:700;
     width: 49.3%;
     border-bottom: 2px solid #777;
 }
 
 .tablink2:hover {
-    background-color: #353535;
+    background-color: #262626;
 }
 
 .tablink-header{
-    background-color: #353535;
+    background-color: #262626;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -213,8 +246,7 @@ h4 {
     display: none;
     padding: 10px;
     height: 100%;
-    border-radius: 12px 12px 0 0;
-    background-color: #353535;
+    background-color: #262626;
 }
 
 .indicator-tab-active {
@@ -240,6 +272,7 @@ h4 {
 }
 
 .inputContainer-nVh4c_cg {
+    height: 50px;
     padding: 8px 16px 8px 47px;
     width: 100%;
     border-style: solid;
@@ -250,11 +283,11 @@ h4 {
 
 .icon-nVh4c_cg {
     color: #a3a6af;
-    height: 12px;
+    height: 18px;
     left: 20px;
     pointer-events: none;
     position: absolute;
-    top: calc(50% - 15px);
+    top: 9px;
 }
 
 .container-nVh4c_cg {
@@ -271,7 +304,7 @@ h4 {
 .period-active,
 .chart-active {
     background: #bb8961 !important;
-    color: #353535;
+    color: #161616;
 }
 
 /* .timeunit-active, */
@@ -293,8 +326,8 @@ h4 {
 
 .tabintab {
     padding: 0;
-    border-radius: '12px 12px 0 0'; 
-    height: '80vh';
+    border-radius: 12px 12px 0 0; 
+    height: 80vh;
 }
 
 .draw-item {
@@ -302,7 +335,22 @@ h4 {
     padding-left:0px !important;
 }
 
-.indicator-item {
-    padding: 5px 10px;
-    padding-left:0px !important;
+.del-icon {
+    padding-right: 10px; 
+    color:#bb8961;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.pencil-icon {
+    float: right; 
+    font-size: 25px;
+    margin: -8px; 
+    color:#bb8961;
+}
+
+.fullChartContainer{
+    background-color: #0f0f0f;
 }

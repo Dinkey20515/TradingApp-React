@@ -1,12 +1,12 @@
 .BottomNavBarContainer{
-    position: fixed;
+    position: sticky;
     width: 100%;
     display: flex;
     justify-content: space-between;
     right: 0;
     background-color: #262626;
     z-index: 1;
-    height: 54px;
+    height: 58px;
     border-top: 1px solid #202020;
     box-shadow: 0px -1px 1px 1px rgba(0, 0, 0, 0.6);
 }
@@ -53,25 +53,23 @@
     cursor: pointer;
     user-select: none;
     appearance: none;
-    padding: 3px 10px;
+    padding: 5px 10px;
     border-radius: 17px;
     transition:none;
     box-shadow:none;
-    
     color: rgb(141, 134, 134);
     text-decoration: none;
     font-family:Arial;
     font-weight: 600;
-    font-size: 0.4rem;
+    font-size: 0.75rem;
     line-height: 1;
     letter-spacing: 0.02857em;
-    text-transform: uppercase;
     margin-bottom: 7px;
 }
 .BottomNavBarButton:hover{
     background-color: none !important;
 }
-.BottomNavBarButton:active{
+.BottomNavBarButton .Active{
     color:#bb8761 !important;
     box-sizing: border-box;
 }
@@ -79,6 +77,6 @@
    margin-top: 6px !important;
 }
 .BottomNavBarIcon{
-    width:22px;
-    height:22px;
+    width:25px;
+    height:25px;
 }
