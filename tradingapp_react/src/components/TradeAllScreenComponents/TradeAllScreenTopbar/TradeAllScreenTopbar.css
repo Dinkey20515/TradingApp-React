@@ -53,7 +53,8 @@
     overflow-x: hidden;
     list-style: none;
     display: inline-flex;
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 0px;
     padding-left: 0px !important;
     border-bottom: solid 1px;
     color: #333333;

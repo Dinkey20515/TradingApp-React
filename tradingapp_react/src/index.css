@@ -4,4 +4,6 @@ html {
 	padding: 0;
 	font-family: Arial;
 }
-
+iframe {
+	display: none;
+}

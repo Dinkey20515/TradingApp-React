@@ -1,24 +1,25 @@
 .header-section{
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 10px;
+    padding: 5px;
 }
 .header-section p{
     color: #b1b1b1;
-    margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 0;
 }
 .circleProgressBar{
     padding: 10px;
     color:#2ab644;
-    width:60vw;
-    margin-left: 20vw;
+    width:50%;
+    max-width: 250px;
+    margin: auto;
 }
 .priceStyle{
     color:white;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 .dealStyle{
     color:#b1b1b1;
@@ -38,38 +39,49 @@
 .okButton{
     background-color:#ba8861;
     color:white;
-    padding: 10px;
-    width: 80vw;
-    margin-left: 10vw;
+    padding: 5px;
+    width: 80%;
+    margin-left: 10%;
     margin-top: 2vh;
     border-radius: 8px;;
 }
 .marginRight{
-       margin-left:52vw;
+       margin-left:52%;
        color:#b1b1b1;
+       font-size: 0.7rem;
+       margin-bottom: 0;
 }
 .marginHalf{
-    /* margin-left:52vw; */
+    /* margin-left:52%; */
     color:#b1b1b1;
-    padding-left: 4vw;;
-    width:50vw;
+    padding-left: 4%;;
+    width:50%;
+    font-size: 0.7rem;
+    margin-bottom: 0;
 }
 .marginHalfRight{
-    padding-left:20vw;
-    width:50vw;
+    padding-left:20%;
+    width:50%;
     color:#b1b1b1;
+    font-size: 0.7rem;
+    margin-bottom: 0;
 }
+.marginRight .colorBlue{
+    font-size:1.5rem !important;
+    font-weight: 700;
+}
+
+
 .marginHalfRightbar{
-    padding-left:46vw;
-    width:50vw;
+    padding-left:46%;
+    width:50%;
     color:#b1b1b1;
 }
 .colorBlue{
     color:#2ab644;
-    font-size:1.5rem;
 }
 .colorGrey{
-    font-size:1.5rem;
+    font-size:1rem;
     color:#b1b1b1;
 }
 .panel{

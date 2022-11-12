@@ -10,7 +10,14 @@
     justify-content: center;
     animation-name: modal-effect;
     animation-duration: 0.8s;
+    width: 100%;
 }
+@media (min-width: 900px) {
+    .modal {
+      max-width: 500px;
+      margin: auto;
+    }
+  } 
 @keyframes modal-effect {
     0%   {top:100%}
     100% {top:0%}

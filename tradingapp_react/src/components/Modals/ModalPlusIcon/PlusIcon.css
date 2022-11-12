@@ -14,8 +14,7 @@
     display: flex;
     border-radius: 8px;
     background-color: #434343;
-    width:90vw;
-    margin-left:5vw;
+    margin: 10px 30px;
     padding: 10px;;
 }
 .pSection{

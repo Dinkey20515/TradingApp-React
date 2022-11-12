@@ -8,17 +8,17 @@ function Modal(props) {
         return null;
     }
     return (
-            <div className="modal">
-                <div className="modal-back" onClick={props.onClose}>
+            <div className="mymodal">
+                <div className="mymodal-back" onClick={props.onClose}>
                 </div>
-                <div className="modal-content">
-                    <div className="modal-header-1">
-                        <h4 className="modal-title">Modal title</h4>
+                <div className="mymodal-content">
+                    <div className="mymodal-header-1">
+                        <h4 className="mymodal-title">Modal title</h4>
                     </div>
-                    <div className="modal-body">
+                    <div className="mymodal-body">
                         This is modal content
                     </div>
-                    <div className="modal-footer-1">
+                    <div className="mymodal-footer-1">
                         <button className="button" onClick={props.onClose}>Close</button>
                     </div>
                 </div>
