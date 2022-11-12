@@ -29821,7 +29821,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -29882,7 +29882,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -29974,7 +29974,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30052,7 +30052,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30128,7 +30128,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30137,7 +30137,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30210,7 +30210,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30311,7 +30311,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30369,7 +30369,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 1,
 									trackPrice: !1,
 									transparency: 35,
@@ -30451,7 +30451,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30513,7 +30513,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30522,7 +30522,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30531,7 +30531,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30633,7 +30633,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30646,14 +30646,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 1,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -30751,7 +30751,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30837,7 +30837,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30850,7 +30850,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -30926,7 +30926,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -30939,7 +30939,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -31010,7 +31010,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31019,7 +31019,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31116,7 +31116,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31194,7 +31194,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 5,
 									trackPrice: !1,
 									transparency: 35,
@@ -31310,7 +31310,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31323,14 +31323,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 61.8,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 38.2,
 								},
@@ -31412,7 +31412,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31425,14 +31425,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 100,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: -100,
 								},
@@ -31509,7 +31509,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31522,14 +31522,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 70,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 30,
 								},
@@ -31653,7 +31653,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31738,7 +31738,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 4,
 									trackPrice: !1,
 									transparency: 40,
@@ -31815,7 +31815,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31828,7 +31828,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -31896,7 +31896,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31905,7 +31905,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -31914,7 +31914,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32059,7 +32059,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32068,7 +32068,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32077,7 +32077,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32160,7 +32160,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32225,7 +32225,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32305,7 +32305,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32318,7 +32318,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -32380,7 +32380,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32389,7 +32389,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32398,7 +32398,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 3,
 									trackPrice: !1,
 									transparency: 35,
@@ -32480,7 +32480,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32489,7 +32489,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32498,7 +32498,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32603,7 +32603,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32612,7 +32612,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32625,35 +32625,35 @@ webpackJsonp(
 								{
 									color: "#FF4F00",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 1.5,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0.75,
 								},
 								{
 									color: "#FF4F00",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: -0.75,
 								},
 								{
 									color: "#FF4F00",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: -1.5,
 								},
@@ -32755,7 +32755,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32828,7 +32828,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32897,7 +32897,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32906,7 +32906,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32915,7 +32915,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32924,7 +32924,7 @@ webpackJsonp(
 								},
 								plot_3: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -32933,7 +32933,7 @@ webpackJsonp(
 								},
 								plot_4: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33114,7 +33114,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33123,7 +33123,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33132,7 +33132,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33241,7 +33241,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33250,7 +33250,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33318,7 +33318,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33327,7 +33327,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33340,7 +33340,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -33549,7 +33549,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33617,7 +33617,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33676,7 +33676,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33685,7 +33685,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33694,7 +33694,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 3,
 									trackPrice: !1,
 									transparency: 35,
@@ -33776,7 +33776,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33785,7 +33785,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33794,7 +33794,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 3,
 									trackPrice: !1,
 									transparency: 35,
@@ -33876,7 +33876,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -33948,7 +33948,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34014,7 +34014,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34093,7 +34093,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34106,14 +34106,14 @@ webpackJsonp(
 								{
 									color: "#c0c0c0",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 80,
 								},
 								{
 									color: "#c0c0c0",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 20,
 								},
@@ -34197,7 +34197,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34280,7 +34280,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34289,7 +34289,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34396,7 +34396,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 1,
 									trackPrice: !1,
 									transparency: 35,
@@ -34405,7 +34405,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34414,7 +34414,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34523,7 +34523,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34606,7 +34606,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34689,7 +34689,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34742,7 +34742,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34796,7 +34796,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 3,
 									trackPrice: !1,
 									transparency: 35,
@@ -34871,7 +34871,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34880,7 +34880,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34889,7 +34889,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -34982,7 +34982,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35055,7 +35055,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35110,7 +35110,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35123,7 +35123,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -35182,7 +35182,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35195,14 +35195,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 70,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 30,
 								},
@@ -35293,7 +35293,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35302,7 +35302,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35388,7 +35388,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35401,14 +35401,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 80,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 20,
 								},
@@ -35497,7 +35497,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35506,7 +35506,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35515,7 +35515,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 1,
 									trackPrice: !1,
 									transparency: 35,
@@ -35606,7 +35606,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35685,7 +35685,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35694,7 +35694,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35707,14 +35707,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 80,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 20,
 								},
@@ -35816,7 +35816,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35825,7 +35825,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35838,14 +35838,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 80,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 20,
 								},
@@ -35967,7 +35967,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -35980,7 +35980,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -36049,7 +36049,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36116,7 +36116,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36125,7 +36125,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36138,7 +36138,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -36217,7 +36217,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36309,7 +36309,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: 0,
 									transparency: 0,
@@ -36375,7 +36375,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36434,7 +36434,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36447,7 +36447,7 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: 0,
 								},
@@ -36517,7 +36517,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36526,7 +36526,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36606,7 +36606,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36619,14 +36619,14 @@ webpackJsonp(
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: -20,
 								},
 								{
 									color: "#808080",
 									linestyle: 2,
-									linewidth: 4,
+									linewidth: 2,
 									visible: !0,
 									value: -80,
 								},
@@ -36704,7 +36704,7 @@ webpackJsonp(
 							styles: {
 								plot_0: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36713,7 +36713,7 @@ webpackJsonp(
 								},
 								plot_1: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -36722,7 +36722,7 @@ webpackJsonp(
 								},
 								plot_2: {
 									linestyle: 0,
-									linewidth: 4,
+									linewidth: 2,
 									plottype: 0,
 									trackPrice: !1,
 									transparency: 35,
@@ -40232,7 +40232,7 @@ webpackJsonp(
 							linetooltrendline: {
 								clonable: !0,
 								linecolor: "rgba( 21, 153, 128, 1)",
-								linewidth: 4,
+								linewidth: 2,
 								linestyle: CanvasEx.LINESTYLE_SOLID,
 								extendLeft: !1,
 								extendRight: !1,
@@ -40437,7 +40437,7 @@ webpackJsonp(
 							linetoolarrow: {
 								clonable: !0,
 								linecolor: "rgba( 111, 136, 198, 1)",
-								linewidth: 4,
+								linewidth: 2,
 								linestyle: CanvasEx.LINESTYLE_SOLID,
 								extendLeft: !1,
 								extendRight: !1,
@@ -40481,7 +40481,7 @@ webpackJsonp(
 							linetoolextended: {
 								clonable: !0,
 								linecolor: "rgba( 21, 153, 128, 1)",
-								linewidth: 4,
+								linewidth: 2,
 								linestyle: CanvasEx.LINESTYLE_SOLID,
 								extendLeft: !0,
 								extendRight: !0,
@@ -40535,7 +40535,7 @@ webpackJsonp(
 							linetoolvertline: {
 								clonable: !0,
 								linecolor: "rgba( 128, 204, 219, 1)",
-								linewidth: 4,
+								linewidth: 2,
 								linestyle: CanvasEx.LINESTYLE_SOLID,
 								showTime: !0,
 							},
@@ -40765,7 +40765,7 @@ webpackJsonp(
 								fillBackground: !0,
 								backgroundColor: "rgba( 153, 153, 21, 0.5)",
 								transparency: 50,
-								linewidth: 4,
+								linewidth: 2,
 							},
 							linetoolarc: {
 								clonable: !0,
@@ -40837,7 +40837,7 @@ webpackJsonp(
 								clonable: !0,
 								showWave: !0,
 								color: "rgba( 61, 133, 198, 1)",
-								linewidth: 4,
+								linewidth: 2,
 							},
 							linetoolelliotttriangle: {
 								degree: 7,
@@ -40858,7 +40858,7 @@ webpackJsonp(
 								clonable: !0,
 								showWave: !0,
 								color: "rgba( 61, 133, 198, 1)",
-								linewidth: 4,
+								linewidth: 2,
 							},
 							linetoolelliottdoublecombo: {
 								degree: 7,

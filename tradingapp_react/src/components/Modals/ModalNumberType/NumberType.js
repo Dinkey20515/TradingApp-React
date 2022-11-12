@@ -8,7 +8,7 @@ import { BsViewList } from "react-icons/bs";
 import { IoKeypad } from "react-icons/io5";
 
 
-function Modal(props) {
+function NumberTypeModal(props) {
     const [type, setType] = useState(true);
     if(!props.show){
         return null;
@@ -60,4 +60,4 @@ function Modal(props) {
         );
 }
 
-export default Modal;
+export default NumberTypeModal;
