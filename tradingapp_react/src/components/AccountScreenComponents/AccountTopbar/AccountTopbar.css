@@ -1,0 +1,19 @@
+.acccountTopbarContainer{
+padding: 3px;
+height: 70px;
+}
+.accontName{
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.logOut{
+    font-size: 0.8rem;
+    color: #bb8761;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}

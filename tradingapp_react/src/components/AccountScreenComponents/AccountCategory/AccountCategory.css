@@ -1,0 +1,67 @@
+.AccountCategoriesCotainer{
+    border-radius: 8px !important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    padding-bottom: 90px; 
+}
+.AccountCategoryContainer{
+    border-radius: 8px !important;
+    background-color: #262626;
+    margin:6px 10px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    height: 55px;
+    /* width: 100%; */
+    padding: 15px 0px; 
+}
+
+.AccountCategoryCard{
+    align-items: center;
+}
+.AccountCategoryText{
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+}
+.accountCategoryIcon{
+    width: 1.7rem;
+    height: 1.7rem;
+    color: #807d7d;
+    margin-right: 15px;
+    /* stroke-width: 1px; */
+}
+.detailIcon{
+    color: #807d7d;
+    float: right;
+    /* margin-top: 8px; */
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 1px;
+}
+.categorySpace{
+    margin-bottom: 2rem !important;
+}

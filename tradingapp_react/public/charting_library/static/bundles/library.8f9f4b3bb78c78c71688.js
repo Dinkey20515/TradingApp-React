@@ -40436,7 +40436,7 @@ webpackJsonp(
 							},
 							linetoolarrow: {
 								clonable: !0,
-								linecolor: "rgba( 111, 136, 198, 1)",
+								linecolor: "rgba( 111, 225, 198, 1)",
 								linewidth: 2,
 								linestyle: CanvasEx.LINESTYLE_SOLID,
 								extendLeft: !1,
@@ -52427,7 +52427,7 @@ webpackJsonp(
 									}).value = e;
 								},
 							},
-							// {
+							// {  //kmh 11-13
 							// 	key: "show",
 							// 	value: function () {
 							// 		var t = this,

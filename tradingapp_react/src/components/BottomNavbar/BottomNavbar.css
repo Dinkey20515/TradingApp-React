@@ -1,5 +1,5 @@
 .BottomNavBarContainer{
-    position: sticky;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -8,9 +8,15 @@
     /* z-index: 1; */
     height: 58px;
     border-top: 1px solid #202020;
-    box-shadow: 0px -1px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+    left: 0;
+    right: 0;
 }
-
+@media (min-width: 900px) {
+    .BottomNavBarContainer {
+      max-width: 500px;
+      margin: auto;
+    }
+  } 
 .hidebar{
     bottom: -20%;
     animation-name: bottomBarShowEffect;
@@ -39,7 +45,12 @@
     transition: all 0.3s ease;
   }
   
-.BottomNavBarButton{
+.BottomNavBarTradeButton,
+.BottomNavBarPortfolioButton,
+.BottomNavBarSearchButton,
+.BottomNavBarNewsButton,
+.BottomNavBarAccountButton
+{
     background: none;
     -webkit-box-align: center;
     align-items: center;
@@ -69,7 +80,7 @@
 .BottomNavBarButton:hover{
     background-color: none !important;
 }
-.BottomNavBarButton .Active{
+.BottomNavBar-item.Active{
     color:#bb8761 !important;
     box-sizing: border-box;
 }

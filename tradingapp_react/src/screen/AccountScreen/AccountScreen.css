@@ -1,0 +1,54 @@
+.tradeAllScreenContainer{
+    background-color: #121212;
+    height: 100%;
+    padding: 0px 0px !important;
+  }
+.searchHeaderText{
+    padding: 10px 5px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.searchInput,
+.searchInput:focus {
+    background-color: initial;
+    border: none;
+    color: white;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.searchButtoninputContainer {
+    height: 40px;
+    padding: 8px 16px 8px 47px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1.3px;
+    border-radius: 3px;
+    border-color: #bb8961;
+}
+
+.searchButtonIcon{
+    color: #a3a6af;
+    height: 18px;
+    left: 20px;
+    pointer-events: none;
+    position: absolute;
+    top: 9px;
+}
+
+.searchButtonContainer {
+    align-items: center;
+    margin-left:30px;
+    margin-right:30px;
+    margin-bottom: 10px;
+    cursor: default;
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+}

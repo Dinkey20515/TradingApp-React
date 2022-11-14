@@ -5,6 +5,10 @@ import TradeOneScreen from "./screen/TradeOneScreen/TradeOneScreen"
 import LogInScreen from "./screen/LogInScreen/LogInScreen"
 import TradeAllScreen from "./screen/TradeAllScreen/TradeAllScreen";
 import FullChart from "./screen/FullChart";
+import PortfolioScreen from "./screen/PortfolioScreen/PortfolioScreen";
+import SearchScreen from "./screen/SearchScreen/SearchScreen";
+import AccountScreen from "./screen/AccountScreen/AccountScreen";
+import MyAccountDetailPage from "./screen/AccountScreen/MyAccountDetail/MyAccountDetailPage";
 
 import './App.css';
 
@@ -16,6 +20,11 @@ function App() {
 			  <Route path='detailpage' element={<TradeOneScreen/>}/>
 			  <Route path='trade' element={<TradeAllScreen />}/>
 			  <Route path='chart' element={<FullChart />}/>
+			  <Route path='Portfolio' element={<PortfolioScreen />} />
+			  <Route path='Search' element={<SearchScreen />} />
+			  <Route path='Account' element={<AccountScreen />} />
+			//=========pages==========
+			  <Route path='myAccount' element={<MyAccountDetailPage />} />
 		 </Routes>
 		</BrowserRouter>
 	)

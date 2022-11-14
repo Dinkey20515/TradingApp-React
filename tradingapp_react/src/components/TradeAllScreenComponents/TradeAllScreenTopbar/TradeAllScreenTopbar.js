@@ -17,7 +17,7 @@ function TradeAllScreenTopbar(props) {
 			</ul>
 			<div className="topStatusHorizonBar" />
 			<div className="TradeAllScreenTopNavbar">
-				<ul className="topNavBarRow ">
+				<ul className="topNavBarRow">
 					<li className="TradeAllScreenTopNavbarText">Favorite</li>
 					<li className="TradeAllScreenTopNavbarText">Popular</li>
 					<li className="TradeAllScreenTopNavbarText">New</li>

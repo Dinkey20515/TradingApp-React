@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LogInScreen.css";
 import { useNavigate } from "react-router-dom";
-import React, { Component } from "react";
+import { useState } from "react";
+import React from "react";
+import SignUp from "../../components/Modals/ModalSignUp/SignUp";
 
 // import Slide1 from "../../assets/intro-pic1.jpg";
 // import Slide2 from "../../assets/intro-pic2.jpg";
@@ -19,7 +21,8 @@ function LogInScreen() {
 		let path = "/trade";
 		navigate(path);
 	};
-
+	const [show, setShow] = useState(false);
+	
 	return (
 		<div className="logInScreenContainer">
 			<div className="titleSection">
@@ -28,6 +31,7 @@ function LogInScreen() {
 				<span>Study trends with powerful charts</span>
 			</div>
 			<div className="loginButtons">
+				
 				<button className="google" onClick={loginHandler}>
 					<FcGoogle className="googleIcon" />
 					Continue with Google
@@ -40,7 +44,9 @@ function LogInScreen() {
 					<BsApple className="AppleIcon" />
 					Continue with Apple
 				</button>
-				<button className="email">Continue with Email</button>
+				
+				<button className="email" onClick={()=>setShow(true)}>Continue with Email</button>
+				
 				<div className="LogInText">
 					<span>Already have an account?</span>
 					<span className="LogIn-p"> Log in</span>
@@ -50,6 +56,7 @@ function LogInScreen() {
 					<span>Trading is risky and you may lose your invested capital</span>
 				</div>
 			</div>
+		<SignUp show={show} onClose={()=>setShow(false)}/> 
 		</div>
 	);
 }

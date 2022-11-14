@@ -56,11 +56,11 @@ export class TVChartContainer extends React.PureComponent {
 			charts_storage_api_version: '1.0',
 			preset: "mobile",
 			auto_save_delay: 2000,
-			client_id: this.props.clientId,
-			user_id: this.props.userId,
-			fullscreen: this.props.fullscreen,
-			autosize: this.props.autosize,
-			studies_overrides: this.props.studiesOverrides,
+			// client_id: this.props.clientId,
+			// user_id: this.props.userId,
+			// fullscreen: this.props.fullscreen,
+			// autosize: this.props.autosize,
+			// studies_overrides: this.props.studiesOverrides,
 			overrides: {
 				"paneProperties.background": "#121212",
 				"paneProperties.vertGridProperties.color": "#323232",
@@ -85,7 +85,7 @@ export class TVChartContainer extends React.PureComponent {
 			props.chartloaded(1, state.loaded);
 	}
 	static getDerivedStateFromProps(props) {
-		if (props.option.selectedItem !== '') {
+		if ( props.option.selectedItem !== '') {
 			switch (props.option.selectedItem) {
 				case 'symbol':
 					window.tvWidget.setSymbol(props.option.symbol, props.option.period);

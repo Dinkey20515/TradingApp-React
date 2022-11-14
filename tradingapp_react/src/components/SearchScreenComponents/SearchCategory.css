@@ -1,0 +1,102 @@
+
+.searchCategoryContainer{
+    display: flex;
+    /* border-radius: 20px !important;
+    background-color: #404040; */
+    margin:8px 2px!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    /* border: solid 0.5px; */
+    /* border-color:#807d7d; */
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    height: 45px;
+    /* width: 100%; */
+    /* padding: 0px 0px;  */
+    /* border-radius: 4px; */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgba(0, 0, 0, 0.87);
+}
+.searchCategoryContainer:first-child{
+    margin-top: 20px !important;
+}
+.searchCategoryCard{
+    align-items: center;
+}
+.searchCategoryText{
+    background-color: #252525;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.04857em;
+    border: solid 0.5px; 
+    border-color:#404040 !important;
+    border-radius: 4px;
+    text-align: center;
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+.topRiserIcon{
+    color: #01a8fa;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}
+.AiOutlineFallIcon{
+    color: #f00112;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.AiOutlineHeartIcon{
+    color: #f0ab18;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.RiBarChart2LineIcon{
+    color: #ff7039;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.GiMapleLeafIcon{
+    color: #2ab641;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.SlPlaneIcon{
+    color: #04ad9f;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.AiOutlineSecurityScanIcon{
+    color: #843cb8;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.SlEnergyIcon{
+    color: #87b601;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.RiCapsuleLineIcon{
+    color: #00aafe;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}.HiOutlineCpuChipIcon{
+    color: #843cb8;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: 13px;
+}
