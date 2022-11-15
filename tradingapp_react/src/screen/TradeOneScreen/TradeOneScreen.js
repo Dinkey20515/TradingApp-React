@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import {IoIosArrowUp} from  "react-icons/io";
 
@@ -11,8 +12,23 @@ import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import MiddleChartContainer from "../../components/TradeOneScreenComponents/MiddleChartContainer/MiddleChartContainer"
 import  TradeOneScreenTopbar from "../../components/TradeOneScreenComponents/TradeOneScreenTopbar/TradeOneScreenTopbar";
 import middlechart from '../../assets/middlechart.jpg'; 
+import { TVChartContainer } from '../../components/TVChartContainer/index';
 
 function TradeOneScreen() {
+    const [TVOption, setTVOption] = useState({
+        symbol: "Bitfinex:BTC/USD",
+        period: '',
+        charttype: '',
+        add_indicator: '',
+        add_drawing: '',
+        del_obj:'',
+        getShapeFlg: 0,
+        selectedItem: "onStart",
+        height: window.innerHeight/2,
+        selectedShapeIndexes: [],		//selected drawingtool indexes
+        selectedIndicators: [],			//selected indicator indexes.
+        flag: 0,
+    })
     //=======page navigation=======
     const navigate = useNavigate();
     const midExpandOnclickHandler = () => {
@@ -24,11 +40,17 @@ function TradeOneScreen() {
         let path = '/trade'
         navigate(path);
     }
+
+    const chartloaded = (loaded)=> {
+		// $('.fullOverlay').css('display', loaded);
+	}
+
 	return (
         <div className='tradeOneScreenContainer'>
              <TradeOneScreenTopbar onClick={backIconOnclickHandler}/>
              <MiddleChartContainer />
-            <img src={middlechart} alt="Logo" className="middleChart" />
+            {/* <img src={middlechart} alt="Logo" className="middleChart" /> */}
+            <TVChartContainer option={TVOption}  chartloaded={chartloaded}/>
             <MiddleChartControlPanel onClick={midExpandOnclickHandler}/>
             <TradeOnePanel ask='0.99756' bid='0.98656' price='1,000' />
             <div className="priceRangeDiv">

@@ -7,7 +7,7 @@ import AccountCategory from "../../components/AccountScreenComponents/AccountCat
 import AccountTopbar from "../../components/AccountScreenComponents/AccountTopbar/AccountTopbar";
 
 function AccountScreen() {
-    const [isactiveBottomNav, setisactiveBottomNav] = useState('Account');
+    const [isactiveBottomNav, setisactiveBottomNav] = useState(5);
 
 	return (
         <div className='AccountScreenContainer'>

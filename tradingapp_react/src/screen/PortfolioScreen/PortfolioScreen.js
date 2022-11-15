@@ -13,7 +13,7 @@ function PortfolioScreen() {
       let path = '/detailpage'
       navigate(path)
     }
-    const [isactiveBottomNav, setisactiveBottomNav] = useState('Portfolio');
+    const [isactiveBottomNav, setisactiveBottomNav] = useState(2);
 	return (
         <div className='PortfolioScreenContainer' >
             <PortfolioScreenTopbar />

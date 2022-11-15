@@ -45,7 +45,7 @@ function LogInScreen() {
 					Continue with Apple
 				</button>
 				
-				<button className="email" onClick={()=>setShow(true)}>Continue with Email</button>
+				<button className="email" onClick={()=>setShow(true)}>Continue with ID</button>
 				
 				<div className="LogInText">
 					<span>Already have an account?</span>

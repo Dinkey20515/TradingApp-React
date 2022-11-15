@@ -1,0 +1,14 @@
+.newsScreenContainer{
+    min-height: 100vh;
+    width: 100%;
+}
+.newsScreenContainer:last-child{
+    padding-bottom: 65px;
+}
+
+.connect-error {
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}

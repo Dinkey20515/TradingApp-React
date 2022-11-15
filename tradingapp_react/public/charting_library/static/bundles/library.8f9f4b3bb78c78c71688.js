@@ -52427,7 +52427,7 @@ webpackJsonp(
 									}).value = e;
 								},
 							},
-							// {  //kmh 11-13
+							// {
 							// 	key: "show",
 							// 	value: function () {
 							// 		var t = this,
@@ -56024,107 +56024,107 @@ webpackJsonp(
 										);
 									});
 							},
-							 createDialog: function (t, i) {   //kmh remove dialog
-								return 0;
-							// 	var o, n, r;
-							// 	return s.isOpen(t)
-							// 		? ((o = s.get(t)),
-							// 		  o.find("._tv-dialog-content").html(""),
-							// 		  o.data("new", !1),
-							// 		  o)
-							// 		: ((i = i || {}),
-							// 		  (o = $(
-							// 				e.render(
-							// 					'<div class="_tv-dialog _tv-dialog-nonmodal {{&addClass}}"><div class="_tv-dialog-title{{#hideTitle}} _tv-dialog-title-hidden{{/hideTitle}}{{#hideCloseCross}} _tv-dialog-title-no-close{{/hideCloseCross}}">{{^hideTitle}} {{&title}}{{/hideTitle}}{{^hideCloseCross}}<a class="_tv-dialog-title-close"></a>{{/hideCloseCross}}</div><div class="_tv-dialog-error"><span class="message"></span></div><div class="_tv-dialog-message"><span class="message"></span></div><div class="_tv-dialog-content"></div></div>',
-							// 					{
-							// 						addClass: i.addClass || "",
-							// 						hideTitle: i.hideTitle,
-							// 						hideCloseCross: i.hideCloseCross,
-							// 						title: t,
-							// 					}
-							// 				)
-							// 		  ).appendTo($("body"))),
-							// 		  s._addMessageCloseButton(o.find("._tv-dialog-error")),
-							// 		  s._addMessageCloseButton(o.find("._tv-dialog-message")),
-							// 		  i.width && o.css({ width: i.width }),
-							// 		  i.content && o.find("._tv-dialog-content").html(i.content),
-							// 		  (n = 0),
-							// 		  (n = i.zIndex
-							// 				? i.zIndex
-							// 				: s.dialogs && s.dialogs.length
-							// 				? a(
-							// 						$.map(s.dialogs, function (t) {
-							// 							return parseInt((t.dialog || t).css("z-index"), 10);
-							// 						})
-							// 				  ) + 1
-							// 				: 110),
-							// 		  o.css("z-index", n),
-							// 		  o.data("new", !0),
-							// 		  o.data("title", t),
-							// 		  o.data("id", s.dialogs.length + 1),
-							// 		  s.dialogs.push({
-							// 				title: t,
-							// 				dialog: o,
-							// 				id: s.dialogs.length + 1,
-							// 		  }),
-							// 		  (r = {
-							// 				start: function (t, e) {
-							// 					var i,
-							// 						o,
-							// 						n = e.helper.css("z-index"),
-							// 						r = 0,
-							// 						a = null;
-							// 					for (i = 0; i < s.dialogs.length; i++)
-							// 						(o = s.dialogs[i].dialog.css("z-index")) > r &&
-							// 							((r = o), (a = s.dialogs[i].dialog));
-							// 					e.helper.css("z-index", r), a.css("z-index", n);
-							// 				},
-							// 		  }),
-							// 		  i.dragHandle
-							// 				? (r.handle = i.dragHandle)
-							// 				: i.hideTitle || (r.handle = "._tv-dialog-title"),
-							// 		  i.dragOptions && $.extend(r, i.dragOptions),
-							// 		  c(o).draggable(s._constrainDraggableOptionsIfNeeded(r)),
-							// 		  o);
-							// },
-							// positionDialog: function (t, e, i) {
-							// 	function o() {
-							// 		n.css("margin-left", -Math.round(n.outerWidth() / 2) + "px"),
-							// 			n.css(
-							// 				"margin-top",
-							// 				-Math.round(n.outerHeight() / 2) + "px"
-							// 			);
-							// 	}
-							// 	var n, r, a, l, c, h, u, d;
-							// 	(i = i || {}),
-							// 		(e = e || i.position),
-							// 		t
-							// 			? ((r = t.width()),
-							// 			  (a = t.height()),
-							// 			  (l = $(window).width()),
-							// 			  (c = $(window).height()),
-							// 			  e && e.top && e.left
-							// 					? ((u = i.forcePosition
-							// 							? e.left
-							// 							: Math.max(2, Math.min(l - r - 4, e.left)) + "px"),
-							// 					  (h = i.forcePosition
-							// 							? e.top
-							// 							: Math.max(2, Math.min(c - a - 4, e.top)) + "px"))
-							// 					: e && e.considerScroll
-							// 					? ((d = $(document)),
-							// 					  (u = Math.round((l - r) / 2 + d.scrollLeft()) + "px"),
-							// 					  (h = Math.round((c - a) / 2 + d.scrollTop()) + "px"))
-							// 					: ((u = Math.round((l - r) / 2) + "px"),
-							// 					  (h = Math.round((c - a) / 2) + "px")),
-							// 			  i.fadeIn
-							// 					? t.css({ left: u, top: h }).hide().fadeIn("fast")
-							// 					: i.smooth
-							// 					? t.animate({ left: u, top: h })
-							// 					: t.css({ left: u, top: h }))
-							// 			: ((t = s.modalDialog),
-							// 			  (n = t.find("._tv-dialog")),
-							// 			  o(),
-							// 			  n.resize(o));
+							  createDialog: function (t, i) {   //kmh remove dialog
+								//return 0;
+								var o, n, r;
+								return s.isOpen(t)
+									? ((o = s.get(t)),
+									  o.find("._tv-dialog-content").html(""),
+									  o.data("new", !1),
+									  o)
+									: ((i = i || {}),
+									  (o = $(
+											e.render(
+												'<div class="_tv-dialog _tv-dialog-nonmodal {{&addClass}}"><div class="_tv-dialog-title{{#hideTitle}} _tv-dialog-title-hidden{{/hideTitle}}{{#hideCloseCross}} _tv-dialog-title-no-close{{/hideCloseCross}}">{{^hideTitle}} {{&title}}{{/hideTitle}}{{^hideCloseCross}}<a class="_tv-dialog-title-close"></a>{{/hideCloseCross}}</div><div class="_tv-dialog-error"><span class="message"></span></div><div class="_tv-dialog-message"><span class="message"></span></div><div class="_tv-dialog-content"></div></div>',
+												{
+													addClass: i.addClass || "",
+													hideTitle: i.hideTitle,
+													hideCloseCross: i.hideCloseCross,
+													title: t,
+												}
+											)
+									  ).appendTo($("body"))),
+									  s._addMessageCloseButton(o.find("._tv-dialog-error")),
+									  s._addMessageCloseButton(o.find("._tv-dialog-message")),
+									  i.width && o.css({ width: i.width }),
+									  i.content && o.find("._tv-dialog-content").html(i.content),
+									  (n = 0),
+									  (n = i.zIndex
+											? i.zIndex
+											: s.dialogs && s.dialogs.length
+											? a(
+													$.map(s.dialogs, function (t) {
+														return parseInt((t.dialog || t).css("z-index"), 10);
+													})
+											  ) + 1
+											: 110),
+									  o.css("z-index", n),
+									  o.data("new", !0),
+									  o.data("title", t),
+									  o.data("id", s.dialogs.length + 1),
+									  s.dialogs.push({
+											title: t,
+											dialog: o,
+											id: s.dialogs.length + 1,
+									  }),
+									  (r = {
+											start: function (t, e) {
+												var i,
+													o,
+													n = e.helper.css("z-index"),
+													r = 0,
+													a = null;
+												for (i = 0; i < s.dialogs.length; i++)
+													(o = s.dialogs[i].dialog.css("z-index")) > r &&
+														((r = o), (a = s.dialogs[i].dialog));
+												e.helper.css("z-index", r), a.css("z-index", n);
+											},
+									  }),
+									  i.dragHandle
+											? (r.handle = i.dragHandle)
+											: i.hideTitle || (r.handle = "._tv-dialog-title"),
+									  i.dragOptions && $.extend(r, i.dragOptions),
+									  c(o).draggable(s._constrainDraggableOptionsIfNeeded(r)),
+									  o);
+							},
+							positionDialog: function (t, e, i) {
+								function o() {
+									n.css("margin-left", -Math.round(n.outerWidth() / 2) + "px"),
+										n.css(
+											"margin-top",
+											-Math.round(n.outerHeight() / 2) + "px"
+										);
+								}
+								var n, r, a, l, c, h, u, d;
+								(i = i || {}),
+									(e = e || i.position),
+									t
+										? ((r = t.width()),
+										  (a = t.height()),
+										  (l = $(window).width()),
+										  (c = $(window).height()),
+										  e && e.top && e.left
+												? ((u = i.forcePosition
+														? e.left
+														: Math.max(2, Math.min(l - r - 4, e.left)) + "px"),
+												  (h = i.forcePosition
+														? e.top
+														: Math.max(2, Math.min(c - a - 4, e.top)) + "px"))
+												: e && e.considerScroll
+												? ((d = $(document)),
+												  (u = Math.round((l - r) / 2 + d.scrollLeft()) + "px"),
+												  (h = Math.round((c - a) / 2 + d.scrollTop()) + "px"))
+												: ((u = Math.round((l - r) / 2) + "px"),
+												  (h = Math.round((c - a) / 2) + "px")),
+										  i.fadeIn
+												? t.css({ left: u, top: h }).hide().fadeIn("fast")
+												: i.smooth
+												? t.animate({ left: u, top: h })
+												: t.css({ left: u, top: h }))
+										: ((t = s.modalDialog),
+										  (n = t.find("._tv-dialog")),
+										  o(),
+										  n.resize(o));
 							 },
 							applyHandlers: function (t, e) {
 								var i,

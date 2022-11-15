@@ -1,0 +1,54 @@
+.NewsScreenTopbarContainer{
+    position: sticky;
+    top: 0;
+    background-color:rgb(15,15,15);
+    z-index: 1;
+    border-top: 1px solid #202020;
+    box-shadow: 0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+    width: -webkit-fill-available;
+    margin:0px 0px;
+    margin-bottom: 0px;
+    display: flow-root;
+}
+.NewsScreenTopStatusbar{
+    padding: 0px 15px !important;
+    margin-top: 15px !important;
+    margin-bottom: 0px !important;
+    height: 45px;
+    list-style: none;
+ }
+.NewsScreenTopStatusbarText{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0px 15px;
+    color: rgb(233, 233, 233);
+}
+.NewsScreenTopNavbarText{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0px 15px;
+    color: rgb(117, 117, 117);
+    cursor: pointer;
+    margin: auto;
+}
+.topBarIcon{
+    color: #cccccc;
+    width: 1.2em;
+    height: 1.2em;
+}
+.topStatusHorizonBar{
+    background:#bb8761 ;
+    height: 0px;
+    border-radius: 0px;
+}
+.toTopLeft{
+    float: left;
+    top: 15px !important;
+    left: 15px !important;
+    vertical-align: text-bottom;
+}
+.toTopRight{
+    float: right;
+    top: 15px !important;
+    right: 15px !important;
+}

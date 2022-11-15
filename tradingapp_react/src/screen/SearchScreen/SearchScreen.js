@@ -6,7 +6,7 @@ import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import SearchCategory from "../../components/SearchScreenComponents/SearchCategory";
 
 function SearchScreen() {
-	const [isactiveBottomNav, setisactiveBottomNav] = useState('Search');
+	const [isactiveBottomNav, setisactiveBottomNav] = useState(3);
 	return (
         <div className='searchScreenContainer' >
             <div className="searchHeaderText">Search</div>

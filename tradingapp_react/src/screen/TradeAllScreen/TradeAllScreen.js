@@ -16,9 +16,10 @@ function TradeAllScreen(props) {
     const navigate = useNavigate();
     const symbolCardOnclickHandler = () => {
       let path = '/detailpage'
-      navigate(path)
+      navigate(path);
+      window.location.reload(false);
     }
-	const [isactiveBottomNav, setisactiveBottomNav] = useState('Trade');
+	const [isactiveBottomNav, setisactiveBottomNav] = useState(1);
 	return (
         <div className='tradeAllScreenContainer' >
             <TradeAllScreenTopbar />

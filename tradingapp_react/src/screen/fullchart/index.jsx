@@ -6,7 +6,7 @@ import { TVChartContainer } from '../../components/TVChartContainer/index';
 import jsonData from "./data";
 import $ from 'jquery';
 import renderHTML from 'react-render-html';
-import { IoReload } from "react-icons/io5"; 
+import { FiLoader } from "react-icons/fi"; 
  
 class FullChart extends React.Component {
 	
@@ -18,9 +18,10 @@ class FullChart extends React.Component {
 			charttype: '',
 			add_indicator: '',
 			add_drawing: '',
+			height: (window.innerHeight - 55),
 			del_obj:'',
 			getShapeFlg: 0,
-			selectedItem: "",
+			selectedItem: "onStart",
 			selectedShapeIndexes: [],		//selected drawingtool indexes
 			selectedIndicators: [],			//selected indicator indexes.
 			flag: 0,
@@ -288,7 +289,7 @@ class FullChart extends React.Component {
 		return (
 			<div>
 				<div className='fullOverlay'>
-					<IoReload className='fullOverlayImage'/>
+					<FiLoader className='fullOverlayImage'/>
 				</div>
 				<div className="overlay" onClick={()=>this.initTab()}></div>
 				<TVChartContainer option={this.state} getShapeId={this.getShapeId} chartloaded={this.chartloaded}/>

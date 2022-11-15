@@ -33,90 +33,37 @@ function BottomNavbar(props) {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     });
-	const  setActive = () =>{
-		switch(props.index) {
-			case 'Portfolio':
-				$(".Active").removeClass("Active");
-				$(".BottomNavBarPortfolioButton").addClass("Active");
-			  break;
-			case 'Search':
-				$(".Active").removeClass("Active");
-				$(".BottomNavBarSearchButton").addClass("Active");
-			  break;  
-			case 'News':
-				$(".Active").removeClass("Active");
-				$(".BottomNavBarNewsButton").addClass("Active");
-			break;  
-			case 'Account':
-				$(".Active").removeClass("Active");
-				$(".BottomNavBarAccountButton").addClass("Active");
-			break;  
-			case 'News':
-				$(".Active").removeClass("Active");
-				$(".BottomNavBarNewsButton").addClass("Active");
-			break;  
-			default:
-				$(".Active").removeClass("Active");
-				$(".BottomNavBarTradeButton").addClass("Active");
-		  }
-
-	}
-    //================End=================
-
+	
 	
 	//===============PageNavigate==========
-	const navigate = useNavigate();
-	const navBarTradeButtonOnClickHandler = () => {
-		let path = '/trade';
-		navigate(path);
-		setActive();
-		$(".Active").removeClass("Active");
-		$(".BottomNavBarTradeButton").addClass("Active");
+	const navigate = useNavigate('');
+
+	const onNavClick = (url) => {
+		navigate(url);
 	}
-	const navBarPortfolioButtonOnClickHandler = () => {
-		let path = '/Portfolio';
-		navigate(path);
-		setActive();
-		$(".Active").removeClass("Active");
-		$(".BottomNavBarPortfolioButton").addClass("Active");
-	}
-	const navBarSearchButtonOnClickHandler = () => {
-		let path = '/Search';
-		navigate(path);
-		setActive();
-	}
-	const navBarNewsButtonOnClickHandler = () => {
-		let path = '/News';
-		navigate(path);
-		setActive();
-	}
-	const navBarAccountButtonOnClickHandler = () => {
-		let path = '/Account';
-		navigate(path);
-		setActive();
-	}
+
 	return (
-		<div className={`BottomNavBarContainer ${visibleBottombar ? "showbar" : "hidebar"} `} >
-			<button className="BottomNavBarTradeButton BottomNavBar-item" onClick={navBarTradeButtonOnClickHandler}>
+		<div className={`BottomNavBarContainer ${visibleBottombar?'showbar':'hidebar'} `} >
+			<button className={"BottomNavBarTradeButton BottomNavBar-item "+(props.index==1?'Active':'')} onClick={()=> onNavClick('/trade')}>
                 <RiLineChartLine className="BottomNavBarIcon" />
 				<span className="BottomNavBar-Text">Trade</span>
 			</button>
 
-			<button className="BottomNavBarPortfolioButton BottomNavBar-item" onClick={navBarPortfolioButtonOnClickHandler}>
+			<button className={"BottomNavBarPortfolioButton BottomNavBar-item "+(props.index==2?'Active':'')} onClick={()=>onNavClick('/portfolio')}>
 				<SlHandbag className="BottomNavBarIcon" />
 				<span className="BottomNavBar-Text">Portfolio</span>
 			</button>
 
-			<button className="BottomNavBarSearchButton BottomNavBar-item" onClick={navBarSearchButtonOnClickHandler}>
+			<button className={"BottomNavBarSearchButton BottomNavBar-item "+(props.index==3?'Active':'')} onClick={()=>onNavClick('/search')}>
 				<BsSearch className="BottomNavBarIcon" />
                 <span className="BottomNavBar-Text">Search</span>
 			</button>
-			<button className="BottomNavBarNewsButton BottomNavBar-item" onClick={navBarNewsButtonOnClickHandler}>
+			<button className={"BottomNavBarNewsButton BottomNavBar-item "+(props.index==4?'Active':'') } onClick={()=>onNavClick('/news')}>
 				<IoNewspaperOutline className="BottomNavBarIcon" />
 				<span className="BottomNavBar-Text">News</span>
 			</button>
 
-			<button className="BottomNavBarAccountButton BottomNavBar-item" onClick={navBarAccountButtonOnClickHandler}>
+			<button className={"BottomNavBarAccountButton BottomNavBar-item "+(props.index==5?'Active':'')} onClick={()=>onNavClick('/account')}>
 				<VscAccount className="BottomNavBarIcon" />
 				<span className="BottomNavBar-Text">Account</span>
 			</button>

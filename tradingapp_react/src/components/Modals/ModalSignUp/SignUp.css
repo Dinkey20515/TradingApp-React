@@ -98,10 +98,11 @@ label{
     margin: 10px;
   }
 .inputForm{
-    background-color: #0f0f0f;
+    background-color: #1b1b1b !important;
     padding: 15px 15px;
     font-size: 1.3rem;
     border: solid 1px;
+    color: rgb(199, 198, 198);
     border-color: #666666;
 }
 .inputForm:hover{
@@ -161,3 +162,9 @@ label{
     top: 25px !important;
     left: 12px !important;
 }  
+
+.account-span {
+  color: white;
+  padding-left: 30px;
+  font-size: 19px;
+}

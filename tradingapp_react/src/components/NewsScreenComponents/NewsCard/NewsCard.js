@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NewsImg from '../../assets/News.jpg'; 
+import NewsImg from '../../../assets/News.jpg'; 
 import "./NewsCard.css";
 
 function NewsCard(props) {
