@@ -4,21 +4,21 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import {ImPencil} from "react-icons/im";
 import {AiOutlineAppstoreAdd} from "react-icons/ai";
-
+import { useState } from "react";
 import './TradeAllScreen.css';
 import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import TradeAllScreenTopbar from "../../components/TradeAllScreenComponents/TradeAllScreenTopbar/TradeAllScreenTopbar";
 import SummaryCard from "../../components/TradeAllScreenComponents/SummaryCard/SummaryCard";
 
 
-function TradeAllScreen() {
+function TradeAllScreen(props) {
     //=======page navigation=======
     const navigate = useNavigate();
     const symbolCardOnclickHandler = () => {
       let path = '/detailpage'
       navigate(path)
     }
-
+	const [isactiveBottomNav, setisactiveBottomNav] = useState('Trade');
 	return (
         <div className='tradeAllScreenContainer' >
             <TradeAllScreenTopbar />
@@ -47,7 +47,7 @@ function TradeAllScreen() {
                     <div className="tradeAllScreenButtonText"> Add markets </div>
                 </Col>
             </Row>
-            <BottomNavbar />
+            <BottomNavbar index={isactiveBottomNav}/>
         </div>
 	);
 }

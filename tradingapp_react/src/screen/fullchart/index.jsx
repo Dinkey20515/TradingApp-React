@@ -6,7 +6,7 @@ import { TVChartContainer } from '../../components/TVChartContainer/index';
 import jsonData from "./data";
 import $ from 'jquery';
 import renderHTML from 'react-render-html';
-import { RiLoader2Line } from "react-icons/ri"; 
+import { IoReload } from "react-icons/io5"; 
  
 class FullChart extends React.Component {
 	
@@ -288,7 +288,7 @@ class FullChart extends React.Component {
 		return (
 			<div>
 				<div className='fullOverlay'>
-					<RiLoader2Line className='fullOverlayImage'/>
+					<IoReload className='fullOverlayImage'/>
 				</div>
 				<div className="overlay" onClick={()=>this.initTab()}></div>
 				<TVChartContainer option={this.state} getShapeId={this.getShapeId} chartloaded={this.chartloaded}/>

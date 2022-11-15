@@ -28,7 +28,7 @@ function LogInScreen() {
 			<div className="titleSection">
 				<p>capital com</p>
 				<br />
-				<span>Study trends with powerful charts</span>
+				<span>Study trends with powerful charts!</span>
 			</div>
 			<div className="loginButtons">
 				

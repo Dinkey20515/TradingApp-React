@@ -33,55 +33,67 @@ function BottomNavbar(props) {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     });
+	const  setActive = () =>{
+		switch(props.index) {
+			case 'Portfolio':
+				$(".Active").removeClass("Active");
+				$(".BottomNavBarPortfolioButton").addClass("Active");
+			  break;
+			case 'Search':
+				$(".Active").removeClass("Active");
+				$(".BottomNavBarSearchButton").addClass("Active");
+			  break;  
+			case 'News':
+				$(".Active").removeClass("Active");
+				$(".BottomNavBarNewsButton").addClass("Active");
+			break;  
+			case 'Account':
+				$(".Active").removeClass("Active");
+				$(".BottomNavBarAccountButton").addClass("Active");
+			break;  
+			case 'News':
+				$(".Active").removeClass("Active");
+				$(".BottomNavBarNewsButton").addClass("Active");
+			break;  
+			default:
+				$(".Active").removeClass("Active");
+				$(".BottomNavBarTradeButton").addClass("Active");
+		  }
+
+	}
     //================End=================
-    const [isactiveBottomNav, setisactiveBottomNav] = useState('Trade');
+
+	
 	//===============PageNavigate==========
 	const navigate = useNavigate();
 	const navBarTradeButtonOnClickHandler = () => {
-		console.log('tradebef',isactiveBottomNav);
-		setisactiveBottomNav('Trade');
-		console.log('tradeaft',isactiveBottomNav);
-		if(isactiveBottomNav == 'Trade')
-		{
-		$(".Active").removeClass("Active");
-		$(".BottomNavBarTradeButton").addClass("Active");
-		console.log('tradeif',isactiveBottomNav);
-		}
 		let path = '/trade';
 		navigate(path);
+		setActive();
+		$(".Active").removeClass("Active");
+		$(".BottomNavBarTradeButton").addClass("Active");
 	}
 	const navBarPortfolioButtonOnClickHandler = () => {
-		console.log('portbef',isactiveBottomNav);
-		setisactiveBottomNav('Portfolio');
-		console.log('portaft',isactiveBottomNav);
-		if(isactiveBottomNav == 'Portfolio')
-		{
-		$(".Active").removeClass("Active");
-		$(".BottomNavBarPortfolioButton").addClass("Active");
-		console.log('portif',isactiveBottomNav);
-		}
 		let path = '/Portfolio';
 		navigate(path);
-		
+		setActive();
+		$(".Active").removeClass("Active");
+		$(".BottomNavBarPortfolioButton").addClass("Active");
 	}
 	const navBarSearchButtonOnClickHandler = () => {
-		setisactiveBottomNav('Search');
-		$(".Active").removeClass("Active");
-		$(".BottomNavBarSearchButton").addClass("Active");
 		let path = '/Search';
 		navigate(path);
+		setActive();
 	}
 	const navBarNewsButtonOnClickHandler = () => {
-		setisactiveBottomNav('News');
-		$(".Active").removeClass("Active");
-		$(".BottomNavBarNewsButton").addClass("Active");
+		let path = '/News';
+		navigate(path);
+		setActive();
 	}
 	const navBarAccountButtonOnClickHandler = () => {
-		setisactiveBottomNav('Account');
-		$(".Active").removeClass("Active");
-		$(".BottomNavBarAccountButton").addClass("Active");
 		let path = '/Account';
 		navigate(path);
+		setActive();
 	}
 	return (
 		<div className={`BottomNavBarContainer ${visibleBottombar ? "showbar" : "hidebar"} `} >

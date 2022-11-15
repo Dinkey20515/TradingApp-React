@@ -13,7 +13,7 @@ function SignUp(props) {
 		<div className="signUpModal">
             <div className="login-form signUpModal-content">
                 <div className="SignUpTopbar">
-                <AiOutlineArrowLeft className="arrowBackIcon" />
+                <AiOutlineArrowLeft className="arrowBackIcon" onClick={props.onClose}/>
                     {/* <div >
                         <div className="fullChartSymbolSketText"> Bitcoin / USD </div>
                         <div className="fullChartSymboldetailText"> Bitcoin to US Dollar </div>

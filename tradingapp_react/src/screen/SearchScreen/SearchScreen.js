@@ -1,12 +1,12 @@
 
 import React ,{ Component } from "react";
-
+import { useState } from "react";
 import './SearchScreen.css';
 import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import SearchCategory from "../../components/SearchScreenComponents/SearchCategory";
 
 function SearchScreen() {
-
+	const [isactiveBottomNav, setisactiveBottomNav] = useState('Search');
 	return (
         <div className='searchScreenContainer' >
             <div className="searchHeaderText">Search</div>
@@ -20,7 +20,7 @@ function SearchScreen() {
                 </span>
             </div>
             <SearchCategory />
-            <BottomNavbar />
+            <BottomNavbar index={isactiveBottomNav}/>
         </div>
 	);
 }

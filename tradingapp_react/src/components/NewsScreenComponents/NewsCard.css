@@ -1,0 +1,39 @@
+.NewsCardContainer{
+    margin: 17px 4px !important;
+    padding:10px 2px !important;
+    background-color: #262626 !important;
+    border-radius: 7px !important;
+}
+.NewsCardTitleText{
+    padding: 10px 10px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    margin-top:5px;
+    margin-left: 10px;
+}
+.NewsCardCategoryText{
+    padding: 10px 10px;
+    color: #757575;
+    text-decoration: none;
+    text-align: left;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.02857em;
+    margin-top:5px;
+    margin-left: 10px;
+}
+.NewsImage{
+    width: 90px;
+    height: 90px;
+    float: right;
+    margin-top: 1px;
+    margin-right: 10px;
+}

@@ -1,6 +1,6 @@
 import React ,{ Component } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useState } from "react";
 import './PortfolioScreen.css';
 import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import PortfolioScreenTopbar from "../../components/PortfolioScreenComponents/PortfolioScreenTopbar/PortfolioScreenTopbar";
@@ -13,12 +13,12 @@ function PortfolioScreen() {
       let path = '/detailpage'
       navigate(path)
     }
-
+    const [isactiveBottomNav, setisactiveBottomNav] = useState('Portfolio');
 	return (
         <div className='PortfolioScreenContainer' >
             <PortfolioScreenTopbar />
             <PortfolioTrade />
-            <BottomNavbar />
+            <BottomNavbar index={isactiveBottomNav}/>
         </div>
 	);
 }
