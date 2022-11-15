@@ -1,6 +1,6 @@
 let rp = require('request-promise').defaults({json: true})
 
-const api_root = 'http://10.10.13.238:5000/';
+const api_root = 'localhost:5000/';
 
 export const login = (uid, pass)=> {
     const url = 'api/mt5/login'
