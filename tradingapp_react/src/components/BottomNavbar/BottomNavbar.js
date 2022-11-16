@@ -40,6 +40,7 @@ function BottomNavbar(props) {
 
 	const onNavClick = (url) => {
 		navigate(url);
+		window.location.reload(false);
 	}
 
 	return (

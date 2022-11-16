@@ -1,6 +1,6 @@
 let rp = require('request-promise').defaults({json: true})
 
-const api_root = 'localhost:5000/';
+const api_root = 'http://localhost:5000/';
 
 export const login = (uid, pass)=> {
     const url = 'api/mt5/login'
@@ -15,8 +15,8 @@ export const login = (uid, pass)=> {
     })
 }
 
-export const news = (total)=> {
-    const url = 'api/mt5/news'
+export const newslist = (total)=> {
+    const url = 'api/mt5/newslist'
     const qs = {
         total : total,
     }
@@ -25,7 +25,16 @@ export const news = (total)=> {
         qs,
     })
 }
-
+export const news = (index)=> {
+    const url = 'api/mt5/news'
+    const qs = {
+        id : index,
+    }
+    return rp({
+        url: `${api_root}${url}`,
+        qs,
+    })
+}
 export const singup = (uid, pass)=> {
     const url = 'api/mt5/singup'
     const qs = {

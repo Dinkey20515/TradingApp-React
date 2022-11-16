@@ -4,7 +4,10 @@ import './NewsScreen.css';
 import NewsCard from "../../components/NewsScreenComponents/NewsCard/NewsCard";
 import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import NewsScreenTopBar from "../../components/NewsScreenComponents/NewsScreenTopBar/NewsScreenTopBar"
+import {newslist} from "../../API/api";
 import {news} from "../../API/api";
+
+import LoadingComponent from "../../components/LoadingComponents/LoadingComponent"
 
 function NewsScreen() {
     const isactiveBottomNav = 4;
@@ -12,7 +15,7 @@ function NewsScreen() {
     const [arr_news, setArr_news] = useState([])
     useEffect(() => {
         // Update the document title using the browser API
-         news(total).then(data => {
+        newslist(total).then(data => {
             if (data.state && data.state === 0) {
                 console.log('mt5 API error:',data.data)
                 return ;
@@ -24,6 +27,7 @@ function NewsScreen() {
                 return ;
             }
         });
+
     });
 
     return (
@@ -38,11 +42,10 @@ function NewsScreen() {
 const NavList = ({list})=> {
     if (list.answer && list.answer.length) {
         return list.answer.map ( (item, i)=> {
-            return (<NewsCard key={i} category={item.Category} title={item.Subject} />);
+            return (<NewsCard key={i} category={item.Category} title={item.Subject}  index={item.ID}/>);
         })
     }else {
-        return (<div className="connect-error">Failed Connection to Server.</div>);
+        return (<LoadingComponent show={'true'}/>);
     }
 }
-
 export default NewsScreen;

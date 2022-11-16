@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./BottomNavbar.css";
+import "./LoadingComponent.css";
+import {RiLoader2Line} from "react-icons/ri"
+import $ from 'jquery';
 
 function LoadingComponent(props) {
-	if(props!= 'true')
+	if(props.show!= 'true')
 	{
 		return;
 	} 
+
 	return (
-		<div className='fullOverlay'>
+		<div>
             <RiLoader2Line className='fullOverlayImage'/>
         </div>
 	);
