@@ -11,7 +11,7 @@ import LoadingComponent from "../../components/LoadingComponents/LoadingComponen
 
 function NewsScreen() {
     const isactiveBottomNav = 4;
-    const total = 10;
+    const total = 50;
     const [arr_news, setArr_news] = useState([])
     useEffect(() => {
         // Update the document title using the browser API

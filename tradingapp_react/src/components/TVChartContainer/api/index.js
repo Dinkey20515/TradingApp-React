@@ -1,7 +1,7 @@
 import historyProvider from './historyProvider'
 import stream from './stream'
 
-const supportedResolutions = ["1", "3", "5", "15", "30", "60", "120", "240", "D"]
+const supportedResolutions = ["1", "5", "15", "30", "60", "300", "1D", "5D", "2W", "1M", "3M", "6M"]
 
 const config = {
     supported_resolutions: supportedResolutions
@@ -34,7 +34,7 @@ export default {
 			pricescale: 100000000,
 			has_intraday: true,
 			intraday_multipliers: ['1', '60'],
-			supported_resolution:  supportedResolutions,
+			supported_resolution:  "1", //supportedResolutions,
 			volume_precision: 8,
 			data_status: 'streaming',
 		}

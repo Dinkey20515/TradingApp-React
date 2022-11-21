@@ -16,7 +16,7 @@ import { TVChartContainer } from '../../components/TVChartContainer/index';
 
 function TradeOneScreen() {
     const [TVOption, setTVOption] = useState({
-        symbol: "Bitfinex:BTC/USD",
+        symbol: "Bitfinex:USD/JPY",
         period: '',
         charttype: '',
         add_indicator: '',

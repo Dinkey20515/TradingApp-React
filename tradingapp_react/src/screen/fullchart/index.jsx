@@ -13,7 +13,7 @@ class FullChart extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			symbol: "Bitfinex:BTC/USD",
+			symbol: "Coinbse:USD/JPY",
 			period: '',
 			charttype: '',
 			add_indicator: '',
@@ -175,7 +175,7 @@ class FullChart extends React.Component {
 
 	drawByChartUnit(index, e) {
 		$(".timeunit-active").removeClass("timeunit-active");
-		let data = ["1", "5", "15", "30", "60", "300"];
+		let data = ["1m", "5m", "15m", "30m", "60m", "360m"];
 		e.currentTarget.className = "timeunit-active";
 		this.setState({
 			period: data[index],
@@ -384,7 +384,7 @@ class FullChart extends React.Component {
 							<h4 className={"tab-btn-title"}>SHOW PRICE</h4>
 						</div>
 						<div className={"content-around"}>
-							<button className={"bid-btn"}>BID</button>
+							<button className={"bid-btn"} onClick={(e)=>{console.log(this)}}>BID</button>
 							<button className={"bid-btn"}>ASK</button>
 						</div>
 					</div>

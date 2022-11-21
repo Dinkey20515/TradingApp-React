@@ -1,4 +1,5 @@
 .NewsCardContainer{
+    cursor: pointer;
     margin: 17px 4px !important;
     padding:10px 2px !important;
     background-color: #262626 !important;

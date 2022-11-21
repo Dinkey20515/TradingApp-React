@@ -103899,7 +103899,7 @@ webpackJsonp(
 								o,
 								r,
 								s = this;
-							if (this._leftDate && this._leftDate < e)
+							if (this._leftDate && this._leftDate <= e)
 								return void this._processNextPendingSubscriber();
 							(i = !this._leftDate),
 								(this._requesting = !0),

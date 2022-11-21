@@ -13,7 +13,7 @@ export class TVChartContainer extends React.PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
-			symbol: '',
+			symbol: 'Coinbase:USD/JPY',
 			period: '',
 			charttype: '',
 			add_indicator: '',
@@ -105,9 +105,9 @@ export class TVChartContainer extends React.PureComponent {
 				debug: false,
 				height: nextProps.option.height,
 				width: "100%",
-				symbol: 'Coinbase:BTC/USD',
+				symbol: 'Coinbase:USD/JPY',
 				datafeed: Datafeed,
-				interval: '15',
+				interval: 'D',
 				container_id: 'tv_chart_container',
 				library_path: '/charting_library/',
 				locale: getLanguageFromURL() || 'en',
