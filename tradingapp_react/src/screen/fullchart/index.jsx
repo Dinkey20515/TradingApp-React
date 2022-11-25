@@ -13,8 +13,9 @@ class FullChart extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			symbol: "Coinbse:USD/JPY",
+			symbol: "BTCUSD",
 			period: '',
+			chartunit: '',
 			charttype: '',
 			add_indicator: '',
 			add_drawing: '',
@@ -156,7 +157,7 @@ class FullChart extends React.Component {
 		//let data = ["1", "5", "15", "30", "60", "300"];
 		e.currentTarget.className = "period-active";
 		this.setState({
-			period: this.g_period[i],
+			period: jsonData.g_period_timeframe[i],
 			selectedItem: 'period'
 		});
 		//this.widget.setSymbol("Bitfinex:BTC/USD", this.g_period[i]);
@@ -175,11 +176,11 @@ class FullChart extends React.Component {
 
 	drawByChartUnit(index, e) {
 		$(".timeunit-active").removeClass("timeunit-active");
-		let data = ["1m", "5m", "15m", "30m", "60m", "360m"];
+		let data = ["1", "5", "15", "30", "60", "360"];
 		e.currentTarget.className = "timeunit-active";
 		this.setState({
-			period: data[index],
-			selectedItem: 'period'
+			chartunit: data[index],
+			selectedItem: 'chartunit'
 		});
 		//widget.setSymbol("Bitfinex:BTC/USD", data[index]);
 	}
@@ -360,7 +361,7 @@ class FullChart extends React.Component {
 									<ul id={"sel-indicator-list"} className={"indicator-lists"}>
 										{selectedIndicators.map((id, i)=> {
 											return (<li key={i} className='draw-item' id={'sel_indic_' + id}><div className='p-10'><span className='del-icon' onClick={()=>this.deleteIndicator(id)}><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17" fill="currentColor" style={{marginBottom: '-3px'}}><path d="m.58 1.42.82-.82 15 15-.82.82z"></path><path d="m.58 15.58 15-15 .82.82-15 15z"></path></svg></span><span style={{padding: '10px 0'}}>{this.g_indicators[id]}
-											</span><span className='pencil-icon'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"fill="#bb8961"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/><path xmlns="http://www.w3.org/2000/svg" d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg></span></div></li>)
+											 </span>{/*<span className='pencil-icon'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"fill="#bb8961"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/><path xmlns="http://www.w3.org/2000/svg" d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg></span>*/}</div></li>) 
 										})}
 									</ul>
 								</div>

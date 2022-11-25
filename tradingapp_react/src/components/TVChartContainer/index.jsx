@@ -13,7 +13,7 @@ export class TVChartContainer extends React.PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
-			symbol: 'Coinbase:USD/JPY',
+			symbol: '',
 			period: '',
 			charttype: '',
 			add_indicator: '',
@@ -50,9 +50,13 @@ export class TVChartContainer extends React.PureComponent {
 		if ( nextProps.option.selectedItem !== '') {
 			switch (nextProps.option.selectedItem) {
 				case 'symbol':
-					window.tvWidget.setSymbol(nextProps.option.symbol, nextProps.option.period);
+					window.tvWidget.setSymbol(nextProps.option.symbol, nextProps.option.chartunit);
+					break;
+				case 'chartunit':
+					window.tvWidget.setSymbol(nextProps.option.symbol, nextProps.option.chartunit);
 					break;
 				case 'period':
+					// window.tvWidget.chart().setResolution(nextProps.option.period);
 					window.tvWidget.setSymbol(nextProps.option.symbol, nextProps.option.period);
 					break;
 				case 'charttype':
@@ -105,7 +109,7 @@ export class TVChartContainer extends React.PureComponent {
 				debug: false,
 				height: nextProps.option.height,
 				width: "100%",
-				symbol: 'Coinbase:USD/JPY',
+				symbol: nextProps.option.symbol,
 				datafeed: Datafeed,
 				interval: 'D',
 				container_id: 'tv_chart_container',

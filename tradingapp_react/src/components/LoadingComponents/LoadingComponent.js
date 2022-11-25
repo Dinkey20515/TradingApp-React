@@ -5,15 +5,11 @@ import {RiLoader2Line} from "react-icons/ri"
 import $ from 'jquery';
 
 function LoadingComponent(props) {
-	if(props.show!= 'true')
-	{
-		return;
-	} 
 
-	return (
-		<div>
+	return props.show === 'true'?(
+		<div className="fullOverlay">
             <RiLoader2Line className='fullOverlayImage'/>
         </div>
-	);
+	):(<div></div>);
 }
 export default LoadingComponent;

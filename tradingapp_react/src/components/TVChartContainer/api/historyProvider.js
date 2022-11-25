@@ -14,47 +14,36 @@ export default {
 	history: history,
 
     getBars: function(symbolInfo, resolution, from, to, first, limit) {
-		var split_symbol = symbolInfo.name.split(/[:/]/)
 		limit = limit?limit:2000;
-		const url = `/history/${split_symbol[1]+split_symbol[2]}`;//${split_symbol[1]+split_symbol[2]}/${resolution}/${from }/${to}`; //resolution === 'D' ? '/data/histoday' : resolution >= 60 ? '/data/histohour' : '/data/histominute'
-		if (resolution.endsWith("m")) {
-			from = to - (60 * limit)
-		}else if(resolution.endsWith("M")) {
-			from = to - (86400 * 30 * limit)
-		}else if(resolution.endsWith("D")) {
+		const url = `/history/${symbolInfo.name}`;
+		if(resolution === 'D') {
 			from = to - (86400 * limit)
-		}else if(resolution.endsWith("W")) {
-			from = to - (86400 * 7 * limit)
+		}else if(resolution >= 60) {
+			from = to - (3600 * limit)
 		}else {
 			from = to - (60 * limit)
 		}
-		if (from<0 || to<946652400) {
-			from = 0;
-			return;
+		if(to<0) {
+
+			return []
 		}
-		const qs = {
-				//e: split_symbol[0],
-				//timeframe: resolution,
-				symbol: (split_symbol[1]+split_symbol[2]),
-				//tsym: split_symbol[2],
-				//fromTs: from? convertDate(from * 1000): '2022-11-11 00:00:00',
-				//toTs:  to ? convertDate(to * 1000) : '2022-11-11 05:00:00',
-				//limit: limit ? limit : 2000, 
-				//api_key: '7a877fb52ac46a2ec6a78b939733a9383eaff6a811fdbf456f2cc2ab9dec17fb',
-				// aggregate: 1 //resolution 
-			}
-		// console.log({qs})
+		if(to > 0 && from < 0)
+			from = 0;
 
         return rp({
-                uri: `${api_root}${url}`,
+                uri: `${api_root}${url}/${from}/${to}`,
                 headers: {
 					"Content-Type": 'application/json',
 					"timeframe": resolution,
-					"x_start_date": from,//convertDate(from * 1000),
-					"x_end_date": to,//convertDate(to * 1000),
+					"x_start_date": convertDate(from * 1000),
+					"x_end_date": convertDate(to * 1000),
 					"limit": limit,
 					"Accept": '/',
-				}
+				},
+				body: JSON.stringify({
+					"x_start_date": from,
+					"x_end_date": to,
+				})
             })
             .then(data => {
 				console.log('symboldata--------------')

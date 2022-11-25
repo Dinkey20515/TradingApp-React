@@ -5,17 +5,21 @@ import "./NewsCard.css";
 import NewsBody from "../NewsBody/NewsBody";
 import {news} from "../../../API/api";
 import { Buffer } from 'buffer';
+import LoadingComponent from "../../LoadingComponents/LoadingComponent"
 // import {decode} from 'base-64';
 // import { Base64, btoa } from "js-base64";
 
 function NewsCard(props) {
     const [newsBodyurl, setnewsBodyurl] = useState([]);
     const [newsBodyShow, setnewsBodyshow] = useState(false);
+    const [load_flag, setLoad_flag] = useState('false')
+    
     useEffect(() => {
         // Update the document title using the browser API
     });
     
     const showNewsBody = ()=> {
+        setLoad_flag('true')
         news(props.index).then(data => {
             console.log('data',data);
             if (data.state && data.state === 0) {
@@ -32,8 +36,11 @@ function NewsCard(props) {
             }
         });
     }
+
+
     return (
             <div className='NewsCardContainer' onClick={showNewsBody}>
+                <LoadingComponent show={load_flag} />
                 <img src={NewsImg} alt="News" className="NewsImage"/>       
                 <div className="NewsCardTitleText"> {props.title} </div>
                 <div className="NewsCardCategoryText">{props.category}</div>

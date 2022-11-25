@@ -1,17 +1,32 @@
 // api/stream.js
 import historyProvider from './historyProvider.js'
-// we use Socket.io client to connect to cryptocompare's socket.io stream
-var io = require('socket.io-client')
-var socket_url = 'wss://streamer.cryptocompare.com'
-var socket = io(socket_url)
+import { createStore, useStore } from "usestore-react";
+const ask = createStore("askprice", 0);
+const bid = createStore("bidprice", 0);
+
+var clientID = 123; 
+const url = "ws://localhost:8000/ws/" + clientID;
+const ws = new WebSocket(url);
+ws.onopen = function(evt) {
+  console.log('===Socket connected:', evt)
+};
+
+ws.onclose = function(evt) {
+  console.log('===Socket disconnected:', evt)
+};
+
+ws.onerror = function(evt) {
+  console.log('===Socket error:', evt)
+};
 // keep track of subscriptions
 var _subs = []
 
 export default {
  subscribeBars: function(symbolInfo, resolution, updateCb, uid, resetCache) {
   const channelString = createChannelString(symbolInfo)
-  socket.emit('SubAdd', {subs: [channelString]})
+  // socket.emit('SubAdd', {subs: [channelString]})
   
+  ws.send(JSON.stringify({method: 'SubAdd' , subs: [channelString]}) );
   var newSub = {
    channelString,
    uid,
@@ -20,7 +35,7 @@ export default {
    lastBar: historyProvider.history[symbolInfo.name].lastBar,
    listener: updateCb,
   }
-_subs.push(newSub)
+  _subs.push(newSub)
  },
  unsubscribeBars: function(uid) {
   var subIndex = _subs.findIndex(e => e.uid === uid)
@@ -29,57 +44,52 @@ _subs.push(newSub)
    return
   }
   var sub = _subs[subIndex]
-  socket.emit('SubRemove', {subs: [sub.channelString]})
+  // socket.emit('SubRemove', {subs: [sub.channelString]})
   _subs.splice(subIndex, 1)
  }
 }
 
-socket.on('connect', () => {
- console.log('===Socket connected')
-})
-socket.on('disconnect', (e) => {
- console.log('===Socket disconnected:', e)
-})
-socket.on('error', err => {
- console.log('====socket error', err)
-})
-socket.on('m', (e) => {
- // here we get all events the CryptoCompare connection has subscribed to
- // we need to send this new data to our subscribed charts
- const _data= e.split('~')
- if (_data[0] === "3") {
-  // console.log('Websocket Snapshot load event complete')
-  return
- }
- const data = {
-  sub_type: parseInt(_data[0],10),
-  exchange: _data[1],
-  to_sym: _data[2],
-  from_sym: _data[3],
-  trade_id: _data[5],
-  ts: parseInt(_data[6],10),
-  volume: parseFloat(_data[7]),
-  price: parseFloat(_data[8])
- }
- 
- const channelString = `${data.sub_type}~${data.exchange}~${data.to_sym}~${data.from_sym}`
- 
- const sub = _subs.find(e => e.channelString === channelString)
- 
- if (sub) {
-  // disregard the initial catchup snapshot of trades for already closed candles
-  if (data.ts < sub.lastBar.time / 1000) {
-    return
-   }
-  
-var _lastBar = updateBar(data, sub)
 
-// send the most recent bar back to TV's realtimeUpdate callback
-  sub.listener(_lastBar)
-  // update our own record of lastBar
-  sub.lastBar = _lastBar
- }
-})
+ws.onmessage = event => {
+  const e = JSON.parse(event.data);
+   // here we get all events the mt5 connection has subscribed to
+  // we need to send this new data to our subscribed charts
+  const _data= e['obj'][0];
+  if (e['obj'].length === 0) {
+    // console.log('Websocket Snapshot load event complete')
+    return
+  }
+  const data = {
+    sub_type: '0',
+    symbol: e['symbol'],
+    trade_id: 1,
+    ts: parseInt(_data['time'],10),
+    volume: parseFloat(_data['volume']),
+    price: parseFloat(_data['ask'])
+  }
+
+  ask.setState(parseFloat(_data['bid']));
+  bid.setState(parseFloat(_data['ask']));
+
+  const channelString = `${data.sub_type}~${data.symbol}`
+  
+  const sub = _subs.find(eve => eve.channelString === channelString)
+  
+  if (sub) {
+    // disregard the initial catchup snapshot of trades for already closed candles
+    if (data.ts < sub.lastBar.time / 1000) {
+      return
+    }
+    
+  var _lastBar = updateBar(data, sub)
+
+  // send the most recent bar back to TV's realtimeUpdate callback
+    sub.listener(_lastBar)
+    // update our own record of lastBar
+    sub.lastBar = _lastBar
+  }
+};
+
 
 // Take a single trade, and subscription record, return updated bar
 function updateBar(data, sub) {
@@ -124,12 +134,7 @@ if (rounded > lastBarSec) {
  return _lastBar
 }
 
-// takes symbolInfo object as input and creates the subscription string to send to CryptoCompare
+// takes symbolInfo object as input and creates the subscription string to send to mt5
 function createChannelString(symbolInfo) {
-  var channel = symbolInfo.name.split(/[:/]/)
-  const exchange = channel[0] === 'GDAX' ? 'Coinbase' : channel[0]
-  const to = channel[2]
-  const from = channel[1]
- // subscribe to the CryptoCompare trade channel for the pair and exchange
-  return `0~${exchange}~${from}~${to}`
+  return `0~${symbolInfo.name}`
 }

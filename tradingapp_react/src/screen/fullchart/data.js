@@ -1,5 +1,6 @@
 let jsonData = {
     g_period : ['D', '5D', '2W', 'M', '3M', '6M'],
+	g_period_timeframe : ['120', '360', 'D', '2D', '5D', 'W'],
 	g_chartType : [
 		"Bars",
 		"Candles",

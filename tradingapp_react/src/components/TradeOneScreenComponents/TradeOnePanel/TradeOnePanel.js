@@ -9,24 +9,26 @@ import {TbMinusVertical} from "react-icons/tb";
 import {useState} from "react";
 import ModalNumberType from "./../../Modals/ModalNumberType/NumberType";
 import ModalMarginRequired from "./../../Modals/ModalMarginRequired/MarginRequired";
+import { useStore } from "usestore-react";
 
 function TradeOnePanel(props) {
     const [show, setShow] = useState(false);
     const [showMargin, setShowMargin] = useState(false);
-
+    const [ask] = useStore("askprice");
+    const [bid] = useStore("bidprice");
     return (
             <div className='panelContainer'>
                 <Row className='buttonRow'>
                     <Col className="buttonCol">
                         <button className="sellBuyButton sellButton">
                             <div className="buttonText"> SELL </div>
-                            <div className="priceText"> {props.ask} </div>
+                            <div className="priceText"> {ask} </div>
                         </button>
                     </Col>
                     <Col className="buttonCol">
                         <button className="sellBuyButton buyButton">
                             <div className="buttonText"> BUY </div>
-                            <div className="priceText"> {props.bid} </div>
+                            <div className="priceText"> {bid} </div>
                         </button>
                     </Col>
                 </Row>

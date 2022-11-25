@@ -19,7 +19,7 @@ function App() {
 	return (
 		<BrowserRouter className='mobileSet'>
 		  <Routes>
-			  <Route index element={<LogInScreen/>} />
+			  <Route index element={<LogInScreen/>} /> 
 			  <Route path='detailpage' element={<TradeOneScreen/>}/>
 			  <Route path='trade' element={<TradeAllScreen />}/>
 			  <Route path='chart' element={<FullChart />}/>
@@ -27,7 +27,6 @@ function App() {
 			  <Route path='Search' element={<SearchScreen />} />
 			  <Route path='Account' element={<AccountScreen />} />
 			  <Route path='News' element={<NewsScreen />} />
-			//=========pages==========
 			  <Route path='myAccount' element={<MyAccountDetailPage />} />
 		 </Routes>
 		</BrowserRouter>
