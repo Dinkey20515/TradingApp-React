@@ -4,6 +4,7 @@ import { createStore, useStore } from "usestore-react";
 const ask = createStore("askprice", 0);
 const bid = createStore("bidprice", 0);
 
+
 var clientID = 123; 
 const url = "ws://localhost:8000/ws/" + clientID;
 const ws = new WebSocket(url);
@@ -54,7 +55,7 @@ ws.onmessage = event => {
   const e = JSON.parse(event.data);
    // here we get all events the mt5 connection has subscribed to
   // we need to send this new data to our subscribed charts
-  const _data= e['obj'][0];
+  const _data= e['obj'];
   if (e['obj'].length === 0) {
     // console.log('Websocket Snapshot load event complete')
     return
@@ -63,13 +64,13 @@ ws.onmessage = event => {
     sub_type: '0',
     symbol: e['symbol'],
     trade_id: 1,
-    ts: parseInt(_data['time'],10),
-    volume: parseFloat(_data['volume']),
-    price: parseFloat(_data['ask'])
+    ts: parseInt(_data[0],10),
+    volume: parseFloat(_data[4]),
+    price: parseFloat(_data[2])
   }
 
-  ask.setState(parseFloat(_data['bid']));
-  bid.setState(parseFloat(_data['ask']));
+  ask.setState(parseFloat(_data[1]));
+  bid.setState(parseFloat(_data[2]));
 
   const channelString = `${data.sub_type}~${data.symbol}`
   

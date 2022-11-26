@@ -28,7 +28,7 @@ export default {
 			ticker: symbolName,
 			exchange: '',
 			minmov: 1,
-			pricescale: 100000000,
+			pricescale: 100000,
 			has_intraday: true,
 			intraday_multipliers: ['1', '60'],
 			supported_resolution:  supportedResolutions,

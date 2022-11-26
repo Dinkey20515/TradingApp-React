@@ -14,7 +14,7 @@ export default {
 	history: history,
 
     getBars: function(symbolInfo, resolution, from, to, first, limit) {
-		limit = limit?limit:2000;
+		limit = limit?limit:1000;
 		const url = `/history/${symbolInfo.name}`;
 		if(resolution === 'D') {
 			from = to - (86400 * limit)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import {IoIosArrowUp} from  "react-icons/io";
 
@@ -13,6 +13,7 @@ import MiddleChartContainer from "../../components/TradeOneScreenComponents/Midd
 import  TradeOneScreenTopbar from "../../components/TradeOneScreenComponents/TradeOneScreenTopbar/TradeOneScreenTopbar";
 import middlechart from '../../assets/middlechart.jpg'; 
 import { TVChartContainer } from '../../components/TVChartContainer/index';
+import {login} from "../../API/api";
 
 function TradeOneScreen() {
     const [TVOption, setTVOption] = useState({
@@ -29,6 +30,35 @@ function TradeOneScreen() {
         selectedIndicators: [],			//selected indicator indexes.
         flag: 0,
     })
+    const [loginFlag, setLoginFlag] = useState(0)
+    const [loginData, setLoginData] = useState({   
+        Balance : 0,
+        Group : '',
+        Email : '',
+        Equity : 0,
+        Leverage: 1,
+    })
+
+    useEffect(() => {
+        if(!loginFlag)
+            getLoginInfo()
+      });
+    const getLoginInfo = ()=> {
+        login(222499, 'Saham@123').then(data => {
+            console.log({data})
+            if (data.state && data.state === 0) {
+                console.log('mt5 API error:',data.data)
+                return ;
+            }
+            if (data.data) {
+                //loginData = data.data;
+                setLoginFlag(1)
+                setLoginData(data.data.answer)
+            } else {
+                return ;
+            }
+        });
+    }
     //=======page navigation=======
     const navigate = useNavigate();
     const midExpandOnclickHandler = () => {
@@ -49,10 +79,9 @@ function TradeOneScreen() {
         <div className='tradeOneScreenContainer'>
              <TradeOneScreenTopbar onClick={backIconOnclickHandler}/>
              <MiddleChartContainer />
-            {/* <img src={middlechart} alt="Logo" className="middleChart" /> */}
             <TVChartContainer option={TVOption}  chartloaded={chartloaded}/>
             <MiddleChartControlPanel onClick={midExpandOnclickHandler}/>
-            <TradeOnePanel ask='0.99756' bid='0.98656' price='1,000' />
+            <TradeOnePanel userInfo={loginData} symbol={TVOption.symbol} />
             <div className="priceRangeDiv">
                 <span className="priceRangeText">Price Range</span>
                 <span className="pricePercentText">+2.10% (+0.408)</span>

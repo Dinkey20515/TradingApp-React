@@ -35,7 +35,8 @@ export const news = (index)=> {
         qs,
     })
 }
-export const singup = (uid, pass)=> {
+
+export const singup = (uid, pass) => {
     const url = 'api/mt5/singup'
     const qs = {
         uid : uid,
@@ -58,6 +59,17 @@ export const singup = (uid, pass)=> {
         } else {
             return [];
         }
+    })
+}
+
+// sell / buy order action
+export const sendOrderRequest = (data) => {
+    console.log('sendOrderRequest')
+    console.log(data)
+    const url = 'api/mt5/sendRequest'
+    return rp({
+        uri: `${api_root}${url}`,
+        body: JSON.stringify(data)
     })
 }
 

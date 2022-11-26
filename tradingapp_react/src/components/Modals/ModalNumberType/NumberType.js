@@ -3,18 +3,38 @@ import "./../Modal/Modal.css";
 import "./NumberType.css";
 import React from 'react';
 import {useState} from "react";
+import { createStore, useStore } from "usestore-react";
 import { RiDeleteBack2Fill } from "react-icons/ri";
 import { BsViewList } from "react-icons/bs";
 import { IoKeypad } from "react-icons/io5";
-
+const [amount, setamount] = createStore("trade_amount", 1);
 
 function NumberTypeModal(props) {
     const [type, setType] = useState(true);
     if(!props.show){
         return null;
     }
+    // const state = {
+    //     result: ""
+    //   }
+
+    const onbuttonclick = (button) => {
+        if(button === ".") {
+            amount = amount + button;
+            setamount(amount);
+        }
+    
+        else if(button === "ce") {
+            prop = prop.slice(0, -1);
+            console.log(prop);
+        }
+    
+        else {
+            amount = amount + button;
+            setamount(amount);
+        }
+      };
     return (
-      
             <div className="modal">
                 <div className="modal-back" onClick={props.onClose}>
                 </div>
@@ -32,24 +52,24 @@ function NumberTypeModal(props) {
                             <table>
                                 <tbody>
                                     <tr>
-                                            <th>1</th>
-                                            <th>2</th>
-                                            <th>3</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "1")}>1</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "2")}>2</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "3")}>3</th>
                                     </tr>
                                     <tr>
-                                            <th>4</th>
-                                            <th>5</th>  
-                                            <th>6</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "4")}>4</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "5")}>5</th>  
+                                            <th onClick={()=>onbuttonclick(props.state, "6")}>6</th>
                                     </tr>
                                     <tr>
-                                            <th>7</th>
-                                            <th>8</th>
-                                            <th>9</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "7")}>7</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "8")}>8</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "9")}>9</th>
                                     </tr>
                                     <tr>
-                                            <th>.</th>
-                                            <th>0</th>
-                                            <th><RiDeleteBack2Fill/></th>
+                                            <th onClick={()=>onbuttonclick(props.state, ".")}>.</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "0")}>0</th>
+                                            <th onClick={()=>onbuttonclick(props.state, "ce")}><RiDeleteBack2Fill/></th>
                                     </tr>
                                 </tbody>
                             </table>
