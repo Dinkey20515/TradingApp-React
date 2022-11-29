@@ -13,8 +13,8 @@ function TradeOneScreenTopbar(props) {
 		<div className="TradeOneScreenTopbarContainer">
 			<AiOutlineArrowLeft className="arrowBackIcon" onClick={props.onClick} />
 			<div>
-				<div className="symbolSketText"> Bitcoin / USD </div>
-				<div className="symboldetailText"> Bitcoin to US Dollar </div>
+				<div className="symbolSketText">{props.title}</div>
+				{/* <div className="symboldetailText"> Bitcoin to US Dollar </div> */}
 			</div>
 			<AiOutlinePlusCircle
 				className="plusIcon"

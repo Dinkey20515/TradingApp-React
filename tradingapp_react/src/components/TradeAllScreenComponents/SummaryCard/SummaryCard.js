@@ -8,7 +8,7 @@ import "./SummaryCard.css";
 
 function SummaryCard(props) {
 
-    const {ask, bid } = props
+    const {ask, bid, symbol, symbolCardOnclickHandler } = props
     const prevProps = usePrevious({ask, bid});
     const [askstate, setAskstate] = useState(0);
     const [bidstate, setBidstate] = useState(0);
@@ -26,6 +26,12 @@ function SummaryCard(props) {
         }
         
     }, [ask, bid])
+
+    const onSymbolClick = ()=> {
+        // alert(123)
+        symbolCardOnclickHandler(symbol);
+    }
+
     return (
         <div className='summaryCardContainer'>
             <div className="summaryCardSymbolText"> {props.symbol} </div>
@@ -36,7 +42,7 @@ function SummaryCard(props) {
                         <div className="summaryCardButtonText"> Sell </div>
                     </button>
                 </Col>
-                <Col>
+                <Col onClick={onSymbolClick}>
                     <div className={props.rate>0?'card-text rate-text-blue': 'card-text rate-text-red'}> {props.rate>0?'+': ''}{props.rate} </div>
                     <img src={minichart} alt="Logo" className="miniChart"/>
                 </Col>

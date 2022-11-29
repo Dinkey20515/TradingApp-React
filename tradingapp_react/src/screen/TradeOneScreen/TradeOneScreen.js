@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {IoIosArrowUp} from  "react-icons/io";
 
 import './TradeOneScreen.css';
@@ -15,8 +15,9 @@ import middlechart from '../../assets/middlechart.jpg';
 import { TVChartContainer } from '../../components/TVChartContainer/index';
 import {login} from "../../API/api";
 
-function TradeOneScreen({route, navigation}) {
-    const { symbol } = route.params;
+function TradeOneScreen() {
+    const location = useLocation();
+    const symbol = location.state.symbol;
     const [TVOption, setTVOption] = useState({
         symbol: symbol,
         period: '',
@@ -78,7 +79,7 @@ function TradeOneScreen({route, navigation}) {
 
 	return (
         <div className='tradeOneScreenContainer'>
-             <TradeOneScreenTopbar onClick={backIconOnclickHandler}/>
+             <TradeOneScreenTopbar onClick={backIconOnclickHandler} title={symbol}/>
              <MiddleChartContainer />
             <TVChartContainer option={TVOption}  chartloaded={chartloaded}/>
             <MiddleChartControlPanel onClick={midExpandOnclickHandler}/>

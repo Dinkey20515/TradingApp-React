@@ -63,8 +63,7 @@ function TradeAllScreen(props) {
 
     const symbolCardOnclickHandler = (symbol_name) => {
       let path = '/detailpage'
-      console.log(symbol_name);
-      navigate(path, {symbol: symbol_name});
+      navigate(path, {state:{symbol: symbol_name}});
     }
 
     const getHistory = ()=> {
@@ -117,11 +116,11 @@ function TradeAllScreen(props) {
                         ask = realPrice[item][2];
                         bid = realPrice[item][1];
                     }
-                    return (<SummaryCard key={i} symbol={item} ask={ask.toFixed(5)} bid={bid.toFixed(5)} rate={(ask - next_open).toFixed(5)} onClick={()=>symbolCardOnclickHandler(item)} />);
+                    return (<SummaryCard key={i} symbol={item} ask={ask.toFixed(5)} bid={bid.toFixed(5)} rate={(ask - next_open).toFixed(5)} symbolCardOnclickHandler={symbolCardOnclickHandler} />);
                 })
             }
                             
-            <Row className='tradeAllScreenButtonRow'>
+            {/* <Row className='tradeAllScreenButtonRow'>
                 <Col className="tradeAllScreenButtonCol">
                     <button onClick={symbolCardOnclickHandler} className="tradeAllScreenButton">
                         <ImPencil className="tradeAllScreenIcon"/>
@@ -134,7 +133,7 @@ function TradeAllScreen(props) {
                     </button>
                     <div className="tradeAllScreenButtonText"> Add markets </div>
                 </Col>
-            </Row>
+            </Row> */}
             <BottomNavbar index={isactiveBottomNav}/>
         </div>
 	);
