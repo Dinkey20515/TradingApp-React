@@ -1,6 +1,15 @@
-let rp = require('request-promise').defaults({json: true})
+let rp = require('request-promise').defaults({json: true});
+import axios from 'axios';
 
 const api_root = 'http://localhost:5000/';
+const api_root2 = 'http://localhost:8000/';
+
+// node api
+
+
+// python api
+export const GET_SYMBOLS_PRICE = api_root2 + "group_history"; 
+
 
 export const login = (uid, pass)=> {
     const url = 'api/mt5/login'
@@ -8,7 +17,6 @@ export const login = (uid, pass)=> {
         uid : uid,
         pass : pass
     }
-
     return rp({
         url: `${api_root}${url}`,
         qs,
@@ -25,6 +33,7 @@ export const newslist = (total)=> {
         qs,
     })
 }
+
 export const news = (index)=> {
     const url = 'api/mt5/news'
     const qs = {
@@ -65,11 +74,19 @@ export const singup = (uid, pass) => {
 // sell / buy order action
 export const sendOrderRequest = (data) => {
     console.log('sendOrderRequest')
-    console.log(data)
     const url = 'api/mt5/sendRequest'
     return rp({
         uri: `${api_root}${url}`,
         body: JSON.stringify(data)
     })
+}
+
+
+export const getData = (uri, urlparams='', headers)=> {
+    return axios.get(`${api_root}${uri}${urlparams}`, headers)
+}
+
+export const postData = (uri, body)=> {
+    return axios.post(`${api_root}${uri}}`, body)
 }
 

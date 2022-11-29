@@ -15,9 +15,10 @@ import middlechart from '../../assets/middlechart.jpg';
 import { TVChartContainer } from '../../components/TVChartContainer/index';
 import {login} from "../../API/api";
 
-function TradeOneScreen() {
+function TradeOneScreen({route, navigation}) {
+    const { symbol } = route.params;
     const [TVOption, setTVOption] = useState({
-        symbol: "BTCUSD",
+        symbol: symbol,
         period: '',
         charttype: '',
         add_indicator: '',

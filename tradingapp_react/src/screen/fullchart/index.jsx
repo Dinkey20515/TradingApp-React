@@ -13,7 +13,7 @@ class FullChart extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			symbol: "XAUUSD",
+			symbol: "BTCUSD",
 			period: '',
 			chartunit: '',
 			charttype: '',

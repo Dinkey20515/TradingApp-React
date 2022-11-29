@@ -1,39 +1,126 @@
-import React ,{ Component } from "react";
+import React ,{ Component, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import {ImPencil} from "react-icons/im";
 import {AiOutlineAppstoreAdd} from "react-icons/ai";
-import { useState } from "react";
-import './TradeAllScreen.css';
+import $ from "jquery";
+import axios from "axios";
+
 import BottomNavbar from "../../components/BottomNavbar/BottomNavbar";
 import TradeAllScreenTopbar from "../../components/TradeAllScreenComponents/TradeAllScreenTopbar/TradeAllScreenTopbar";
 import SummaryCard from "../../components/TradeAllScreenComponents/SummaryCard/SummaryCard";
+
+import './TradeAllScreen.css';
+import { GET_SYMBOLS_PRICE } from "../../API/api";
+import jsonData from "./symbols"
 
 
 function TradeAllScreen(props) {
     //=======page navigation=======
     const navigate = useNavigate();
-    const symbolCardOnclickHandler = () => {
+
+    //const symbolsa = ["NZDCAD", "NZDCHF", "NZDJPY", "NZDSGD", "NZDUSD", "SGDJPY", "USDCAD", "USDCHF", "USDCNH", "USDCZK",];
+    const [symbols, setSymbols] = useState(jsonData.USA.slice(0, 10))
+    const [message, setMessage] = useState([]); 
+    const [history, setHistory] = useState([]); 
+    const [realPrice, setRealPrice] = useState({});
+    const [websckt, setWebsckt] = useState();
+    const [isactiveBottomNav, setisactiveBottomNav] = useState(1);
+
+    useEffect(() => {
+        getHistory();
+        const url = "ws://localhost:8000/ws/" + 567;
+        const ws = new WebSocket(url);
+    
+        ws.onopen = (event) => {
+            ws.send(JSON.stringify({method: 'group' , subs: symbols}) );
+        };
+    
+        // recieve message every start page
+        ws.onmessage = (e) => {
+          const message = JSON.parse(e.data);
+          if (message.target == 'group') {
+            setRealPrice(message.obj);
+          }
+        };
+    
+        setWebsckt(ws); //clean up function when we close page
+        return () => ws.close();
+    }, [symbols]);
+        
+    const sendMessage = () => {
+            websckt.send(message);
+            // recieve message every send message
+            websckt.onmessage = (e) => {
+            const message = JSON.parse(e.data);
+            setMessage([...messages, message]);
+        };
+        setMessage([]);
+    };
+
+
+
+    const symbolCardOnclickHandler = (symbol_name) => {
       let path = '/detailpage'
-      navigate(path);
-      window.location.reload(false);
+      console.log(symbol_name);
+      navigate(path, {symbol: symbol_name});
     }
-	const [isactiveBottomNav, setisactiveBottomNav] = useState(1);
+
+    const getHistory = ()=> {
+        let enddate = Math.ceil((new Date().getTime())/1000)
+        let startdate = enddate-72*3600;
+        axios.get(`${GET_SYMBOLS_PRICE}/${startdate}/${enddate}`, {headers: {
+            'symbols': symbols
+        }})
+        .then(res => {
+            if (res.data.status == 'Success') {
+                setHistory(res.data.data)
+                console.log(history)
+            }
+        })
+    }
+
+    const topNavbarOnclick = (e, country)=> {
+        let obj = e.currentTarget;
+		$(".active").removeClass("active");
+		obj.className = 'active';
+        setSymbols(jsonData[country].slice(0, 10))
+	}
+    
+	
 	return (
         <div className='tradeAllScreenContainer' >
             <TradeAllScreenTopbar />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
-            <SummaryCard symbol='Bitcoin / USD' ask='0.98656' bid='1,000' rate='+1.01% ' />
+            <div className="TradeAllScreenShareRegionNavbar">
+				<ul className="ShareRegionNavBarRow">
+					<li className="active" onClick={(e)=>topNavbarOnclick(e, 'USA')}><img src={"https://cdn-icons-png.flaticon.com/128/197/197484.png"} />
+                        US</li>
+					<li className="" onClick={(e)=>topNavbarOnclick(e, 'EUROPE')}><img src={"https://cdn-icons-png.flaticon.com/128/197/197615.png"} />
+                        EUROPE</li>
+					<li className="" onClick={(e)=>topNavbarOnclick(e, 'RUSSIA')}><img src={"https://cdn-icons-png.flaticon.com/128/323/323300.png"} />
+                        RUSSIA</li>
+					<li className="" onClick={(e)=>topNavbarOnclick(e, 'ARABIC')}><img src={"https://cdn-icons-png.flaticon.com/128/197/197578.png"} />
+                        ARABIC</li>
+					<li className="" onClick={(e)=>topNavbarOnclick(e, 'ASIA')}><img src={"https://cdn-icons-png.flaticon.com/128/6195/6195239.png"} />
+                        ASIA</li>
+				</ul>
+			</div>
+            {
+                symbols.map ( (item, i)=> {
+                    let ask = 0, bid = 0, next_open = 0;
+                    let arr_history = history.filter(function(row) { return row.stock == item; })
+                    if(arr_history.length > 0) {
+                        next_open = arr_history[arr_history.length-1].close
+                    }
+                    if(realPrice[item]) {
+                        ask = realPrice[item][2];
+                        bid = realPrice[item][1];
+                    }
+                    return (<SummaryCard key={i} symbol={item} ask={ask.toFixed(5)} bid={bid.toFixed(5)} rate={(ask - next_open).toFixed(5)} onClick={()=>symbolCardOnclickHandler(item)} />);
+                })
+            }
+                            
             <Row className='tradeAllScreenButtonRow'>
                 <Col className="tradeAllScreenButtonCol">
                     <button onClick={symbolCardOnclickHandler} className="tradeAllScreenButton">

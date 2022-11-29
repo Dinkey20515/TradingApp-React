@@ -619,7 +619,8 @@ body.i-no-padding {
 }
 
 ::selection {
-    background: rgba(216, 240, 250, .6)
+   /* background: rgba(216, 240, 250, .6)*/
+    background: rgba(15,15,15, .6)
 }
 
 html.theme-dark ::selection {
@@ -1224,7 +1225,7 @@ html.theme-dark .tv-select-container a {
 
 .tv-select-container.sbHolderOpen,
 .tv-select-container.sbHolderOpen a {
-    /* color: #000 */
+     color: #000 
 }
 
 .tv-select-container.sbHolderDisabled {
@@ -1723,7 +1724,8 @@ textarea {
 }
 
 .chart-page {
-    background: #eceff2
+   /* background: #eceff2   */
+   background: #0f0f0f;
 }
 
 html.theme-dark .chart-page {

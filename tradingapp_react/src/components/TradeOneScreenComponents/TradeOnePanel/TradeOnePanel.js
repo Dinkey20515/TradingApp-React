@@ -36,18 +36,7 @@ function TradeOnePanel(props) {
                 console.log(res);
                 alert("successful")
             })
-        // sendOrderRequest(option).then(data => {
-        //     if (data.state && data.state === 0) {
-        //         console.log('mt5 API error:',data)
-        //         return ;
-        //     }
-        //     if (data) {
-        //         console.log(data);
-                
-        //     } else {
-        //         return ;
-        //     }
-        // });
+
     }
 
     return (
@@ -88,10 +77,10 @@ function TradeOnePanel(props) {
                 </div>
                 <div className="symbolRow">
                     <div onClick={()=>setShowMargin(true)}>
-                        <span className="priceAsk toLeft"> ${ask/props.userInfo.Leverage} </span>
+                        <span className="priceAsk toLeft"> ${(ask/props.userInfo.Leverage).toFixed(3)} </span>
                         {/* <span className="priceVs toLeft"> </span> */}
                         <TbMinusVertical className="priceVs toLeft"/>
-                        <span className="priceBid toLeft"> ${bid/props.userInfo.Leverage} </span>
+                        <span className="priceBid toLeft"> ${(bid/props.userInfo.Leverage).toFixed(3)} </span>
                         <span className="priceAmount toRight"> ${props.userInfo.Balance} </span>
                     </div>
                     <ModalMarginRequired show={showMargin} onClose={()=>setShowMargin(false)}/>
