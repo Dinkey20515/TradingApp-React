@@ -25,7 +25,7 @@ function TradeAllScreenTopbar() {
 			    <li><MdKeyboardArrowDown className="topBarIcon toTopLeft" /></li>
 				<li  className="toTopLeft TradeAllScreenTopStatusbarText"> 0 </li>
 				
-				<li><CiSliderHorizontal  className="topBarIcon toTopRight"/>  </li>
+				{/* <li><CiSliderHorizontal  className="topBarIcon toTopRight"/>  </li> */}
 				<li><AiOutlineMail className="topBarIcon toTopRight"/></li>
 			</ul>
 			<div className="topStatusHorizonBar" />
@@ -42,7 +42,9 @@ function TradeAllScreenTopbar() {
 					<li className="list9 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list9")}>Forex</li>
 					<li className="list10 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list10")}>Cryptos</li> */}
 				</ul>
+				
 			</div>
+
 		</div>
 	);
 }

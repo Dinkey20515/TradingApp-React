@@ -1,6 +1,5 @@
 import React ,{ Component } from "react";
-import MyAccountScreenTopbar from "../../../components/AccountScreenComponents/MyAccountScreenTopbar/MyAccountScreenTopbar";
-
+import MyAccountScreenTopbar from "../../../components/AccountScreenComponents/myAccountScreenDetailPage/MyAccountScreenTopbar/MyAccountScreenTopbar";
 import './MyAccountDetailPage.css';
 import BottomNavbar from "../../../components/BottomNavbar/BottomNavbar";
 

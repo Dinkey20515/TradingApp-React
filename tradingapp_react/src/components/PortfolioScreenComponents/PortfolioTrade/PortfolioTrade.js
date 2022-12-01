@@ -6,8 +6,7 @@ import './PortfolioTrade.css';
 function PortfolioTrade() {
 	const navigate = useNavigate();
 	const myAccountOnClickHandler = () => {
-        console.log('adsf');
-		let path = "/myAccount";
+		let path = "/myaccount";
 		navigate(path);
 	};
 

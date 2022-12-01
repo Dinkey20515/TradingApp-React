@@ -53,8 +53,10 @@ export default {
 
 ws.onmessage = event => {
   const e = JSON.parse(event.data);
-   // here we get all events the mt5 connection has subscribed to
-  // we need to send this new data to our subscribed charts
+
+  if(e['obj'] == undefined){
+    return;
+  }
   const _data= e['obj'];
   if (e['obj'].length === 0) {
     // console.log('Websocket Snapshot load event complete')

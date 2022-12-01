@@ -28,19 +28,11 @@ export class TVChartContainer extends React.PureComponent {
 		};
 	}
 
-	// static defaultProps = {
-	// 	clientId: 'tradingview.com',
-	// 	userId: 'public_user_id',
-	// 	fullscreen: false,
-	// 	autosize: true,
-	// 	height: (window.innerHeight - 55),
-	// 	studiesOverrides: {},
-	// };
 
 	widget = null;
 
 	componentDidMount(props) {
-		// this.startChart(props)
+		
 	}
 	static removeOverlay(props){
 		if(props.loaded == none)
@@ -138,56 +130,16 @@ export class TVChartContainer extends React.PureComponent {
 			window.TradingView.onready(() => {
 				window.tvWidget = new window.TradingView.widget(widgetOptions);
 				
-				window.tvWidget.onChartReady(() => {
+				window.tvWidget.onChartReady(() => {     
 					console.log('Chart has loaded!');
 					console.log("sdf",nextProps);
 					nextProps.chartloaded('none');
 				});
 			});
 		}
+		return null;
 	}  
 
-	startChart = (props)=> {
-		const widgetOptions = {
-			debug: false,
-			height: props.option.height,
-			width: "100%",
-			symbol: props.option.symbol,
-			datafeed: Datafeed,
-			interval: 'D',
-			container_id: 'tv_chart_container',
-			library_path: '/charting_library/',
-			locale: getLanguageFromURL() || 'en',
-			disabled_features: ['use_localstorage_for_settings'],
-			enabled_features: ['study_templates'],
-			charts_storage_url: 'https://saveload.tradingview.com',
-			charts_storage_api_version: '1.0',
-			preset: "mobile",
-			auto_save_delay: 2000,
-			// client_id: this.props.clientId,
-			// user_id: this.props.userId,
-			// fullscreen: this.props.fullscreen,
-			// autosize: this.props.autosize,
-			// studies_overrides: this.props.studiesOverrides,
-			overrides: {
-				"paneProperties.background": "#0a0a0a",
-				"paneProperties.vertGridProperties.color": "#262626",
-				"paneProperties.horzGridProperties.color": "#262626",
-				"symbolWatermarkProperties.transparency": 90,
-				"scalesProperties.textColor": "#AAA",
-			}
-		};
-		
-		window.TradingView.onready(() => {
-			window.tvWidget = new window.TradingView.widget(widgetOptions);
-			
-			window.tvWidget.onChartReady(() => {
-				console.log('Chart has loaded!');
-				console.log("sdf",nextProps);
-				nextProps.chartloaded('none');
-			});
-		});
-	}
 
 	render() {
 		return (

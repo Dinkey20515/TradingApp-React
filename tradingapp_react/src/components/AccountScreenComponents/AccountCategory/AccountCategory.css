@@ -13,10 +13,10 @@
     appearance: none;
     padding-bottom: 90px; 
 }
-.AccountCategoryContainer{
+.AccountCategoriesCotainer div{
     border-radius: 8px !important;
     background-color: #262626;
-    margin:6px 10px!important;
+    margin:6px 10px;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
@@ -36,7 +36,7 @@
 .AccountCategoryCard{
     align-items: center;
 }
-.AccountCategoryText{
+.AccountCategoriesCotainer div span{
     margin-left: 15px;
     color: white;
     text-decoration: none;
@@ -53,7 +53,16 @@
     margin-right: 15px;
     /* stroke-width: 1px; */
 }
-.detailIcon{
+.AiOutlineRight{
+    color: #807d7d;
+    float: right;
+    /* margin-top: 8px; */
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 1px;
+}
+.detailIntoIcon{
     color: #807d7d;
     float: right;
     /* margin-top: 8px; */

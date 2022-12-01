@@ -14,6 +14,7 @@ import SummaryCard from "../../components/TradeAllScreenComponents/SummaryCard/S
 import './TradeAllScreen.css';
 import { GET_SYMBOLS_PRICE } from "../../API/api";
 import jsonData from "./symbols"
+import { BsWindowSidebar } from "react-icons/bs";
 
 
 function TradeAllScreen(props) {
@@ -62,8 +63,11 @@ function TradeAllScreen(props) {
 
 
     const symbolCardOnclickHandler = (symbol_name) => {
-      let path = '/detailpage'
-      navigate(path, {state:{symbol: symbol_name}});
+        let path = '/detailpage'
+        console.log("reloaded");
+        navigate(path, {state:{symbol: symbol_name}});
+        window.location.reload(false);
+        console.log("reloaded");
     }
 
     const getHistory = ()=> {
@@ -84,7 +88,7 @@ function TradeAllScreen(props) {
         let obj = e.currentTarget;
 		$(".active").removeClass("active");
 		obj.className = 'active';
-        setSymbols(jsonData[country].slice(0, 10))
+        setSymbols(jsonData[country].slice(0, 11))
 	}
     
 	
@@ -108,15 +112,16 @@ function TradeAllScreen(props) {
             {
                 symbols.map ( (item, i)=> {
                     let ask = 0, bid = 0, next_open = 0;
-                    let arr_history = history.filter(function(row) { return row.stock == item; })
-                    if(arr_history.length > 0) {
+                    let arr_history = (history[item]==undefined)?[]:history[item];
+                    
+                    if(arr_history && arr_history.length > 0) {
                         next_open = arr_history[arr_history.length-1].close
                     }
                     if(realPrice[item]) {
-                        ask = realPrice[item][2];
-                        bid = realPrice[item][1];
+                        ask = realPrice[item][1];
+                        bid = realPrice[item][2];
                     }
-                    return (<SummaryCard key={i} symbol={item} ask={ask.toFixed(5)} bid={bid.toFixed(5)} rate={(ask - next_open).toFixed(5)} symbolCardOnclickHandler={symbolCardOnclickHandler} />);
+                    return (<SummaryCard key={i} symbol={item} ask={ask.toFixed(3)} bid={bid.toFixed(3)} rate={(ask - next_open).toFixed(5)} chartdata={arr_history} symbolCardOnclickHandler={symbolCardOnclickHandler} />);
                 })
             }
                             
