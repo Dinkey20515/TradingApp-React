@@ -21,7 +21,7 @@ function TradeAllScreen(props) {
     //=======page navigation=======
     const navigate = useNavigate();
 
-    //const symbolsa = ["NZDCAD", "NZDCHF", "NZDJPY", "NZDSGD", "NZDUSD", "SGDJPY", "USDCAD", "USDCHF", "USDCNH", "USDCZK",];
+    const symbolsa = ["NZDCAD", "NZDCHF", "NZDJPY", "NZDSGD", "NZDUSD", "SGDJPY", "USDCAD", "USDCHF", "USDCNH", "USDCZK",];
     const [symbols, setSymbols] = useState(jsonData.USA.slice(0, 10))
     const [message, setMessage] = useState([]); 
     const [history, setHistory] = useState([]); 
@@ -86,7 +86,8 @@ function TradeAllScreen(props) {
 
     const topNavbarOnclick = (e, country)=> {
         let obj = e.currentTarget;
-		$(".active").removeClass("active");
+		$(".active").removeClass(".active");
+        console.log("adsf");
 		obj.className = 'active';
         setSymbols(jsonData[country].slice(0, 11))
 	}
@@ -121,7 +122,7 @@ function TradeAllScreen(props) {
                         ask = realPrice[item][1];
                         bid = realPrice[item][2];
                     }
-                    return (<SummaryCard key={i} symbol={item} ask={ask.toFixed(3)} bid={bid.toFixed(3)} rate={(ask - next_open).toFixed(5)} chartdata={arr_history} symbolCardOnclickHandler={symbolCardOnclickHandler} />);
+                    return (<SummaryCard key={i} symbol={item} ask={ask.toFixed(5)} bid={bid.toFixed(5)} rate={(ask - next_open).toFixed(5)} chartdata={arr_history} symbolCardOnclickHandler={symbolCardOnclickHandler} />);
                 })
             }
                             

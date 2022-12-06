@@ -26,9 +26,9 @@ function LogInScreen() {
 	return (
 		<div className="logInScreenContainer">
 			<div className="titleSection">
-				<p>capital com</p>
+				<p>Capital.com</p>
 				<br />
-				<span>Study trends with powerful charts!</span>
+				<span></span>
 			</div>
 			<div className="loginButtons">
 				

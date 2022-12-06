@@ -31,16 +31,16 @@ function TradeAllScreenTopbar() {
 			<div className="topStatusHorizonBar" />
 			<div className="TradeAllScreenTopNavbar">
 				<ul className="topNavBarRow">
-					{/* <li className="list1 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list1")}>Favorite</li>
-					<li className="list2 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list2")}>Popular</li> */}
+					<li className="list1 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list1")}>Favorite</li>
+					<li className="list2 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list2")}>Popular</li>
 					<li className="list3 TradeAllScreenTopNavbarText navActive" onClick={(string)=>topNavbarOnclick(".list3")}>Shares</li>
-					{/* <li className="list4 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list4")}>WeekendTrading</li>
+					<li className="list4 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list4")}>WeekendTrading</li>
 					<li className="list5 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list5")}>ETF</li>
 					<li className="list6 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list6")}>Commodities</li>
 					<li className="list7 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list7")}>OilMarkets</li>
 					<li className="list8 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list8")}>Indices</li>
 					<li className="list9 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list9")}>Forex</li>
-					<li className="list10 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list10")}>Cryptos</li> */}
+					<li className="list10 TradeAllScreenTopNavbarText" onClick={(string)=>topNavbarOnclick(".list10")}>Cryptos</li>
 				</ul>
 				
 			</div>

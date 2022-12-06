@@ -1,5 +1,13 @@
 let jsonData = {
     USA : [
+		"EURUSD",
+		"USDHKD",
+		"GBPUSD",
+		"USDCHF",
+		"USDCZK",
+		"USDRUB",
+		"NZDUSD",
+		"AUDUSD",
 		"AAL",
 		"AAPL",
 		"AIG",
